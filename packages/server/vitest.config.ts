@@ -1,8 +1,10 @@
-import { defineConfig } from "vitest/config"
+import { defineConfig, configDefaults } from "vitest/config"
 import path from "path"
 
 export default defineConfig({
 	test: {
+		// The protobuf generator has Bun-native tests; keep the Node/Vitest suite separate.
+		exclude: [...configDefaults.exclude, "scripts/generate-proto.test.ts"],
 		environment: "node",
 		globals: true,
 		setupFiles: [],

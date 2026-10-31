@@ -18,7 +18,11 @@
 		"test": "vitest run",
 		"test:watch": "vitest",
 		"test:coverage": "vitest run --coverage",
-		"typecheck": "tsc --noEmit"
+		"typecheck": "tsc --noEmit",
+		"build:proto": "bun scripts/generate-proto.ts",
+		"check:proto": "bun scripts/generate-proto.ts --check",
+		"test:proto": "bun test scripts/generate-proto.test.ts",
+		"typecheck:proto": "tsc --noEmit --skipLibCheck --esModuleInterop --target es2024 --module esnext --moduleResolution bundler --types bun scripts/generate-proto.ts scripts/proto-analysis.ts scripts/generate-proto.test.ts"
 	},
 	"dependencies": {
 		"@comty/shared": "workspace:*",
@@ -55,6 +59,7 @@
 	"devDependencies": {
 		"@eslint/js": "^10.0.1",
 		"@types/bcrypt": "^6.0.0",
+		"@types/bun": "^1.4.4",
 		"@types/jest": "^30.0.0",
 		"@types/jsonwebtoken": "^9.0.10",
 		"@types/luxon": "^3.7.6",
@@ -66,6 +71,7 @@
 		"eslint": "^10.13.0",
 		"globals": "^17.13.0",
 		"sinon": "^22.1.0",
+		"typescript": "5.9.3",
 		"vitest": "^4.1.12"
 	},
 	"optionalDependencies": {

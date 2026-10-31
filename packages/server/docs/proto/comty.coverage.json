@@ -1,0 +1,4582 @@
+{
+  "scope": "Client-to-server API only: packages/server/services/*/{routes,ws_routes}; only reachable request/response DTOs are emitted.",
+  "counts": {
+    "apiHttp": 180,
+    "ws": 37,
+    "messages": 530,
+    "services": 18,
+    "sourceFiles": 584,
+    "unresolved": 399
+  },
+  "httpRoutes": [
+    {
+      "service": "auth",
+      "method": "GET",
+      "path": "/auth/:username/exists",
+      "request": "AuthGETAuthByUsernameExistsRequest",
+      "response": "AuthGETAuthByUsernameExistsResult",
+      "source": "services/auth/routes/auth/[username]/exists/get.js",
+      "category": "api"
+    },
+    {
+      "service": "auth",
+      "method": "POST",
+      "path": "/auth/activate",
+      "request": "AuthPOSTAuthActivateRequest",
+      "response": "AuthPOSTAuthActivateResult",
+      "source": "services/auth/routes/auth/activate/post.js",
+      "category": "api"
+    },
+    {
+      "service": "auth",
+      "method": "DELETE",
+      "path": "/auth",
+      "request": "AuthDELETEAuthRequest",
+      "response": "AuthDELETEAuthResponse",
+      "source": "services/auth/routes/auth/delete.js",
+      "category": "api"
+    },
+    {
+      "service": "auth",
+      "method": "POST",
+      "path": "/auth/disable-account",
+      "request": "AuthPOSTAuthDisableAccountRequest",
+      "response": "AuthPOSTAuthActivateResult",
+      "source": "services/auth/routes/auth/disable-account/post.js",
+      "category": "api"
+    },
+    {
+      "service": "auth",
+      "method": "GET",
+      "path": "/auth/jwks",
+      "request": "AuthGETAuthJwksRequest",
+      "response": "AuthGETAuthJwksResult",
+      "source": "services/auth/routes/auth/jwks/get.ts",
+      "category": "api"
+    },
+    {
+      "service": "auth",
+      "method": "PUT",
+      "path": "/auth/password",
+      "request": "AuthPUTAuthPasswordRequest",
+      "response": "AuthPUTAuthPasswordResult",
+      "source": "services/auth/routes/auth/password/put.js",
+      "category": "api"
+    },
+    {
+      "service": "auth",
+      "method": "POST",
+      "path": "/auth",
+      "request": "AuthPOSTAuthRequest",
+      "response": "AuthPOSTAuthResponse",
+      "source": "services/auth/routes/auth/post.ts",
+      "category": "api"
+    },
+    {
+      "service": "auth",
+      "method": "POST",
+      "path": "/auth/recover-password",
+      "request": "AuthPOSTAuthRecoverPasswordRequest",
+      "response": "AuthPOSTAuthRecoverPasswordResult",
+      "source": "services/auth/routes/auth/recover-password/post.js",
+      "category": "api"
+    },
+    {
+      "service": "auth",
+      "method": "POST",
+      "path": "/auth/resend-activation-code",
+      "request": "AuthPOSTAuthResendActivationCodeRequest",
+      "response": "AuthPOSTAuthResendActivationCodeResult",
+      "source": "services/auth/routes/auth/resend-activation-code/post.js",
+      "category": "api"
+    },
+    {
+      "service": "auth",
+      "method": "POST",
+      "path": "/auth/token",
+      "request": "AuthPOSTAuthTokenRequest",
+      "response": "AuthPOSTAuthTokenResult",
+      "source": "services/auth/routes/auth/token/post.js",
+      "category": "api"
+    },
+    {
+      "service": "auth",
+      "method": "GET",
+      "path": "/availability",
+      "request": "AuthGETAvailabilityRequest",
+      "response": "AuthGETAvailabilityResult",
+      "source": "services/auth/routes/availability/get.js",
+      "category": "api"
+    },
+    {
+      "service": "auth",
+      "method": "POST",
+      "path": "/forgot/:apr_code",
+      "request": "AuthPOSTForgotByAprCodeRequest",
+      "response": "AuthPOSTForgotByAprCodeResult",
+      "source": "services/auth/routes/forgot/[apr_code]/post.js",
+      "category": "api"
+    },
+    {
+      "service": "auth",
+      "method": "POST",
+      "path": "/forgot",
+      "request": "AuthPOSTForgotRequest",
+      "response": "AuthPOSTForgotResult",
+      "source": "services/auth/routes/forgot/post.js",
+      "category": "api"
+    },
+    {
+      "service": "auth",
+      "method": "GET",
+      "path": "/oauth/.well-known/openid-configuration",
+      "request": "AuthGETOauthWellKnownOpenidConfigurationRequest",
+      "response": "AuthGETOauthWellKnownOpenidConfigurationResult",
+      "source": "services/auth/routes/oauth/.well-known/openid-configuration/get.ts",
+      "category": "api"
+    },
+    {
+      "service": "auth",
+      "method": "DELETE",
+      "path": "/oauth/apps/:clientId",
+      "request": "AuthDELETEOauthAppsByClientIdRequest",
+      "response": "AuthDELETEOauthAppsByClientIdResult",
+      "source": "services/auth/routes/oauth/apps/[clientId]/delete.ts",
+      "category": "api"
+    },
+    {
+      "service": "auth",
+      "method": "GET",
+      "path": "/oauth/apps/:clientId",
+      "request": "AuthGETOauthAppsByClientIdRequest",
+      "response": "AuthGETOauthAppsByClientIdResult",
+      "source": "services/auth/routes/oauth/apps/[clientId]/get.ts",
+      "category": "api"
+    },
+    {
+      "service": "auth",
+      "method": "PUT",
+      "path": "/oauth/apps/:clientId",
+      "request": "AuthPUTOauthAppsByClientIdRequest",
+      "response": "AuthPUTOauthAppsByClientIdResponse",
+      "source": "services/auth/routes/oauth/apps/[clientId]/put.ts",
+      "category": "api"
+    },
+    {
+      "service": "auth",
+      "method": "POST",
+      "path": "/oauth/apps/:clientId/regenerate-secret",
+      "request": "AuthPOSTOauthAppsByClientIdRegenerateSecretRequest",
+      "response": "AuthPOSTOauthAppsByClientIdRegenerateSecretResponse",
+      "source": "services/auth/routes/oauth/apps/[clientId]/regenerate-secret/post.ts",
+      "category": "api"
+    },
+    {
+      "service": "auth",
+      "method": "GET",
+      "path": "/oauth/apps",
+      "request": "AuthGETOauthAppsRequest",
+      "response": "AuthGETOauthAppsResponse",
+      "source": "services/auth/routes/oauth/apps/get.ts",
+      "category": "api"
+    },
+    {
+      "service": "auth",
+      "method": "POST",
+      "path": "/oauth/apps",
+      "request": "AuthPOSTOauthAppsRequest",
+      "response": "AuthPOSTOauthAppsResponse",
+      "source": "services/auth/routes/oauth/apps/post.ts",
+      "category": "api"
+    },
+    {
+      "service": "auth",
+      "method": "POST",
+      "path": "/oauth/authorize",
+      "request": "AuthPOSTOauthAuthorizeRequest",
+      "response": "AuthPOSTOauthAuthorizeResult",
+      "source": "services/auth/routes/oauth/authorize/post.ts",
+      "category": "api"
+    },
+    {
+      "service": "auth",
+      "method": "POST",
+      "path": "/oauth/token",
+      "request": "AuthPOSTOauthTokenRequest",
+      "response": "AuthPOSTOauthTokenResponse",
+      "source": "services/auth/routes/oauth/token/post.ts",
+      "category": "api"
+    },
+    {
+      "service": "auth",
+      "method": "GET",
+      "path": "/oauth/userinfo",
+      "request": "AuthGETOauthUserinfoRequest",
+      "response": "AuthGETOauthUserinfoResponse",
+      "source": "services/auth/routes/oauth/userinfo/get.ts",
+      "category": "api"
+    },
+    {
+      "service": "auth",
+      "method": "POST",
+      "path": "/register",
+      "request": "AuthPOSTRegisterRequest",
+      "response": "AuthPOSTRegisterResult",
+      "source": "services/auth/routes/register/post.js",
+      "category": "api"
+    },
+    {
+      "service": "auth",
+      "method": "DELETE",
+      "path": "/server-keys/:access_id",
+      "request": "AuthDELETEServerKeysByAccessIdRequest",
+      "response": "AuthDELETEServerKeysByAccessIdResult",
+      "source": "services/auth/routes/server-keys/[access_id]/delete.js",
+      "category": "api"
+    },
+    {
+      "service": "auth",
+      "method": "POST",
+      "path": "/server-keys/:access_id/regenerate",
+      "request": "AuthPOSTServerKeysByAccessIdRegenerateRequest",
+      "response": "AuthPOSTRegisterResultUser",
+      "source": "services/auth/routes/server-keys/[access_id]/regenerate/post.js",
+      "category": "api"
+    },
+    {
+      "service": "auth",
+      "method": "POST",
+      "path": "/server-keys/generate",
+      "request": "AuthPOSTServerKeysGenerateRequest",
+      "response": "AuthPOSTRegisterResultUser",
+      "source": "services/auth/routes/server-keys/generate/post.js",
+      "category": "api"
+    },
+    {
+      "service": "auth",
+      "method": "GET",
+      "path": "/server-keys/my",
+      "request": "AuthGETServerKeysMyRequest",
+      "response": "AuthGETServerKeysMyResponse",
+      "source": "services/auth/routes/server-keys/my/get.js",
+      "category": "api"
+    },
+    {
+      "service": "auth",
+      "method": "DELETE",
+      "path": "/sessions/all",
+      "request": "AuthDELETESessionsAllRequest",
+      "response": "AuthDELETESessionsAllResponse",
+      "source": "services/auth/routes/sessions/all/delete.js",
+      "category": "api"
+    },
+    {
+      "service": "auth",
+      "method": "GET",
+      "path": "/sessions/all",
+      "request": "AuthGETSessionsAllRequest",
+      "response": "AuthGETSessionsAllResponse",
+      "source": "services/auth/routes/sessions/all/get.js",
+      "category": "api"
+    },
+    {
+      "service": "auth",
+      "method": "GET",
+      "path": "/sessions/current",
+      "request": "AuthGETSessionsCurrentRequest",
+      "response": "AuthGETSessionsCurrentResponse",
+      "source": "services/auth/routes/sessions/current/get.js",
+      "category": "api"
+    },
+    {
+      "service": "chats",
+      "method": "GET",
+      "path": "/chats/acks",
+      "request": "ChatsGETChatsAcksRequest",
+      "response": "ChatsGETChatsAcksResponse",
+      "source": "services/chats/routes/chats/acks/get.ts",
+      "category": "api"
+    },
+    {
+      "service": "chats",
+      "method": "DELETE",
+      "path": "/chats/channels/:group_id/:channel_id/:message_id",
+      "request": "ChatsDELETEChatsChannelsByGroupIdByChannelIdByMessageIdRequest",
+      "response": "ChatsDELETEChatsChannelsByGroupIdByChannelIdByMessageIdResponse",
+      "source": "services/chats/routes/chats/channels/[group_id]/[channel_id]/[message_id]/delete.js",
+      "category": "api"
+    },
+    {
+      "service": "chats",
+      "method": "GET",
+      "path": "/chats/channels/:group_id/:channel_id",
+      "request": "ChatsGETChatsChannelsByGroupIdByChannelIdRequest",
+      "response": "ChatsGETChatsChannelsByGroupIdByChannelIdResponse",
+      "source": "services/chats/routes/chats/channels/[group_id]/[channel_id]/get.js",
+      "category": "api"
+    },
+    {
+      "service": "chats",
+      "method": "GET",
+      "path": "/chats/channels/:group_id/:channel_id/last",
+      "request": "ChatsGETChatsChannelsByGroupIdByChannelIdLastRequest",
+      "response": "ChatsGETChatsChannelsByGroupIdByChannelIdLastResponse",
+      "source": "services/chats/routes/chats/channels/[group_id]/[channel_id]/last/get.js",
+      "category": "api"
+    },
+    {
+      "service": "chats",
+      "method": "POST",
+      "path": "/chats/channels/:group_id/:channel_id",
+      "request": "ChatsPOSTChatsChannelsByGroupIdByChannelIdRequest",
+      "response": "ChatsPOSTChatsChannelsByGroupIdByChannelIdResponse",
+      "source": "services/chats/routes/chats/channels/[group_id]/[channel_id]/post.js",
+      "category": "api"
+    },
+    {
+      "service": "chats",
+      "method": "GET",
+      "path": "/chats/channels/:group_id/:channel_id/sync",
+      "request": "ChatsGETChatsChannelsByGroupIdByChannelIdSyncRequest",
+      "response": "ChatsGETChatsChannelsByGroupIdByChannelIdSyncResult",
+      "source": "services/chats/routes/chats/channels/[group_id]/[channel_id]/sync/get.ts",
+      "category": "api"
+    },
+    {
+      "service": "chats",
+      "method": "DELETE",
+      "path": "/chats/dm/:to_user_id/:message_id",
+      "request": "ChatsDELETEChatsDmByToUserIdByMessageIdRequest",
+      "response": "ChatsDELETEChatsDmByToUserIdByMessageIdResponse",
+      "source": "services/chats/routes/chats/dm/[to_user_id]/[message_id]/delete.js",
+      "category": "api"
+    },
+    {
+      "service": "chats",
+      "method": "PATCH",
+      "path": "/chats/dm/:to_user_id/:message_id",
+      "request": "ChatsPATCHChatsDmByToUserIdByMessageIdRequest",
+      "response": "ChatsPATCHChatsDmByToUserIdByMessageIdResponse",
+      "source": "services/chats/routes/chats/dm/[to_user_id]/[message_id]/patch.js",
+      "category": "api"
+    },
+    {
+      "service": "chats",
+      "method": "GET",
+      "path": "/chats/dm/:to_user_id",
+      "request": "ChatsGETChatsDmByToUserIdRequest",
+      "response": "ChatsGETChatsDmByToUserIdResponse",
+      "source": "services/chats/routes/chats/dm/[to_user_id]/get.js",
+      "category": "api"
+    },
+    {
+      "service": "chats",
+      "method": "POST",
+      "path": "/chats/dm/:to_user_id",
+      "request": "ChatsPOSTChatsDmByToUserIdRequest",
+      "response": "ChatsPOSTChatsDmByToUserIdResponse",
+      "source": "services/chats/routes/chats/dm/[to_user_id]/post.js",
+      "category": "api"
+    },
+    {
+      "service": "chats",
+      "method": "GET",
+      "path": "/chats/dm",
+      "request": "ChatsGETChatsDmRequest",
+      "response": "ChatsGETChatsDmResponse",
+      "source": "services/chats/routes/chats/dm/get.ts",
+      "category": "api"
+    },
+    {
+      "service": "ems",
+      "method": "POST",
+      "path": "/dispatch",
+      "request": "EmsPOSTDispatchRequest",
+      "response": "EmsPOSTDispatchResult",
+      "source": "services/ems/routes/dispatch/post.js",
+      "category": "api"
+    },
+    {
+      "service": "ems",
+      "method": "GET",
+      "path": "/preview/email/:email",
+      "request": "EmsGETPreviewEmailByEmailRequest",
+      "response": "EmsGETPreviewEmailByEmailResponse",
+      "source": "services/ems/routes/preview/email/[email]/get.js",
+      "category": "api"
+    },
+    {
+      "service": "files",
+      "method": "POST",
+      "path": "/upload/chunk",
+      "request": "FilesPOSTUploadChunkRequest",
+      "response": "FilesPOSTUploadChunkResponse",
+      "source": "services/files/routes/upload/chunk/post.ts",
+      "category": "api"
+    },
+    {
+      "service": "files",
+      "method": "POST",
+      "path": "/upload/file",
+      "request": "FilesPOSTUploadFileRequest",
+      "response": "FilesPOSTUploadFileResult",
+      "source": "services/files/routes/upload/file/post.js",
+      "category": "api"
+    },
+    {
+      "service": "files",
+      "method": "GET",
+      "path": "/upload",
+      "request": "FilesGETUploadRequest",
+      "response": "FilesGETUploadResponse",
+      "source": "services/files/routes/upload/get.js",
+      "category": "api"
+    },
+    {
+      "service": "files",
+      "method": "POST",
+      "path": "/upload/parts/complete",
+      "request": "FilesPOSTUploadPartsCompleteRequest",
+      "response": "FilesPOSTUploadPartsCompleteResponse",
+      "source": "services/files/routes/upload/parts/complete/post.ts",
+      "category": "api"
+    },
+    {
+      "service": "files",
+      "method": "GET",
+      "path": "/upload/parts/url",
+      "request": "FilesGETUploadPartsUrlRequest",
+      "response": "FilesGETUploadPartsUrlResponse",
+      "source": "services/files/routes/upload/parts/url/get.ts",
+      "category": "api"
+    },
+    {
+      "service": "groups",
+      "method": "GET",
+      "path": "/groups/:group_id/canPerform/:action",
+      "request": "GroupsGETGroupsByGroupIdCanPerformByActionRequest",
+      "response": "GroupsGETGroupsByGroupIdCanPerformByActionResult",
+      "source": "services/groups/routes/groups/[group_id]/canPerform/[action]/get.js",
+      "category": "api"
+    },
+    {
+      "service": "groups",
+      "method": "DELETE",
+      "path": "/groups/:group_id/channels/:channel_id",
+      "request": "GroupsDELETEGroupsByGroupIdChannelsByChannelIdRequest",
+      "response": "GroupsDELETEGroupsByGroupIdChannelsByChannelIdResult",
+      "source": "services/groups/routes/groups/[group_id]/channels/[channel_id]/delete.js",
+      "category": "api"
+    },
+    {
+      "service": "groups",
+      "method": "GET",
+      "path": "/groups/:group_id/channels/:channel_id",
+      "request": "GroupsGETGroupsByGroupIdChannelsByChannelIdRequest",
+      "response": "GroupsDELETEGroupsByGroupIdChannelsByChannelIdResult",
+      "source": "services/groups/routes/groups/[group_id]/channels/[channel_id]/get.js",
+      "category": "api"
+    },
+    {
+      "service": "groups",
+      "method": "PUT",
+      "path": "/groups/:group_id/channels/:channel_id",
+      "request": "GroupsPUTGroupsByGroupIdChannelsByChannelIdRequest",
+      "response": "GroupsDELETEGroupsByGroupIdChannelsByChannelIdResult",
+      "source": "services/groups/routes/groups/[group_id]/channels/[channel_id]/put.js",
+      "category": "api"
+    },
+    {
+      "service": "groups",
+      "method": "POST",
+      "path": "/groups/:group_id/channels/create",
+      "request": "GroupsPOSTGroupsByGroupIdChannelsCreateRequest",
+      "response": "GroupsPOSTGroupsByGroupIdChannelsCreateResponse",
+      "source": "services/groups/routes/groups/[group_id]/channels/create/post.js",
+      "category": "api"
+    },
+    {
+      "service": "groups",
+      "method": "GET",
+      "path": "/groups/:group_id/channels",
+      "request": "GroupsGETGroupsByGroupIdChannelsRequest",
+      "response": "GroupsGETGroupsByGroupIdChannelsResult",
+      "source": "services/groups/routes/groups/[group_id]/channels/get.js",
+      "category": "api"
+    },
+    {
+      "service": "groups",
+      "method": "POST",
+      "path": "/groups/:group_id/channels/order",
+      "request": "GroupsPOSTGroupsByGroupIdChannelsOrderRequest",
+      "response": "GroupsPOSTGroupsByGroupIdChannelsOrderResponse",
+      "source": "services/groups/routes/groups/[group_id]/channels/order/post.js",
+      "category": "api"
+    },
+    {
+      "service": "groups",
+      "method": "DELETE",
+      "path": "/groups/:group_id",
+      "request": "GroupsDELETEGroupsByGroupIdRequest",
+      "response": "GroupsDELETEGroupsByGroupIdResponse",
+      "source": "services/groups/routes/groups/[group_id]/delete.js",
+      "category": "api"
+    },
+    {
+      "service": "groups",
+      "method": "GET",
+      "path": "/groups/:group_id",
+      "request": "GroupsGETGroupsByGroupIdRequest",
+      "response": "GroupsGETGroupsByGroupIdResult",
+      "source": "services/groups/routes/groups/[group_id]/get.ts",
+      "category": "api"
+    },
+    {
+      "service": "groups",
+      "method": "DELETE",
+      "path": "/groups/:group_id/invites/:invite_key",
+      "request": "GroupsDELETEGroupsByGroupIdInvitesByInviteKeyRequest",
+      "response": "GroupsDELETEGroupsByGroupIdInvitesByInviteKeyResponse",
+      "source": "services/groups/routes/groups/[group_id]/invites/[invite_key]/delete.js",
+      "category": "api"
+    },
+    {
+      "service": "groups",
+      "method": "GET",
+      "path": "/groups/:group_id/invites/:invite_key",
+      "request": "GroupsGETGroupsByGroupIdInvitesByInviteKeyRequest",
+      "response": "GroupsGETGroupsByGroupIdInvitesByInviteKeyResponse",
+      "source": "services/groups/routes/groups/[group_id]/invites/[invite_key]/get.js",
+      "category": "api"
+    },
+    {
+      "service": "groups",
+      "method": "POST",
+      "path": "/groups/:group_id/invites/create",
+      "request": "GroupsPOSTGroupsByGroupIdInvitesCreateRequest",
+      "response": "GroupsPOSTGroupsByGroupIdInvitesCreateResponse",
+      "source": "services/groups/routes/groups/[group_id]/invites/create/post.js",
+      "category": "api"
+    },
+    {
+      "service": "groups",
+      "method": "GET",
+      "path": "/groups/:group_id/invites",
+      "request": "GroupsGETGroupsByGroupIdInvitesRequest",
+      "response": "GroupsGETGroupsByGroupIdInvitesResponse",
+      "source": "services/groups/routes/groups/[group_id]/invites/get.js",
+      "category": "api"
+    },
+    {
+      "service": "groups",
+      "method": "POST",
+      "path": "/groups/:group_id/join",
+      "request": "GroupsPOSTGroupsByGroupIdJoinRequest",
+      "response": "GroupsPOSTGroupsByGroupIdJoinResponse",
+      "source": "services/groups/routes/groups/[group_id]/join/post.js",
+      "category": "api"
+    },
+    {
+      "service": "groups",
+      "method": "POST",
+      "path": "/groups/:group_id/leave",
+      "request": "GroupsPOSTGroupsByGroupIdLeaveRequest",
+      "response": "GroupsPOSTGroupsByGroupIdLeaveResponse",
+      "source": "services/groups/routes/groups/[group_id]/leave/post.js",
+      "category": "api"
+    },
+    {
+      "service": "groups",
+      "method": "DELETE",
+      "path": "/groups/:group_id/members/:member_id",
+      "request": "GroupsDELETEGroupsByGroupIdMembersByMemberIdRequest",
+      "response": "GroupsDELETEGroupsByGroupIdMembersByMemberIdResult",
+      "source": "services/groups/routes/groups/[group_id]/members/[member_id]/delete.js",
+      "category": "api"
+    },
+    {
+      "service": "groups",
+      "method": "GET",
+      "path": "/groups/:group_id/members/:member_id",
+      "request": "GroupsGETGroupsByGroupIdMembersByMemberIdRequest",
+      "response": "GroupsDELETEGroupsByGroupIdMembersByMemberIdResult",
+      "source": "services/groups/routes/groups/[group_id]/members/[member_id]/get.js",
+      "category": "api"
+    },
+    {
+      "service": "groups",
+      "method": "PUT",
+      "path": "/groups/:group_id/members/:member_id",
+      "request": "GroupsPUTGroupsByGroupIdMembersByMemberIdRequest",
+      "response": "GroupsPUTGroupsByGroupIdMembersByMemberIdResult",
+      "source": "services/groups/routes/groups/[group_id]/members/[member_id]/put.ts",
+      "category": "api"
+    },
+    {
+      "service": "groups",
+      "method": "GET",
+      "path": "/groups/:group_id/members/connections",
+      "request": "GroupsGETGroupsByGroupIdMembersConnectionsRequest",
+      "response": "GroupsGETGroupsByGroupIdMembersConnectionsResponse",
+      "source": "services/groups/routes/groups/[group_id]/members/connections/get.ts",
+      "category": "api"
+    },
+    {
+      "service": "groups",
+      "method": "GET",
+      "path": "/groups/:group_id/members",
+      "request": "GroupsGETGroupsByGroupIdMembersRequest",
+      "response": "GroupsGETGroupsByGroupIdMembersResult",
+      "source": "services/groups/routes/groups/[group_id]/members/get.ts",
+      "category": "api"
+    },
+    {
+      "service": "groups",
+      "method": "POST",
+      "path": "/groups/:group_id/members",
+      "request": "GroupsPOSTGroupsByGroupIdMembersRequest",
+      "response": "GroupsPOSTGroupsByGroupIdMembersResponse",
+      "source": "services/groups/routes/groups/[group_id]/members/post.js",
+      "category": "api"
+    },
+    {
+      "service": "groups",
+      "method": "GET",
+      "path": "/groups/:group_id/meta",
+      "request": "GroupsGETGroupsByGroupIdMetaRequest",
+      "response": "GroupsGETGroupsByGroupIdMetaResult",
+      "source": "services/groups/routes/groups/[group_id]/meta/get.ts",
+      "category": "api"
+    },
+    {
+      "service": "groups",
+      "method": "PUT",
+      "path": "/groups/:group_id",
+      "request": "GroupsPUTGroupsByGroupIdRequest",
+      "response": "GroupsGETGroupsByGroupIdResult",
+      "source": "services/groups/routes/groups/[group_id]/put.js",
+      "category": "api"
+    },
+    {
+      "service": "groups",
+      "method": "DELETE",
+      "path": "/groups/:group_id/soundpad/items/:item_id",
+      "request": "GroupsDELETEGroupsByGroupIdSoundpadItemsByItemIdRequest",
+      "response": "GroupsDELETEGroupsByGroupIdSoundpadItemsByItemIdResponse",
+      "source": "services/groups/routes/groups/[group_id]/soundpad/items/[item_id]/delete.js",
+      "category": "api"
+    },
+    {
+      "service": "groups",
+      "method": "GET",
+      "path": "/groups/:group_id/soundpad/items/:item_id",
+      "request": "GroupsGETGroupsByGroupIdSoundpadItemsByItemIdRequest",
+      "response": "GroupsGETGroupsByGroupIdSoundpadItemsByItemIdResponse",
+      "source": "services/groups/routes/groups/[group_id]/soundpad/items/[item_id]/get.js",
+      "category": "api"
+    },
+    {
+      "service": "groups",
+      "method": "GET",
+      "path": "/groups/:group_id/soundpad/items",
+      "request": "GroupsGETGroupsByGroupIdSoundpadItemsRequest",
+      "response": "GroupsGETGroupsByGroupIdSoundpadItemsResponse",
+      "source": "services/groups/routes/groups/[group_id]/soundpad/items/get.js",
+      "category": "api"
+    },
+    {
+      "service": "groups",
+      "method": "POST",
+      "path": "/groups/:group_id/soundpad/items",
+      "request": "GroupsPOSTGroupsByGroupIdSoundpadItemsRequest",
+      "response": "GroupsPOSTGroupsByGroupIdSoundpadItemsResponse",
+      "source": "services/groups/routes/groups/[group_id]/soundpad/items/post.js",
+      "category": "api"
+    },
+    {
+      "service": "groups",
+      "method": "POST",
+      "path": "/groups/create",
+      "request": "GroupsPOSTGroupsCreateRequest",
+      "response": "GroupsPOSTGroupsCreateResponse",
+      "source": "services/groups/routes/groups/create/post.js",
+      "category": "api"
+    },
+    {
+      "service": "groups",
+      "method": "GET",
+      "path": "/groups/my",
+      "request": "GroupsGETGroupsMyRequest",
+      "response": "GroupsGETGroupsMyResult",
+      "source": "services/groups/routes/groups/my/get.js",
+      "category": "api"
+    },
+    {
+      "service": "groups",
+      "method": "PUT",
+      "path": "/groups/my/sort",
+      "request": "GroupsPUTGroupsMySortRequest",
+      "response": "GroupsPUTGroupsMySortResponse",
+      "source": "services/groups/routes/groups/my/sort/put.js",
+      "category": "api"
+    },
+    {
+      "service": "main",
+      "method": "POST",
+      "path": "/activity/client",
+      "request": "MainPOSTActivityClientRequest",
+      "response": "AuthPOSTRegisterResultUser",
+      "source": "services/main/routes/activity/client/post.js",
+      "category": "api"
+    },
+    {
+      "service": "main",
+      "method": "GET",
+      "path": "/activity/recent",
+      "request": "MainGETActivityRecentRequest",
+      "response": "MainGETActivityRecentResponse",
+      "source": "services/main/routes/activity/recent/get.js",
+      "category": "api"
+    },
+    {
+      "service": "main",
+      "method": "GET",
+      "path": "/badges/:ids",
+      "request": "MainGETBadgesByIdsRequest",
+      "response": "MainGETBadgesByIdsResponse",
+      "source": "services/main/routes/badges/[ids]/get.js",
+      "category": "api"
+    },
+    {
+      "service": "main",
+      "method": "DELETE",
+      "path": "/bots/:bot_id",
+      "request": "MainDELETEBotsByBotIdRequest",
+      "response": "MainDELETEBotsByBotIdResult",
+      "source": "services/main/routes/bots/[bot_id]/delete.js",
+      "category": "api"
+    },
+    {
+      "service": "main",
+      "method": "GET",
+      "path": "/bots/:bot_id",
+      "request": "MainGETBotsByBotIdRequest",
+      "response": "MainGETBotsByBotIdResult",
+      "source": "services/main/routes/bots/[bot_id]/get.js",
+      "category": "api"
+    },
+    {
+      "service": "main",
+      "method": "PATCH",
+      "path": "/bots/:bot_id",
+      "request": "MainPATCHBotsByBotIdRequest",
+      "response": "AuthPOSTRegisterResultUser",
+      "source": "services/main/routes/bots/[bot_id]/patch.js",
+      "category": "api"
+    },
+    {
+      "service": "main",
+      "method": "POST",
+      "path": "/bots/create",
+      "request": "MainPOSTBotsCreateRequest",
+      "response": "MainPOSTBotsCreateResult",
+      "source": "services/main/routes/bots/create/post.js",
+      "category": "api"
+    },
+    {
+      "service": "main",
+      "method": "GET",
+      "path": "/bots/my",
+      "request": "MainGETBotsMyRequest",
+      "response": "MainGETBotsMyResponse",
+      "source": "services/main/routes/bots/my/get.js",
+      "category": "api"
+    },
+    {
+      "service": "main",
+      "method": "GET",
+      "path": "/config/global",
+      "request": "MainGETConfigGlobalRequest",
+      "response": "MainGETConfigGlobalResponse",
+      "source": "services/main/routes/config/global/get.js",
+      "category": "api"
+    },
+    {
+      "service": "main",
+      "method": "GET",
+      "path": "/decorations/:ids",
+      "request": "MainGETDecorationsByIdsRequest",
+      "response": "MainGETDecorationsByIdsResponse",
+      "source": "services/main/routes/decorations/[ids]/get.js",
+      "category": "api"
+    },
+    {
+      "service": "main",
+      "method": "GET",
+      "path": "/events/:event_id/data",
+      "request": "MainGETEventsByEventIdDataRequest",
+      "response": "AuthPOSTRegisterResultUser",
+      "source": "services/main/routes/events/[event_id]/data/get.js",
+      "category": "api"
+    },
+    {
+      "service": "main",
+      "method": "GET",
+      "path": "/expressions/gif/fav",
+      "request": "MainGETExpressionsGifFavRequest",
+      "response": "MainGETExpressionsGifFavResponse",
+      "source": "services/main/routes/expressions/gif/fav/get.ts",
+      "category": "api"
+    },
+    {
+      "service": "main",
+      "method": "POST",
+      "path": "/expressions/gif/fav",
+      "request": "MainPOSTExpressionsGifFavRequest",
+      "response": "MainPOSTExpressionsGifFavResponse",
+      "source": "services/main/routes/expressions/gif/fav/post.ts",
+      "category": "api"
+    },
+    {
+      "service": "main",
+      "method": "GET",
+      "path": "/expressions/gif/search",
+      "request": "MainGETExpressionsGifSearchRequest",
+      "response": "MainGETExpressionsGifSearchResponse",
+      "source": "services/main/routes/expressions/gif/search/get.ts",
+      "category": "api"
+    },
+    {
+      "service": "main",
+      "method": "GET",
+      "path": "/featured/events",
+      "request": "MainGETFeaturedEventsRequest",
+      "response": "MainGETFeaturedEventsResponse",
+      "source": "services/main/routes/featured/events/get.js",
+      "category": "api"
+    },
+    {
+      "service": "main",
+      "method": "GET",
+      "path": "/featured/wallpapers",
+      "request": "MainGETFeaturedWallpapersRequest",
+      "response": "MainGETFeaturedWallpapersResponse",
+      "source": "services/main/routes/featured/wallpapers/get.js",
+      "category": "api"
+    },
+    {
+      "service": "main",
+      "method": "POST",
+      "path": "/flags/ack/:flag_id",
+      "request": "MainPOSTFlagsAckByFlagIdRequest",
+      "response": "MainPOSTFlagsAckByFlagIdResult",
+      "source": "services/main/routes/flags/ack/[flag_id]/post.js",
+      "category": "api"
+    },
+    {
+      "service": "main",
+      "method": "GET",
+      "path": "/limits",
+      "request": "MainGETLimitsRequest",
+      "response": "MainGETLimitsResponse",
+      "source": "services/main/routes/limits/get.js",
+      "category": "api"
+    },
+    {
+      "service": "main",
+      "method": "GET",
+      "path": "/main",
+      "request": "MainGETMainRequest",
+      "response": "MainGETMainResponse",
+      "source": "services/main/routes/main/get.js",
+      "category": "api"
+    },
+    {
+      "service": "main",
+      "method": "GET",
+      "path": "/main/query_url",
+      "request": "MainGETMainQueryUrlRequest",
+      "response": "MainGETMainQueryUrlResponse",
+      "source": "services/main/routes/main/query_url/get.js",
+      "category": "api"
+    },
+    {
+      "service": "main",
+      "method": "GET",
+      "path": "/main/turnstile",
+      "request": "MainGETMainTurnstileRequest",
+      "response": "MainGETMainTurnstileResult",
+      "source": "services/main/routes/main/turnstile/get.js",
+      "category": "api"
+    },
+    {
+      "service": "main",
+      "method": "GET",
+      "path": "/main/users_connected",
+      "request": "MainGETMainUsersConnectedRequest",
+      "response": "MainGETMainUsersConnectedResponse",
+      "source": "services/main/routes/main/users_connected/get.js",
+      "category": "api"
+    },
+    {
+      "service": "main",
+      "method": "DELETE",
+      "path": "/nfc/tag/id/:id",
+      "request": "MainDELETENfcTagIdByIdRequest",
+      "response": "MainDELETENfcTagIdByIdResponse",
+      "source": "services/main/routes/nfc/tag/id/[id]/delete.js",
+      "category": "api"
+    },
+    {
+      "service": "main",
+      "method": "GET",
+      "path": "/nfc/tag/id/:id/execute",
+      "request": "MainGETNfcTagIdByIdExecuteRequest",
+      "response": "MainGETNfcTagIdByIdExecuteResponse",
+      "source": "services/main/routes/nfc/tag/id/[id]/execute/get.js",
+      "category": "api"
+    },
+    {
+      "service": "main",
+      "method": "GET",
+      "path": "/nfc/tag/id/:id",
+      "request": "MainGETNfcTagIdByIdRequest",
+      "response": "MainGETNfcTagIdByIdResponse",
+      "source": "services/main/routes/nfc/tag/id/[id]/get.js",
+      "category": "api"
+    },
+    {
+      "service": "main",
+      "method": "GET",
+      "path": "/nfc/tag/my",
+      "request": "MainGETNfcTagMyRequest",
+      "response": "MainGETNfcTagMyResponse",
+      "source": "services/main/routes/nfc/tag/my/get.js",
+      "category": "api"
+    },
+    {
+      "service": "main",
+      "method": "POST",
+      "path": "/nfc/tag/register/:serial",
+      "request": "MainPOSTNfcTagRegisterBySerialRequest",
+      "response": "MainPOSTNfcTagRegisterBySerialResponse",
+      "source": "services/main/routes/nfc/tag/register/[serial]/post.js",
+      "category": "api"
+    },
+    {
+      "service": "main",
+      "method": "GET",
+      "path": "/nfc/tag/serial",
+      "request": "MainGETNfcTagSerialRequest",
+      "response": "MainGETNfcTagSerialResponse",
+      "source": "services/main/routes/nfc/tag/serial/get.js",
+      "category": "api"
+    },
+    {
+      "service": "main",
+      "method": "GET",
+      "path": "/ping",
+      "request": "MainGETPingRequest",
+      "response": "MainGETPingResponse",
+      "source": "services/main/routes/ping/get.js",
+      "category": "api"
+    },
+    {
+      "service": "main",
+      "method": "GET",
+      "path": "/repo/auto-update/mobile",
+      "request": "MainGETRepoAutoUpdateMobileRequest",
+      "response": "MainGETRepoAutoUpdateMobileResponse",
+      "source": "services/main/routes/repo/auto-update/mobile/get.js",
+      "category": "api"
+    },
+    {
+      "service": "main",
+      "method": "GET",
+      "path": "/repo/releases-notes",
+      "request": "MainGETRepoReleasesNotesRequest",
+      "response": "MainGETRepoReleasesNotesResponse",
+      "source": "services/main/routes/repo/releases-notes/get.js",
+      "category": "api"
+    },
+    {
+      "service": "main",
+      "method": "GET",
+      "path": "/stickers/:id",
+      "request": "MainGETStickersByIdRequest",
+      "response": "AuthGETOauthAppsByClientIdResult",
+      "source": "services/main/routes/stickers/[id]/get.js",
+      "category": "api"
+    },
+    {
+      "service": "main",
+      "method": "POST",
+      "path": "/stickers/create",
+      "request": "MainPOSTStickersCreateRequest",
+      "response": "AuthPOSTRegisterResultUser",
+      "source": "services/main/routes/stickers/create/post.js",
+      "category": "api"
+    },
+    {
+      "service": "main",
+      "method": "PUT",
+      "path": "/stickers/packs/:id",
+      "request": "MainPUTStickersPacksByIdRequest",
+      "response": "AuthPOSTRegisterResultUser",
+      "source": "services/main/routes/stickers/packs/[id]/put.js",
+      "category": "api"
+    },
+    {
+      "service": "main",
+      "method": "POST",
+      "path": "/stickers/packs/create",
+      "request": "MainPOSTStickersPacksCreateRequest",
+      "response": "AuthPOSTRegisterResultUser",
+      "source": "services/main/routes/stickers/packs/create/post.js",
+      "category": "api"
+    },
+    {
+      "service": "marketplace",
+      "method": "GET",
+      "path": "/extensions/:user_id/:pkg",
+      "request": "MarketplaceGETExtensionsByUserIdByPkgRequest",
+      "response": "AuthPOSTRegisterResultUser",
+      "source": "services/marketplace/routes/extensions/[user_id]/[pkg]/get.js",
+      "category": "api"
+    },
+    {
+      "service": "marketplace",
+      "method": "GET",
+      "path": "/extensions/list",
+      "request": "MarketplaceGETExtensionsListRequest",
+      "response": "MarketplaceGETExtensionsListResult",
+      "source": "services/marketplace/routes/extensions/list/get.js",
+      "category": "api"
+    },
+    {
+      "service": "marketplace",
+      "method": "PUT",
+      "path": "/extensions/publish",
+      "request": "MarketplacePUTExtensionsPublishRequest",
+      "response": "AuthPOSTRegisterResultUser",
+      "source": "services/marketplace/routes/extensions/publish/put.js",
+      "category": "api"
+    },
+    {
+      "service": "music",
+      "method": "GET",
+      "path": "/music/feed",
+      "request": "MusicGETMusicFeedRequest",
+      "response": "MusicGETMusicFeedResult",
+      "source": "services/music/routes/music/feed/get.js",
+      "category": "api"
+    },
+    {
+      "service": "music",
+      "method": "GET",
+      "path": "/music/my/library/favorite",
+      "request": "MusicGETMusicMyLibraryFavoriteRequest",
+      "response": "MusicGETMusicMyLibraryFavoriteResponse",
+      "source": "services/music/routes/music/my/library/favorite/get.js",
+      "category": "api"
+    },
+    {
+      "service": "music",
+      "method": "PUT",
+      "path": "/music/my/library/favorite",
+      "request": "MusicPUTMusicMyLibraryFavoriteRequest",
+      "response": "MusicPUTMusicMyLibraryFavoriteResult",
+      "source": "services/music/routes/music/my/library/favorite/put.js",
+      "category": "api"
+    },
+    {
+      "service": "music",
+      "method": "GET",
+      "path": "/music/my/library",
+      "request": "MusicGETMusicMyLibraryRequest",
+      "response": "MusicGETMusicMyLibraryResponse",
+      "source": "services/music/routes/music/my/library/get.js",
+      "category": "api"
+    },
+    {
+      "service": "music",
+      "method": "GET",
+      "path": "/music/my/releases",
+      "request": "MusicGETMusicMyReleasesRequest",
+      "response": "MusicGETMusicMyReleasesResult",
+      "source": "services/music/routes/music/my/releases/get.js",
+      "category": "api"
+    },
+    {
+      "service": "music",
+      "method": "GET",
+      "path": "/music/radio/:radio_id",
+      "request": "MusicGETMusicRadioByRadioIdRequest",
+      "response": "MusicGETMusicRadioByRadioIdResponse",
+      "source": "services/music/routes/music/radio/[radio_id]/get.ts",
+      "category": "api"
+    },
+    {
+      "service": "music",
+      "method": "GET",
+      "path": "/music/radio/list",
+      "request": "MusicGETMusicRadioListRequest",
+      "response": "MusicGETMusicRadioListResponse",
+      "source": "services/music/routes/music/radio/list/get.js",
+      "category": "api"
+    },
+    {
+      "service": "music",
+      "method": "GET",
+      "path": "/music/radio/sse/:channel_id",
+      "request": "MusicGETMusicRadioSseByChannelIdRequest",
+      "response": "MusicGETMusicRadioSseByChannelIdResponse",
+      "source": "services/music/routes/music/radio/sse/[channel_id]/get.js",
+      "category": "api"
+    },
+    {
+      "service": "music",
+      "method": "GET",
+      "path": "/music/radio/trendings",
+      "request": "MusicGETMusicRadioTrendingsRequest",
+      "response": "MusicGETMusicRadioTrendingsResult",
+      "source": "services/music/routes/music/radio/trendings/get.js",
+      "category": "api"
+    },
+    {
+      "service": "music",
+      "method": "POST",
+      "path": "/music/radio/webhook",
+      "request": "MusicPOSTMusicRadioWebhookRequest",
+      "response": "MusicPOSTMusicRadioWebhookResult",
+      "source": "services/music/routes/music/radio/webhook/post.ts",
+      "category": "api"
+    },
+    {
+      "service": "music",
+      "method": "GET",
+      "path": "/music/recently",
+      "request": "MusicGETMusicRecentlyRequest",
+      "response": "MusicGETMusicRecentlyResponse",
+      "source": "services/music/routes/music/recently/get.js",
+      "category": "api"
+    },
+    {
+      "service": "music",
+      "method": "GET",
+      "path": "/music/releases/:release_id/data",
+      "request": "MusicGETMusicReleasesByReleaseIdDataRequest",
+      "response": "MusicGETMusicReleasesByReleaseIdDataResponse",
+      "source": "services/music/routes/music/releases/[release_id]/data/get.js",
+      "category": "api"
+    },
+    {
+      "service": "music",
+      "method": "DELETE",
+      "path": "/music/releases/:release_id",
+      "request": "MusicDELETEMusicReleasesByReleaseIdRequest",
+      "response": "MusicDELETEMusicReleasesByReleaseIdResponse",
+      "source": "services/music/routes/music/releases/[release_id]/delete.js",
+      "category": "api"
+    },
+    {
+      "service": "music",
+      "method": "GET",
+      "path": "/music/releases",
+      "request": "MusicGETMusicReleasesRequest",
+      "response": "MusicGETMusicReleasesResult",
+      "source": "services/music/routes/music/releases/get.js",
+      "category": "api"
+    },
+    {
+      "service": "music",
+      "method": "PUT",
+      "path": "/music/releases",
+      "request": "MusicPUTMusicReleasesRequest",
+      "response": "MusicPUTMusicReleasesResponse",
+      "source": "services/music/routes/music/releases/put.js",
+      "category": "api"
+    },
+    {
+      "service": "music",
+      "method": "GET",
+      "path": "/music/tracks/:track_id/data",
+      "request": "MusicGETMusicTracksByTrackIdDataRequest",
+      "response": "MusicGETMusicTracksByTrackIdDataResponse",
+      "source": "services/music/routes/music/tracks/[track_id]/data/get.js",
+      "category": "api"
+    },
+    {
+      "service": "music",
+      "method": "DELETE",
+      "path": "/music/tracks/:track_id",
+      "request": "MusicDELETEMusicTracksByTrackIdRequest",
+      "response": "MusicDELETEMusicTracksByTrackIdResult",
+      "source": "services/music/routes/music/tracks/[track_id]/delete.js",
+      "category": "api"
+    },
+    {
+      "service": "music",
+      "method": "GET",
+      "path": "/music/tracks/:track_id/lyrics",
+      "request": "MusicGETMusicTracksByTrackIdLyricsRequest",
+      "response": "AuthGETOauthAppsByClientIdResult",
+      "source": "services/music/routes/music/tracks/[track_id]/lyrics/get.js",
+      "category": "api"
+    },
+    {
+      "service": "music",
+      "method": "PUT",
+      "path": "/music/tracks/:track_id/lyrics",
+      "request": "MusicPUTMusicTracksByTrackIdLyricsRequest",
+      "response": "AuthPOSTRegisterResultUser",
+      "source": "services/music/routes/music/tracks/[track_id]/lyrics/put.js",
+      "category": "api"
+    },
+    {
+      "service": "music",
+      "method": "GET",
+      "path": "/music/tracks/:track_id/override",
+      "request": "MusicGETMusicTracksByTrackIdOverrideRequest",
+      "response": "MusicGETMusicTracksByTrackIdOverrideResponse",
+      "source": "services/music/routes/music/tracks/[track_id]/override/get.js",
+      "category": "api"
+    },
+    {
+      "service": "music",
+      "method": "PUT",
+      "path": "/music/tracks/:track_id/override",
+      "request": "MusicPUTMusicTracksByTrackIdOverrideRequest",
+      "response": "MusicPUTMusicTracksByTrackIdOverrideResponse",
+      "source": "services/music/routes/music/tracks/[track_id]/override/put.js",
+      "category": "api"
+    },
+    {
+      "service": "music",
+      "method": "GET",
+      "path": "/music/tracks/:track_id/timings",
+      "request": "MusicGETMusicTracksByTrackIdTimingsRequest",
+      "response": "MusicGETMusicTracksByTrackIdTimingsResponse",
+      "source": "services/music/routes/music/tracks/[track_id]/timings/get.js",
+      "category": "api"
+    },
+    {
+      "service": "music",
+      "method": "GET",
+      "path": "/music/tracks",
+      "request": "MusicGETMusicTracksRequest",
+      "response": "MusicGETMusicTracksResult",
+      "source": "services/music/routes/music/tracks/get.js",
+      "category": "api"
+    },
+    {
+      "service": "music",
+      "method": "PUT",
+      "path": "/music/tracks",
+      "request": "MusicPUTMusicTracksRequest",
+      "response": "MusicPUTMusicTracksResponse",
+      "source": "services/music/routes/music/tracks/put.js",
+      "category": "api"
+    },
+    {
+      "service": "notifications",
+      "method": "POST",
+      "path": "/notifications/broadcast",
+      "request": "NotificationsPOSTNotificationsBroadcastRequest",
+      "response": "NotificationsPOSTNotificationsBroadcastResponse",
+      "source": "services/notifications/routes/notifications/broadcast/post.js",
+      "category": "api"
+    },
+    {
+      "service": "posts",
+      "method": "GET",
+      "path": "/posts/:post_id/data",
+      "request": "PostsGETPostsByPostIdDataRequest",
+      "response": "PostsGETPostsByPostIdDataResponse",
+      "source": "services/posts/routes/posts/[post_id]/data/get.js",
+      "category": "api"
+    },
+    {
+      "service": "posts",
+      "method": "DELETE",
+      "path": "/posts/:post_id",
+      "request": "PostsDELETEPostsByPostIdRequest",
+      "response": "PostsDELETEPostsByPostIdResult",
+      "source": "services/posts/routes/posts/[post_id]/delete.js",
+      "category": "api"
+    },
+    {
+      "service": "posts",
+      "method": "GET",
+      "path": "/posts/:post_id/replies",
+      "request": "PostsGETPostsByPostIdRepliesRequest",
+      "response": "PostsGETPostsByPostIdRepliesResult",
+      "source": "services/posts/routes/posts/[post_id]/replies/get.js",
+      "category": "api"
+    },
+    {
+      "service": "posts",
+      "method": "POST",
+      "path": "/posts/:post_id/toggle_like",
+      "request": "PostsPOSTPostsByPostIdToggleLikeRequest",
+      "response": "PostsPOSTPostsByPostIdToggleLikeResult",
+      "source": "services/posts/routes/posts/[post_id]/toggle_like/post.js",
+      "category": "api"
+    },
+    {
+      "service": "posts",
+      "method": "POST",
+      "path": "/posts/:post_id/toggle_save",
+      "request": "PostsPOSTPostsByPostIdToggleSaveRequest",
+      "response": "PostsPOSTPostsByPostIdToggleSaveResult",
+      "source": "services/posts/routes/posts/[post_id]/toggle_save/post.js",
+      "category": "api"
+    },
+    {
+      "service": "posts",
+      "method": "PUT",
+      "path": "/posts/:post_id/update",
+      "request": "PostsPUTPostsByPostIdUpdateRequest",
+      "response": "PostsPUTPostsByPostIdUpdateResponse",
+      "source": "services/posts/routes/posts/[post_id]/update/put.js",
+      "category": "api"
+    },
+    {
+      "service": "posts",
+      "method": "DELETE",
+      "path": "/posts/:post_id/vote_poll/:option_id",
+      "request": "PostsDELETEPostsByPostIdVotePollByOptionIdRequest",
+      "response": "PostsDELETEPostsByPostIdVotePollByOptionIdResponse",
+      "source": "services/posts/routes/posts/[post_id]/vote_poll/[option_id]/delete.js",
+      "category": "api"
+    },
+    {
+      "service": "posts",
+      "method": "POST",
+      "path": "/posts/:post_id/vote_poll/:option_id",
+      "request": "PostsPOSTPostsByPostIdVotePollByOptionIdRequest",
+      "response": "PostsPOSTPostsByPostIdVotePollByOptionIdResult",
+      "source": "services/posts/routes/posts/[post_id]/vote_poll/[option_id]/post.js",
+      "category": "api"
+    },
+    {
+      "service": "posts",
+      "method": "GET",
+      "path": "/posts/feed/global",
+      "request": "PostsGETPostsFeedGlobalRequest",
+      "response": "PostsGETPostsFeedGlobalResponse",
+      "source": "services/posts/routes/posts/feed/global/get.js",
+      "category": "api"
+    },
+    {
+      "service": "posts",
+      "method": "GET",
+      "path": "/posts/feed/timeline",
+      "request": "PostsGETPostsFeedTimelineRequest",
+      "response": "PostsGETPostsFeedTimelineResponse",
+      "source": "services/posts/routes/posts/feed/timeline/get.js",
+      "category": "api"
+    },
+    {
+      "service": "posts",
+      "method": "GET",
+      "path": "/posts/liked",
+      "request": "PostsGETPostsLikedRequest",
+      "response": "PostsGETPostsLikedResponse",
+      "source": "services/posts/routes/posts/liked/get.js",
+      "category": "api"
+    },
+    {
+      "service": "posts",
+      "method": "POST",
+      "path": "/posts/new",
+      "request": "PostsPOSTPostsNewRequest",
+      "response": "AuthPOSTRegisterResultUser",
+      "source": "services/posts/routes/posts/new/post.js",
+      "category": "api"
+    },
+    {
+      "service": "posts",
+      "method": "GET",
+      "path": "/posts/saved",
+      "request": "PostsGETPostsSavedRequest",
+      "response": "PostsGETPostsSavedResponse",
+      "source": "services/posts/routes/posts/saved/get.js",
+      "category": "api"
+    },
+    {
+      "service": "posts",
+      "method": "GET",
+      "path": "/posts/trending/:trending",
+      "request": "PostsGETPostsTrendingByTrendingRequest",
+      "response": "PostsGETPostsTrendingByTrendingResponse",
+      "source": "services/posts/routes/posts/trending/[trending]/get.js",
+      "category": "api"
+    },
+    {
+      "service": "posts",
+      "method": "GET",
+      "path": "/posts/trendings",
+      "request": "PostsGETPostsTrendingsRequest",
+      "response": "PostsGETPostsTrendingsResponse",
+      "source": "services/posts/routes/posts/trendings/get.js",
+      "category": "api"
+    },
+    {
+      "service": "posts",
+      "method": "GET",
+      "path": "/posts/user/:user_id",
+      "request": "PostsGETPostsUserByUserIdRequest",
+      "response": "PostsGETPostsUserByUserIdResponse",
+      "source": "services/posts/routes/posts/user/[user_id]/get.js",
+      "category": "api"
+    },
+    {
+      "service": "rtc",
+      "method": "POST",
+      "path": "/rtc/groups/:group_id/:channel_id/:user_id/disconnect",
+      "request": "RtcPOSTRtcGroupsByGroupIdByChannelIdByUserIdDisconnectRequest",
+      "response": "RtcPOSTRtcGroupsByGroupIdByChannelIdByUserIdDisconnectResult",
+      "source": "services/rtc/routes/rtc/groups/[group_id]/[channel_id]/[user_id]/disconnect/post.js",
+      "category": "api"
+    },
+    {
+      "service": "rtc",
+      "method": "GET",
+      "path": "/rtc/groups/:group_id/state",
+      "request": "RtcGETRtcGroupsByGroupIdStateRequest",
+      "response": "RtcGETRtcGroupsByGroupIdStateResponse",
+      "source": "services/rtc/routes/rtc/groups/[group_id]/state/get.ts",
+      "category": "api"
+    },
+    {
+      "service": "search",
+      "method": "GET",
+      "path": "/search",
+      "request": "SearchGETSearchRequest",
+      "response": "SearchGETSearchResponse",
+      "source": "services/search/routes/search/get.js",
+      "category": "api"
+    },
+    {
+      "service": "users",
+      "method": "GET",
+      "path": "/users/:user_id/avatar",
+      "request": "UsersGETUsersByUserIdAvatarRequest",
+      "response": "UsersGETUsersByUserIdAvatarResponse",
+      "source": "services/users/routes/users/[user_id]/avatar/get.js",
+      "category": "api"
+    },
+    {
+      "service": "users",
+      "method": "GET",
+      "path": "/users/:user_id/badges",
+      "request": "UsersGETUsersByUserIdBadgesRequest",
+      "response": "UsersGETUsersByUserIdBadgesResponse",
+      "source": "services/users/routes/users/[user_id]/badges/get.js",
+      "category": "api"
+    },
+    {
+      "service": "users",
+      "method": "GET",
+      "path": "/users/:user_id/data",
+      "request": "UsersGETUsersByUserIdDataRequest",
+      "response": "UsersGETUsersByUserIdDataResponse",
+      "source": "services/users/routes/users/[user_id]/data/get.js",
+      "category": "api"
+    },
+    {
+      "service": "users",
+      "method": "GET",
+      "path": "/users/:user_id/decorations",
+      "request": "UsersGETUsersByUserIdDecorationsRequest",
+      "response": "UsersGETUsersByUserIdDecorationsResponse",
+      "source": "services/users/routes/users/[user_id]/decorations/get.ts",
+      "category": "api"
+    },
+    {
+      "service": "users",
+      "method": "POST",
+      "path": "/users/:user_id/follow",
+      "request": "UsersPOSTUsersByUserIdFollowRequest",
+      "response": "UsersPOSTUsersByUserIdFollowResult",
+      "source": "services/users/routes/users/[user_id]/follow/post.js",
+      "category": "api"
+    },
+    {
+      "service": "users",
+      "method": "GET",
+      "path": "/users/:user_id/followers",
+      "request": "UsersGETUsersByUserIdFollowersRequest",
+      "response": "UsersGETUsersByUserIdFollowersResponse",
+      "source": "services/users/routes/users/[user_id]/followers/get.js",
+      "category": "api"
+    },
+    {
+      "service": "users",
+      "method": "GET",
+      "path": "/users/:user_id/is-connected",
+      "request": "UsersGETUsersByUserIdIsConnectedRequest",
+      "response": "UsersGETUsersByUserIdIsConnectedResponse",
+      "source": "services/users/routes/users/[user_id]/is-connected/get.js",
+      "category": "api"
+    },
+    {
+      "service": "users",
+      "method": "GET",
+      "path": "/users/:user_id/resolve-user_id",
+      "request": "UsersGETUsersByUserIdResolveUserIdRequest",
+      "response": "UsersGETUsersByUserIdResolveUserIdResult",
+      "source": "services/users/routes/users/[user_id]/resolve-user_id/get.js",
+      "category": "api"
+    },
+    {
+      "service": "users",
+      "method": "GET",
+      "path": "/users/:user_id/roles",
+      "request": "UsersGETUsersByUserIdRolesRequest",
+      "response": "UsersGETUsersByUserIdRolesResponse",
+      "source": "services/users/routes/users/[user_id]/roles/get.js",
+      "category": "api"
+    },
+    {
+      "service": "users",
+      "method": "POST",
+      "path": "/users/check-versions",
+      "request": "UsersPOSTUsersCheckVersionsRequest",
+      "response": "UsersPOSTUsersCheckVersionsResponse",
+      "source": "services/users/routes/users/check-versions/post.ts",
+      "category": "api"
+    },
+    {
+      "service": "users",
+      "method": "DELETE",
+      "path": "/users/self/2fa",
+      "request": "UsersDELETEUsersSelf2faRequest",
+      "response": "UsersDELETEUsersSelf2faResult",
+      "source": "services/users/routes/users/self/2fa/delete.ts",
+      "category": "api"
+    },
+    {
+      "service": "users",
+      "method": "POST",
+      "path": "/users/self/2fa/enable",
+      "request": "UsersPOSTUsersSelf2faEnableRequest",
+      "response": "UsersPOSTUsersSelf2faEnableResult",
+      "source": "services/users/routes/users/self/2fa/enable/post.ts",
+      "category": "api"
+    },
+    {
+      "service": "users",
+      "method": "GET",
+      "path": "/users/self/2fa/generate",
+      "request": "UsersGETUsersSelf2faGenerateRequest",
+      "response": "UsersGETUsersSelf2faGenerateResult",
+      "source": "services/users/routes/users/self/2fa/generate/get.ts",
+      "category": "api"
+    },
+    {
+      "service": "users",
+      "method": "GET",
+      "path": "/users/self/config",
+      "request": "UsersGETUsersSelfConfigRequest",
+      "response": "UsersGETUsersSelfConfigResponse",
+      "source": "services/users/routes/users/self/config/get.js",
+      "category": "api"
+    },
+    {
+      "service": "users",
+      "method": "PUT",
+      "path": "/users/self/config",
+      "request": "UsersPUTUsersSelfConfigRequest",
+      "response": "UsersPUTUsersSelfConfigResponse",
+      "source": "services/users/routes/users/self/config/put.js",
+      "category": "api"
+    },
+    {
+      "service": "users",
+      "method": "PUT",
+      "path": "/users/self/data",
+      "request": "UsersPUTUsersSelfDataRequest",
+      "response": "AuthPOSTRegisterResultUser",
+      "source": "services/users/routes/users/self/data/put.js",
+      "category": "api"
+    },
+    {
+      "service": "users",
+      "method": "GET",
+      "path": "/users/self/fav-stickers-set",
+      "request": "UsersGETUsersSelfFavStickersSetRequest",
+      "response": "UsersGETUsersSelfFavStickersSetResult",
+      "source": "services/users/routes/users/self/fav-stickers-set/get.js",
+      "category": "api"
+    },
+    {
+      "service": "users",
+      "method": "GET",
+      "path": "/users/self",
+      "request": "UsersGETUsersSelfRequest",
+      "response": "UsersGETUsersSelfResponse",
+      "source": "services/users/routes/users/self/get.js",
+      "category": "api"
+    },
+    {
+      "service": "users",
+      "method": "GET",
+      "path": "/users/self/roles",
+      "request": "UsersGETUsersSelfRolesRequest",
+      "response": "UsersGETUsersSelfRolesResponse",
+      "source": "services/users/routes/users/self/roles/get.js",
+      "category": "api"
+    }
+  ],
+  "wsEvents": [
+    {
+      "service": "chats",
+      "method": "WS",
+      "path": "channel:ack",
+      "request": "ChatsWSChannelByAckRequest",
+      "response": "ChatsWSChannelByAckResponse",
+      "source": "services/chats/ws_routes/channel/ack.ts",
+      "category": "api"
+    },
+    {
+      "service": "chats",
+      "method": "WS",
+      "path": "channel:message:delete",
+      "request": "ChatsWSChannelByMessageByDeleteRequest",
+      "response": "ChatsWSChannelByMessageByDeleteResponse",
+      "source": "services/chats/ws_routes/channel/message/delete.ts",
+      "category": "api"
+    },
+    {
+      "service": "chats",
+      "method": "WS",
+      "path": "channel:message:update",
+      "request": "ChatsWSChannelByMessageByUpdateRequest",
+      "response": "ChatsWSChannelByMessageByUpdateResponse",
+      "source": "services/chats/ws_routes/channel/message/update.ts",
+      "category": "api"
+    },
+    {
+      "service": "chats",
+      "method": "WS",
+      "path": "channel:send",
+      "request": "ChatsWSChannelBySendPayload",
+      "response": "ChatsWSChannelBySendResponse",
+      "source": "services/chats/ws_routes/channel/send.ts",
+      "category": "api"
+    },
+    {
+      "service": "chats",
+      "method": "WS",
+      "path": "channel:subscribe",
+      "request": "ChatsWSChannelBySubscribePayload",
+      "response": "ChatsWSChannelBySubscribeResponse",
+      "source": "services/chats/ws_routes/channel/subscribe.ts",
+      "category": "api"
+    },
+    {
+      "service": "chats",
+      "method": "WS",
+      "path": "channel:typing",
+      "request": "ChatsWSChannelByTypingPayload",
+      "response": "ChatsWSChannelByTypingResponse",
+      "source": "services/chats/ws_routes/channel/typing.ts",
+      "category": "api"
+    },
+    {
+      "service": "chats",
+      "method": "WS",
+      "path": "channel:unsubscribe",
+      "request": "ChatsWSChannelByUnsubscribePayload",
+      "response": "ChatsWSChannelByUnsubscribeResponse",
+      "source": "services/chats/ws_routes/channel/unsubscribe.ts",
+      "category": "api"
+    },
+    {
+      "service": "chats",
+      "method": "WS",
+      "path": "dm:ack",
+      "request": "ChatsWSDmByAckRequest",
+      "response": "ChatsWSDmByAckResponse",
+      "source": "services/chats/ws_routes/dm/ack.ts",
+      "category": "api"
+    },
+    {
+      "service": "chats",
+      "method": "WS",
+      "path": "dm:message:delete",
+      "request": "ChatsWSDmByMessageByDeleteRequest",
+      "response": "ChatsWSDmByMessageByDeleteResponse",
+      "source": "services/chats/ws_routes/dm/message/delete.ts",
+      "category": "api"
+    },
+    {
+      "service": "chats",
+      "method": "WS",
+      "path": "dm:message:update",
+      "request": "ChatsWSDmByMessageByUpdateRequest",
+      "response": "ChatsWSDmByMessageByUpdateResponse",
+      "source": "services/chats/ws_routes/dm/message/update.ts",
+      "category": "api"
+    },
+    {
+      "service": "chats",
+      "method": "WS",
+      "path": "dm:send",
+      "request": "ChatsWSDmBySendRequest",
+      "response": "ChatsWSDmBySendResponse",
+      "source": "services/chats/ws_routes/dm/send.ts",
+      "category": "api"
+    },
+    {
+      "service": "chats",
+      "method": "WS",
+      "path": "dm:subscribe",
+      "request": "ChatsWSDmBySubscribePayload",
+      "response": "ChatsWSDmBySubscribeResponse",
+      "source": "services/chats/ws_routes/dm/subscribe.ts",
+      "category": "api"
+    },
+    {
+      "service": "chats",
+      "method": "WS",
+      "path": "dm:typing",
+      "request": "ChatsWSDmByTypingPayload",
+      "response": "ChatsWSDmByTypingResponse",
+      "source": "services/chats/ws_routes/dm/typing.ts",
+      "category": "api"
+    },
+    {
+      "service": "chats",
+      "method": "WS",
+      "path": "dm:unsubscribe",
+      "request": "ChatsWSDmByUnsubscribePayload",
+      "response": "ChatsWSDmByUnsubscribeResponse",
+      "source": "services/chats/ws_routes/dm/unsubscribe.ts",
+      "category": "api"
+    },
+    {
+      "service": "main",
+      "method": "WS",
+      "path": "main:findClientsByUserId",
+      "request": "MainWSMainByFindClientsByUserIdRequest",
+      "response": "MainWSMainByFindClientsByUserIdResponse",
+      "source": "services/main/ws_routes/main/findClientsByUserId.js",
+      "category": "api"
+    },
+    {
+      "service": "main",
+      "method": "WS",
+      "path": "main:test",
+      "request": "MainWSMainByTestRequest",
+      "response": "MainWSMainByTestResponse",
+      "source": "services/main/ws_routes/main/test.js",
+      "category": "api"
+    },
+    {
+      "service": "music",
+      "method": "WS",
+      "path": "sync_room:join",
+      "request": "MusicWSSyncRoomByJoinRequest",
+      "response": "MusicWSSyncRoomByJoinResponse",
+      "source": "services/music/ws_routes/sync_room/join.js",
+      "category": "api"
+    },
+    {
+      "service": "music",
+      "method": "WS",
+      "path": "sync_room:leave",
+      "request": "MusicWSSyncRoomByLeaveRequest",
+      "response": "MusicWSSyncRoomByLeaveResponse",
+      "source": "services/music/ws_routes/sync_room/leave.js",
+      "category": "api"
+    },
+    {
+      "service": "music",
+      "method": "WS",
+      "path": "sync_room:push",
+      "request": "MusicWSSyncRoomByPushRequest",
+      "response": "MusicWSSyncRoomByPushResponse",
+      "source": "services/music/ws_routes/sync_room/push.js",
+      "category": "api"
+    },
+    {
+      "service": "music",
+      "method": "WS",
+      "path": "sync_room:push_lyrics",
+      "request": "MusicWSSyncRoomByPushLyricsRequest",
+      "response": "MusicWSSyncRoomByPushLyricsResponse",
+      "source": "services/music/ws_routes/sync_room/push_lyrics.js",
+      "category": "api"
+    },
+    {
+      "service": "music",
+      "method": "WS",
+      "path": "sync_room:request_lyrics",
+      "request": "MusicWSSyncRoomByRequestLyricsRequest",
+      "response": "MusicWSSyncRoomByRequestLyricsResponse",
+      "source": "services/music/ws_routes/sync_room/request_lyrics.js",
+      "category": "api"
+    },
+    {
+      "service": "posts",
+      "method": "WS",
+      "path": "posts:subscribe",
+      "request": "PostsWSPostsBySubscribeRequest",
+      "response": "PostsWSPostsBySubscribeResponse",
+      "source": "services/posts/ws_routes/posts/subscribe.ts",
+      "category": "api"
+    },
+    {
+      "service": "posts",
+      "method": "WS",
+      "path": "posts:unsubscribe",
+      "request": "PostsWSPostsByUnsubscribeRequest",
+      "response": "PostsWSPostsByUnsubscribeResponse",
+      "source": "services/posts/ws_routes/posts/unsubscribe.js",
+      "category": "api"
+    },
+    {
+      "service": "rtc",
+      "method": "WS",
+      "path": "channel:client_event",
+      "request": "RtcWSChannelByClientEventPayload",
+      "response": "RtcWSChannelByClientEventResponse",
+      "source": "services/rtc/ws_routes/channel/client_event.ts",
+      "category": "api"
+    },
+    {
+      "service": "rtc",
+      "method": "WS",
+      "path": "channel:connect_transport",
+      "request": "RtcWSChannelByConnectTransportPayload",
+      "response": "RtcWSChannelByConnectTransportResponse",
+      "source": "services/rtc/ws_routes/channel/connect_transport.ts",
+      "category": "api"
+    },
+    {
+      "service": "rtc",
+      "method": "WS",
+      "path": "channel:consume",
+      "request": "RtcWSChannelByConsumePayload",
+      "response": "RtcWSChannelByConsumeResult",
+      "source": "services/rtc/ws_routes/channel/consume.ts",
+      "category": "api"
+    },
+    {
+      "service": "rtc",
+      "method": "WS",
+      "path": "channel:consumer_control",
+      "request": "RtcWSChannelByConsumerControlPayload",
+      "response": "RtcWSChannelByConsumerControlResponse",
+      "source": "services/rtc/ws_routes/channel/consumer_control.ts",
+      "category": "api"
+    },
+    {
+      "service": "rtc",
+      "method": "WS",
+      "path": "channel:consumer_stop",
+      "request": "RtcWSChannelByConsumerStopPayload",
+      "response": "RtcWSChannelByConsumerStopResponse",
+      "source": "services/rtc/ws_routes/channel/consumer_stop.ts",
+      "category": "api"
+    },
+    {
+      "service": "rtc",
+      "method": "WS",
+      "path": "channel:create_transport",
+      "request": "RtcWSChannelByCreateTransportRequest",
+      "response": "RtcWSChannelByCreateTransportResult",
+      "source": "services/rtc/ws_routes/channel/create_transport.ts",
+      "category": "api"
+    },
+    {
+      "service": "rtc",
+      "method": "WS",
+      "path": "channel:join",
+      "request": "RtcWSChannelByJoinPayload",
+      "response": "RtcWSChannelByJoinResult",
+      "source": "services/rtc/ws_routes/channel/join.ts",
+      "category": "api"
+    },
+    {
+      "service": "rtc",
+      "method": "WS",
+      "path": "channel:leave",
+      "request": "RtcWSChannelByLeavePayload",
+      "response": "RtcWSChannelByLeaveResponse",
+      "source": "services/rtc/ws_routes/channel/leave.ts",
+      "category": "api"
+    },
+    {
+      "service": "rtc",
+      "method": "WS",
+      "path": "channel:produce",
+      "request": "RtcWSChannelByProducePayload",
+      "response": "RtcWSChannelByProduceResult",
+      "source": "services/rtc/ws_routes/channel/produce.ts",
+      "category": "api"
+    },
+    {
+      "service": "rtc",
+      "method": "WS",
+      "path": "channel:producer_stop",
+      "request": "RtcWSChannelByProducerStopPayload",
+      "response": "RtcWSChannelByProducerStopResult",
+      "source": "services/rtc/ws_routes/channel/producer_stop.ts",
+      "category": "api"
+    },
+    {
+      "service": "rtc",
+      "method": "WS",
+      "path": "channel:request_keyframe",
+      "request": "RtcWSChannelByConsumerControlPayload",
+      "response": "RtcWSChannelByRequestKeyframeResponse",
+      "source": "services/rtc/ws_routes/channel/request_keyframe.ts",
+      "category": "api"
+    },
+    {
+      "service": "rtc",
+      "method": "WS",
+      "path": "channel:soundpad_dispatch",
+      "request": "RtcWSChannelBySoundpadDispatchPayload",
+      "response": "RtcWSChannelBySoundpadDispatchResponse",
+      "source": "services/rtc/ws_routes/channel/soundpad_dispatch.ts",
+      "category": "api"
+    },
+    {
+      "service": "rtc",
+      "method": "WS",
+      "path": "group:subscribe",
+      "request": "RtcWSGroupBySubscribeRequest",
+      "response": "RtcWSGroupBySubscribeResult",
+      "source": "services/rtc/ws_routes/group/subscribe.ts",
+      "category": "api"
+    },
+    {
+      "service": "rtc",
+      "method": "WS",
+      "path": "group:unsubscribe",
+      "request": "RtcWSGroupByUnsubscribeRequest",
+      "response": "RtcWSGroupByUnsubscribeResult",
+      "source": "services/rtc/ws_routes/group/unsubscribe.ts",
+      "category": "api"
+    }
+  ],
+  "ignoredFiles": [
+    {
+      "source": "services/chats/routes/chats/channels/[group_id]/[channel_id]/[message_id]/update.js",
+      "reason": "filename is not a recognized HTTP verb"
+    },
+    {
+      "source": "services/posts/routes/posts/[post_id]/data/get.spec.js",
+      "reason": "filename is not a recognized HTTP verb"
+    },
+    {
+      "source": "services/posts/routes/posts/[post_id]/replies/get.spec.js",
+      "reason": "filename is not a recognized HTTP verb"
+    }
+  ],
+  "unresolved": [
+    {
+      "source": "services/auth/routes/auth/activate/post.js",
+      "context": "AuthPOSTAuthActivateResultId",
+      "reason": "unknown"
+    },
+    {
+      "source": "services/auth/routes/auth/delete.js",
+      "context": "AuthDELETEAuthResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/auth/jwks/get.ts",
+      "context": "AuthGETAuthJwksResultKeysItem",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/auth/password/put.js",
+      "context": "AuthPUTAuthPasswordHeadersXForwardedFor",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/auth/password/put.js",
+      "context": "AuthPUTAuthPasswordHeadersUserAgent",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/auth/password/put.js",
+      "context": "AuthPUTAuthPasswordBodyOldPassword",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/auth/password/put.js",
+      "context": "AuthPUTAuthPasswordBodyNewPassword",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/auth/password/put.js",
+      "context": "AuthPUTAuthPasswordBodyVerificationToken",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/auth/password/put.js",
+      "context": "AuthPUTAuthPasswordBodyCode",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/auth/post.ts",
+      "context": "AuthPOSTAuthBodyRefreshToken",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/auth/post.ts",
+      "context": "AuthPOSTAuthBodyAuthToken",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/auth/post.ts",
+      "context": "AuthPOSTAuthResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/auth/recover-password/post.js",
+      "context": "AuthPOSTAuthRecoverPasswordBodyAccount",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/auth/recover-password/post.js",
+      "context": "AuthPOSTAuthRecoverPasswordHeadersXForwardedFor",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/auth/recover-password/post.js",
+      "context": "AuthPOSTAuthRecoverPasswordHeadersUserAgent",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/auth/recover-password/post.js",
+      "context": "AuthPOSTAuthRecoverPasswordResultUserId",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/auth/recover-password/post.js",
+      "context": "AuthPOSTAuthRecoverPasswordResultExpiresAt",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/auth/recover-password/post.js",
+      "context": "AuthPOSTAuthRecoverPasswordResultCodeLength",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/auth/resend-activation-code/post.js",
+      "context": "AuthPOSTAuthResendActivationCodeBodyUserId",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/auth/resend-activation-code/post.js",
+      "context": "AuthPOSTAuthResendActivationCodeResultEvent",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/auth/resend-activation-code/post.js",
+      "context": "AuthPOSTAuthResendActivationCodeResultUserId",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/auth/resend-activation-code/post.js",
+      "context": "AuthPOSTAuthResendActivationCodeResultDate",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/auth/token/post.js",
+      "context": "AuthPOSTAuthTokenBodyToken",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/auth/token/post.js",
+      "context": "AuthPOSTAuthTokenResultToken",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/auth/token/post.js",
+      "context": "AuthPOSTAuthTokenResultDecodedAud",
+      "reason": "heterogeneous union string | string[] | undefined"
+    },
+    {
+      "source": "services/auth/routes/auth/token/post.js",
+      "context": "AuthPOSTAuthTokenResultSession",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/auth/token/post.js",
+      "context": "AuthPOSTAuthTokenResultUser",
+      "reason": "callable/runtime object, not a declared data DTO"
+    },
+    {
+      "source": "services/auth/routes/availability/get.js",
+      "context": "AuthGETAvailabilityQueryUsername",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/availability/get.js",
+      "context": "AuthGETAvailabilityQueryEmail",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/forgot/[apr_code]/post.js",
+      "context": "AuthPOSTForgotByAprCodeHeadersXForwardedFor",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/forgot/[apr_code]/post.js",
+      "context": "AuthPOSTForgotByAprCodeHeadersUserAgent",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/forgot/[apr_code]/post.js",
+      "context": "AuthPOSTForgotByAprCodeBodyNewPassword",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/forgot/post.js",
+      "context": "AuthPOSTForgotBodyEmail",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/forgot/post.js",
+      "context": "AuthPOSTForgotHeadersXForwardedFor",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/forgot/post.js",
+      "context": "AuthPOSTForgotHeadersUserAgent",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/oauth/apps/[clientId]/get.ts",
+      "context": "AuthGETOauthAppsByClientIdResultId",
+      "reason": "unknown"
+    },
+    {
+      "source": "services/auth/routes/oauth/apps/[clientId]/put.ts",
+      "context": "AuthPUTOauthAppsByClientIdBodyClientName",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/oauth/apps/[clientId]/put.ts",
+      "context": "AuthPUTOauthAppsByClientIdBodyRedirectUris",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/oauth/apps/[clientId]/put.ts",
+      "context": "AuthPUTOauthAppsByClientIdBodyLogoUrl",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/oauth/apps/[clientId]/put.ts",
+      "context": "AuthPUTOauthAppsByClientIdBodyWebsiteUrl",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/oauth/apps/[clientId]/put.ts",
+      "context": "AuthPUTOauthAppsByClientIdBodyScopes",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/oauth/apps/[clientId]/put.ts",
+      "context": "AuthPUTOauthAppsByClientIdBodyGrantTypes",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/oauth/apps/[clientId]/put.ts",
+      "context": "AuthPUTOauthAppsByClientIdResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/oauth/apps/[clientId]/regenerate-secret/post.ts",
+      "context": "AuthPOSTOauthAppsByClientIdRegenerateSecretResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/oauth/apps/get.ts",
+      "context": "AuthGETOauthAppsResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/oauth/apps/post.ts",
+      "context": "AuthPOSTOauthAppsBodyClientName",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/oauth/apps/post.ts",
+      "context": "AuthPOSTOauthAppsBodyRedirectUris",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/oauth/apps/post.ts",
+      "context": "AuthPOSTOauthAppsResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/oauth/authorize/post.ts",
+      "context": "AuthPOSTOauthAuthorizeQueryClientId",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/oauth/authorize/post.ts",
+      "context": "AuthPOSTOauthAuthorizeQueryRedirectUri",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/oauth/authorize/post.ts",
+      "context": "AuthPOSTOauthAuthorizeQueryResponseType",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/oauth/authorize/post.ts",
+      "context": "AuthPOSTOauthAuthorizeQueryScope",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/oauth/authorize/post.ts",
+      "context": "AuthPOSTOauthAuthorizeQueryState",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/oauth/authorize/post.ts",
+      "context": "AuthPOSTOauthAuthorizeQueryCodeChallenge",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/oauth/authorize/post.ts",
+      "context": "AuthPOSTOauthAuthorizeQueryCodeChallengeMethod",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/oauth/token/post.ts",
+      "context": "AuthPOSTOauthTokenBodyGrantType",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/oauth/token/post.ts",
+      "context": "AuthPOSTOauthTokenBodyCode",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/oauth/token/post.ts",
+      "context": "AuthPOSTOauthTokenBodyRedirectUri",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/oauth/token/post.ts",
+      "context": "AuthPOSTOauthTokenBodyClientId",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/oauth/token/post.ts",
+      "context": "AuthPOSTOauthTokenBodyClientSecret",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/oauth/token/post.ts",
+      "context": "AuthPOSTOauthTokenBodyRefreshToken",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/oauth/token/post.ts",
+      "context": "AuthPOSTOauthTokenBodyCodeVerifier",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/oauth/token/post.ts",
+      "context": "AuthPOSTOauthTokenResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/oauth/userinfo/get.ts",
+      "context": "AuthGETOauthUserinfoHeadersAuthorization",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/oauth/userinfo/get.ts",
+      "context": "AuthGETOauthUserinfoResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/register/post.js",
+      "context": "AuthPOSTRegisterResultUserId",
+      "reason": "unknown"
+    },
+    {
+      "source": "services/auth/routes/register/post.js",
+      "context": "AuthPOSTRegisterResultUserLocalsEntry",
+      "reason": "unknown"
+    },
+    {
+      "source": "services/auth/routes/register/post.js",
+      "context": "AuthPOSTRegisterResultUserWhereEntry",
+      "reason": "unknown"
+    },
+    {
+      "source": "services/auth/routes/register/post.js",
+      "context": "AuthPOSTRegisterResultUserCollection",
+      "reason": "external runtime type Collection"
+    },
+    {
+      "source": "services/auth/routes/register/post.js",
+      "context": "AuthPOSTRegisterResultUserDb",
+      "reason": "external runtime type Connection"
+    },
+    {
+      "source": "services/auth/routes/register/post.js",
+      "context": "AuthPOSTRegisterResultUserErrors",
+      "reason": "external runtime type ValidationError"
+    },
+    {
+      "source": "services/auth/routes/register/post.js",
+      "context": "AuthPOSTRegisterResultUserSchema",
+      "reason": "external runtime type Schema"
+    },
+    {
+      "source": "services/auth/routes/server-keys/generate/post.js",
+      "context": "AuthPOSTServerKeysGenerateBodyName",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/sessions/all/delete.js",
+      "context": "AuthDELETESessionsAllResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/sessions/all/get.js",
+      "context": "AuthGETSessionsAllResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/auth/routes/sessions/current/get.js",
+      "context": "AuthGETSessionsCurrentResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/chats/routes/chats/acks/get.ts",
+      "context": "ChatsGETChatsAcksResultItem",
+      "reason": "external runtime type __type"
+    },
+    {
+      "source": "services/chats/routes/chats/channels/[group_id]/[channel_id]/[message_id]/delete.js",
+      "context": "ChatsDELETEChatsChannelsByGroupIdByChannelIdByMessageIdResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/chats/routes/chats/channels/[group_id]/[channel_id]/get.js",
+      "context": "ChatsGETChatsChannelsByGroupIdByChannelIdQueryLimit",
+      "reason": "any"
+    },
+    {
+      "source": "services/chats/routes/chats/channels/[group_id]/[channel_id]/get.js",
+      "context": "ChatsGETChatsChannelsByGroupIdByChannelIdQueryBeforeId",
+      "reason": "any"
+    },
+    {
+      "source": "services/chats/routes/chats/channels/[group_id]/[channel_id]/get.js",
+      "context": "ChatsGETChatsChannelsByGroupIdByChannelIdQueryAfterId",
+      "reason": "any"
+    },
+    {
+      "source": "services/chats/routes/chats/channels/[group_id]/[channel_id]/get.js",
+      "context": "ChatsGETChatsChannelsByGroupIdByChannelIdResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/chats/routes/chats/channels/[group_id]/[channel_id]/last/get.js",
+      "context": "ChatsGETChatsChannelsByGroupIdByChannelIdLastResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/chats/routes/chats/channels/[group_id]/[channel_id]/post.js",
+      "context": "ChatsPOSTChatsChannelsByGroupIdByChannelIdResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/chats/routes/chats/channels/[group_id]/[channel_id]/sync/get.ts",
+      "context": "ChatsGETChatsChannelsByGroupIdByChannelIdSyncQueryLastSyncedAt",
+      "reason": "any"
+    },
+    {
+      "source": "services/chats/routes/chats/channels/[group_id]/[channel_id]/sync/get.ts",
+      "context": "ChatsGETChatsChannelsByGroupIdByChannelIdSyncQueryLastMessageId",
+      "reason": "any"
+    },
+    {
+      "source": "services/chats/routes/chats/channels/[group_id]/[channel_id]/sync/get.ts",
+      "context": "ChatsGETChatsChannelsByGroupIdByChannelIdSyncResultNewMessagesItem",
+      "reason": "external runtime type __type"
+    },
+    {
+      "source": "services/chats/routes/chats/dm/[to_user_id]/[message_id]/delete.js",
+      "context": "ChatsDELETEChatsDmByToUserIdByMessageIdResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/chats/routes/chats/dm/[to_user_id]/[message_id]/patch.js",
+      "context": "ChatsPATCHChatsDmByToUserIdByMessageIdResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/chats/routes/chats/dm/[to_user_id]/get.js",
+      "context": "ChatsGETChatsDmByToUserIdQueryLimit",
+      "reason": "any"
+    },
+    {
+      "source": "services/chats/routes/chats/dm/[to_user_id]/get.js",
+      "context": "ChatsGETChatsDmByToUserIdQueryBeforeId",
+      "reason": "any"
+    },
+    {
+      "source": "services/chats/routes/chats/dm/[to_user_id]/get.js",
+      "context": "ChatsGETChatsDmByToUserIdQueryAfterId",
+      "reason": "any"
+    },
+    {
+      "source": "services/chats/routes/chats/dm/[to_user_id]/get.js",
+      "context": "ChatsGETChatsDmByToUserIdResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/chats/routes/chats/dm/[to_user_id]/post.js",
+      "context": "ChatsPOSTChatsDmByToUserIdResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/chats/routes/chats/dm/get.ts",
+      "context": "ChatsGETChatsDmResultItemUser",
+      "reason": "any"
+    },
+    {
+      "source": "services/chats/ws_routes/channel/ack.ts",
+      "context": "ChatsWSChannelByAckPayload",
+      "reason": "any"
+    },
+    {
+      "source": "services/chats/ws_routes/channel/message/delete.ts",
+      "context": "ChatsWSChannelByMessageByDeletePayload",
+      "reason": "any"
+    },
+    {
+      "source": "services/chats/ws_routes/channel/message/delete.ts",
+      "context": "ChatsWSChannelByMessageByDeleteResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/chats/ws_routes/channel/message/update.ts",
+      "context": "ChatsWSChannelByMessageByUpdatePayload",
+      "reason": "any"
+    },
+    {
+      "source": "services/chats/ws_routes/channel/message/update.ts",
+      "context": "ChatsWSChannelByMessageByUpdateResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/chats/ws_routes/channel/send.ts",
+      "context": "ChatsWSChannelBySendPayloadCreatedAt",
+      "reason": "heterogeneous union string | Date | undefined"
+    },
+    {
+      "source": "services/chats/ws_routes/channel/send.ts",
+      "context": "ChatsWSChannelBySendPayloadUpdatedAt",
+      "reason": "heterogeneous union string | Date | undefined"
+    },
+    {
+      "source": "services/chats/ws_routes/dm/ack.ts",
+      "context": "ChatsWSDmByAckPayload",
+      "reason": "any"
+    },
+    {
+      "source": "services/chats/ws_routes/dm/message/delete.ts",
+      "context": "ChatsWSDmByMessageByDeletePayload",
+      "reason": "any"
+    },
+    {
+      "source": "services/chats/ws_routes/dm/message/delete.ts",
+      "context": "ChatsWSDmByMessageByDeleteResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/chats/ws_routes/dm/message/update.ts",
+      "context": "ChatsWSDmByMessageByUpdatePayload",
+      "reason": "any"
+    },
+    {
+      "source": "services/chats/ws_routes/dm/message/update.ts",
+      "context": "ChatsWSDmByMessageByUpdateResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/chats/ws_routes/dm/send.ts",
+      "context": "ChatsWSDmBySendPayload",
+      "reason": "any"
+    },
+    {
+      "source": "services/chats/ws_routes/dm/send.ts",
+      "context": "ChatsWSDmBySendResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/ems/routes/dispatch/post.js",
+      "context": "EmsPOSTDispatchBodyTo",
+      "reason": "any"
+    },
+    {
+      "source": "services/ems/routes/dispatch/post.js",
+      "context": "EmsPOSTDispatchBodySubject",
+      "reason": "any"
+    },
+    {
+      "source": "services/ems/routes/dispatch/post.js",
+      "context": "EmsPOSTDispatchBodyBody",
+      "reason": "any"
+    },
+    {
+      "source": "services/ems/routes/dispatch/post.js",
+      "context": "EmsPOSTDispatchBodyTemplate",
+      "reason": "any"
+    },
+    {
+      "source": "services/ems/routes/dispatch/post.js",
+      "context": "EmsPOSTDispatchResultResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/ems/routes/preview/email/[email]/get.js",
+      "context": "EmsGETPreviewEmailByEmailResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/files/routes/upload/chunk/post.ts",
+      "context": "FilesPOSTUploadChunkHeadersUploaderFileId",
+      "reason": "any"
+    },
+    {
+      "source": "services/files/routes/upload/chunk/post.ts",
+      "context": "FilesPOSTUploadChunkHeadersUseProvider",
+      "reason": "any"
+    },
+    {
+      "source": "services/files/routes/upload/chunk/post.ts",
+      "context": "FilesPOSTUploadChunkHeadersTransformations",
+      "reason": "any"
+    },
+    {
+      "source": "services/files/routes/upload/chunk/post.ts",
+      "context": "FilesPOSTUploadChunkHeadersUploaderOriginalName",
+      "reason": "any"
+    },
+    {
+      "source": "services/files/routes/upload/chunk/post.ts",
+      "context": "FilesPOSTUploadChunkHeadersPreferNoJob",
+      "reason": "any"
+    },
+    {
+      "source": "services/files/routes/upload/chunk/post.ts",
+      "context": "FilesPOSTUploadChunkHeadersUploaderChunkNumber",
+      "reason": "any"
+    },
+    {
+      "source": "services/files/routes/upload/chunk/post.ts",
+      "context": "FilesPOSTUploadChunkResult",
+      "reason": "heterogeneous union { id: any; url: any; metadata: {}; } | { uploadId: string; jobId: any; useWebsocketEvents: boolean; next?: undefined; chunkNumber?: undefined; config?: undefine"
+    },
+    {
+      "source": "services/files/routes/upload/file/post.js",
+      "context": "FilesPOSTUploadFileHeadersTransformations",
+      "reason": "any"
+    },
+    {
+      "source": "services/files/routes/upload/file/post.js",
+      "context": "FilesPOSTUploadFileResultId",
+      "reason": "any"
+    },
+    {
+      "source": "services/files/routes/upload/file/post.js",
+      "context": "FilesPOSTUploadFileResultUrl",
+      "reason": "any"
+    },
+    {
+      "source": "services/files/routes/upload/file/post.js",
+      "context": "FilesPOSTUploadFileResultMetadata",
+      "reason": "unstructured type {}"
+    },
+    {
+      "source": "services/files/routes/upload/get.js",
+      "context": "FilesGETUploadResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/files/routes/upload/parts/complete/post.ts",
+      "context": "FilesPOSTUploadPartsCompleteBodyTaskId",
+      "reason": "any"
+    },
+    {
+      "source": "services/files/routes/upload/parts/complete/post.ts",
+      "context": "FilesPOSTUploadPartsCompleteBodyFileHash",
+      "reason": "any"
+    },
+    {
+      "source": "services/files/routes/upload/parts/complete/post.ts",
+      "context": "FilesPOSTUploadPartsCompleteBodyUploadId",
+      "reason": "any"
+    },
+    {
+      "source": "services/files/routes/upload/parts/complete/post.ts",
+      "context": "FilesPOSTUploadPartsCompleteBodyObjectPath",
+      "reason": "any"
+    },
+    {
+      "source": "services/files/routes/upload/parts/complete/post.ts",
+      "context": "FilesPOSTUploadPartsCompleteBodyParts",
+      "reason": "any"
+    },
+    {
+      "source": "services/files/routes/upload/parts/complete/post.ts",
+      "context": "FilesPOSTUploadPartsCompleteHeadersTransformations",
+      "reason": "any"
+    },
+    {
+      "source": "services/files/routes/upload/parts/complete/post.ts",
+      "context": "FilesPOSTUploadPartsCompleteResult",
+      "reason": "heterogeneous union MultipartUploadCompletedResult | { uploadId: any; jobId: any; useWebsocketEvents: boolean; }"
+    },
+    {
+      "source": "services/files/routes/upload/parts/url/get.ts",
+      "context": "FilesGETUploadPartsUrlHeadersUploaderFileHash",
+      "reason": "any"
+    },
+    {
+      "source": "services/files/routes/upload/parts/url/get.ts",
+      "context": "FilesGETUploadPartsUrlHeadersUploaderFileName",
+      "reason": "any"
+    },
+    {
+      "source": "services/files/routes/upload/parts/url/get.ts",
+      "context": "FilesGETUploadPartsUrlHeadersUploaderFileChunks",
+      "reason": "any"
+    },
+    {
+      "source": "services/files/routes/upload/parts/url/get.ts",
+      "context": "FilesGETUploadPartsUrlHeadersUploaderFileMime",
+      "reason": "any"
+    },
+    {
+      "source": "services/files/routes/upload/parts/url/get.ts",
+      "context": "FilesGETUploadPartsUrlHeadersUploaderFileSize",
+      "reason": "any"
+    },
+    {
+      "source": "services/files/routes/upload/parts/url/get.ts",
+      "context": "FilesGETUploadPartsUrlResult",
+      "reason": "heterogeneous union MultipartUploadCompletedResult | MultipartUploadStartResult"
+    },
+    {
+      "source": "services/groups/routes/groups/[group_id]/channels/[channel_id]/delete.js",
+      "context": "GroupsDELETEGroupsByGroupIdChannelsByChannelIdResultModel",
+      "reason": "external runtime type Model"
+    },
+    {
+      "source": "services/groups/routes/groups/[group_id]/channels/create/post.js",
+      "context": "GroupsPOSTGroupsByGroupIdChannelsCreateResult",
+      "reason": "external runtime type __type"
+    },
+    {
+      "source": "services/groups/routes/groups/[group_id]/channels/order/post.js",
+      "context": "GroupsPOSTGroupsByGroupIdChannelsOrderBodyOrder",
+      "reason": "any"
+    },
+    {
+      "source": "services/groups/routes/groups/[group_id]/channels/order/post.js",
+      "context": "GroupsPOSTGroupsByGroupIdChannelsOrderResultItemModel",
+      "reason": "external runtime type Model"
+    },
+    {
+      "source": "services/groups/routes/groups/[group_id]/delete.js",
+      "context": "GroupsDELETEGroupsByGroupIdResult",
+      "reason": "external runtime type __type"
+    },
+    {
+      "source": "services/groups/routes/groups/[group_id]/get.ts",
+      "context": "GroupsGETGroupsByGroupIdResultModel",
+      "reason": "external runtime type Model"
+    },
+    {
+      "source": "services/groups/routes/groups/[group_id]/invites/[invite_key]/delete.js",
+      "context": "GroupsDELETEGroupsByGroupIdInvitesByInviteKeyResult",
+      "reason": "external runtime type __type"
+    },
+    {
+      "source": "services/groups/routes/groups/[group_id]/invites/[invite_key]/get.js",
+      "context": "GroupsGETGroupsByGroupIdInvitesByInviteKeyQueryFetch",
+      "reason": "any"
+    },
+    {
+      "source": "services/groups/routes/groups/[group_id]/invites/[invite_key]/get.js",
+      "context": "GroupsGETGroupsByGroupIdInvitesByInviteKeyResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/groups/routes/groups/[group_id]/invites/create/post.js",
+      "context": "GroupsPOSTGroupsByGroupIdInvitesCreateBodyMaxUsage",
+      "reason": "any"
+    },
+    {
+      "source": "services/groups/routes/groups/[group_id]/invites/create/post.js",
+      "context": "GroupsPOSTGroupsByGroupIdInvitesCreateBodyExpiresAt",
+      "reason": "any"
+    },
+    {
+      "source": "services/groups/routes/groups/[group_id]/invites/create/post.js",
+      "context": "GroupsPOSTGroupsByGroupIdInvitesCreateResult",
+      "reason": "external runtime type __type"
+    },
+    {
+      "source": "services/groups/routes/groups/[group_id]/invites/get.js",
+      "context": "GroupsGETGroupsByGroupIdInvitesResultItem",
+      "reason": "external runtime type __type"
+    },
+    {
+      "source": "services/groups/routes/groups/[group_id]/join/post.js",
+      "context": "GroupsPOSTGroupsByGroupIdJoinBodyInviteKey",
+      "reason": "any"
+    },
+    {
+      "source": "services/groups/routes/groups/[group_id]/join/post.js",
+      "context": "GroupsPOSTGroupsByGroupIdJoinResult",
+      "reason": "heterogeneous union boolean | { already_member: boolean; }"
+    },
+    {
+      "source": "services/groups/routes/groups/[group_id]/leave/post.js",
+      "context": "GroupsPOSTGroupsByGroupIdLeaveResultItem",
+      "reason": "external runtime type __type"
+    },
+    {
+      "source": "services/groups/routes/groups/[group_id]/members/[member_id]/delete.js",
+      "context": "GroupsDELETEGroupsByGroupIdMembersByMemberIdBodyUserId",
+      "reason": "any"
+    },
+    {
+      "source": "services/groups/routes/groups/[group_id]/members/[member_id]/delete.js",
+      "context": "GroupsDELETEGroupsByGroupIdMembersByMemberIdResultModel",
+      "reason": "external runtime type Model"
+    },
+    {
+      "source": "services/groups/routes/groups/[group_id]/members/[member_id]/get.js",
+      "context": "GroupsGETGroupsByGroupIdMembersByMemberIdBodyUserId",
+      "reason": "any"
+    },
+    {
+      "source": "services/groups/routes/groups/[group_id]/members/connections/get.ts",
+      "context": "GroupsGETGroupsByGroupIdMembersConnectionsQueryUsersId",
+      "reason": "any"
+    },
+    {
+      "source": "services/groups/routes/groups/[group_id]/members/connections/get.ts",
+      "context": "GroupsGETGroupsByGroupIdMembersConnectionsResult",
+      "reason": "unstructured type {}"
+    },
+    {
+      "source": "services/groups/routes/groups/[group_id]/members/get.ts",
+      "context": "GroupsGETGroupsByGroupIdMembersQueryLimit",
+      "reason": "any"
+    },
+    {
+      "source": "services/groups/routes/groups/[group_id]/members/get.ts",
+      "context": "GroupsGETGroupsByGroupIdMembersQueryOffset",
+      "reason": "any"
+    },
+    {
+      "source": "services/groups/routes/groups/[group_id]/members/post.js",
+      "context": "GroupsPOSTGroupsByGroupIdMembersBodyUserId",
+      "reason": "any"
+    },
+    {
+      "source": "services/groups/routes/groups/[group_id]/members/post.js",
+      "context": "GroupsPOSTGroupsByGroupIdMembersResult",
+      "reason": "external runtime type __type"
+    },
+    {
+      "source": "services/groups/routes/groups/[group_id]/soundpad/items/[item_id]/delete.js",
+      "context": "GroupsDELETEGroupsByGroupIdSoundpadItemsByItemIdResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/groups/routes/groups/[group_id]/soundpad/items/[item_id]/get.js",
+      "context": "GroupsGETGroupsByGroupIdSoundpadItemsByItemIdResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/groups/routes/groups/[group_id]/soundpad/items/get.js",
+      "context": "GroupsGETGroupsByGroupIdSoundpadItemsResultItem",
+      "reason": "any"
+    },
+    {
+      "source": "services/groups/routes/groups/[group_id]/soundpad/items/post.js",
+      "context": "GroupsPOSTGroupsByGroupIdSoundpadItemsBodyIcon",
+      "reason": "any"
+    },
+    {
+      "source": "services/groups/routes/groups/[group_id]/soundpad/items/post.js",
+      "context": "GroupsPOSTGroupsByGroupIdSoundpadItemsBodyName",
+      "reason": "any"
+    },
+    {
+      "source": "services/groups/routes/groups/[group_id]/soundpad/items/post.js",
+      "context": "GroupsPOSTGroupsByGroupIdSoundpadItemsBodySrc",
+      "reason": "any"
+    },
+    {
+      "source": "services/groups/routes/groups/[group_id]/soundpad/items/post.js",
+      "context": "GroupsPOSTGroupsByGroupIdSoundpadItemsResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/groups/routes/groups/create/post.js",
+      "context": "GroupsPOSTGroupsCreateResult",
+      "reason": "external runtime type __type"
+    },
+    {
+      "source": "services/groups/routes/groups/my/get.js",
+      "context": "GroupsGETGroupsMyResultItemsItem",
+      "reason": "external runtime type __type"
+    },
+    {
+      "source": "services/main/routes/activity/client/post.js",
+      "context": "MainPOSTActivityClientBodyId",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/activity/client/post.js",
+      "context": "MainPOSTActivityClientBodyPayload",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/activity/recent/get.js",
+      "context": "MainGETActivityRecentQueryType",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/bots/[bot_id]/get.js",
+      "context": "MainGETBotsByBotIdResultId",
+      "reason": "unknown"
+    },
+    {
+      "source": "services/main/routes/bots/[bot_id]/patch.js",
+      "context": "MainPATCHBotsByBotIdBodyPublicName",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/bots/[bot_id]/patch.js",
+      "context": "MainPATCHBotsByBotIdBodyAvatar",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/bots/[bot_id]/patch.js",
+      "context": "MainPATCHBotsByBotIdBodyCover",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/bots/[bot_id]/patch.js",
+      "context": "MainPATCHBotsByBotIdBodyDescription",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/bots/create/post.js",
+      "context": "MainPOSTBotsCreateBodyUsername",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/bots/create/post.js",
+      "context": "MainPOSTBotsCreateBodyPublicName",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/bots/create/post.js",
+      "context": "MainPOSTBotsCreateBodyAvatar",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/bots/create/post.js",
+      "context": "MainPOSTBotsCreateResultId",
+      "reason": "unknown"
+    },
+    {
+      "source": "services/main/routes/bots/my/get.js",
+      "context": "MainGETBotsMyResultItemUser",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/bots/my/get.js",
+      "context": "MainGETBotsMyResultItemId",
+      "reason": "unknown"
+    },
+    {
+      "source": "services/main/routes/config/global/get.js",
+      "context": "MainGETConfigGlobalResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/expressions/gif/fav/get.ts",
+      "context": "MainGETExpressionsGifFavResultItemModel",
+      "reason": "external runtime type Model"
+    },
+    {
+      "source": "services/main/routes/expressions/gif/fav/get.ts",
+      "context": "MainGETExpressionsGifFavResultItemMetadata",
+      "reason": "external runtime type Map"
+    },
+    {
+      "source": "services/main/routes/expressions/gif/fav/post.ts",
+      "context": "MainPOSTExpressionsGifFavBodyId",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/expressions/gif/fav/post.ts",
+      "context": "MainPOSTExpressionsGifFavBodyResourceUrl",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/expressions/gif/fav/post.ts",
+      "context": "MainPOSTExpressionsGifFavBodyMetadata",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/expressions/gif/fav/post.ts",
+      "context": "MainPOSTExpressionsGifFavResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/expressions/gif/search/get.ts",
+      "context": "MainGETExpressionsGifSearchQueryKeywords",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/expressions/gif/search/get.ts",
+      "context": "MainGETExpressionsGifSearchQueryLimit",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/expressions/gif/search/get.ts",
+      "context": "MainGETExpressionsGifSearchQueryPage",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/expressions/gif/search/get.ts",
+      "context": "MainGETExpressionsGifSearchResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/featured/wallpapers/get.js",
+      "context": "MainGETFeaturedWallpapersQueryLimit",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/featured/wallpapers/get.js",
+      "context": "MainGETFeaturedWallpapersQueryOffset",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/featured/wallpapers/get.js",
+      "context": "MainGETFeaturedWallpapersQueryRandom",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/featured/wallpapers/get.js",
+      "context": "MainGETFeaturedWallpapersQueryIncludeDisabled",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/featured/wallpapers/get.js",
+      "context": "MainGETFeaturedWallpapersResult",
+      "reason": "heterogeneous union (Document<unknown, {}, Record<string, any>, { id: string; }, DefaultSchemaOptions> & Omit<Record<string, any> & Required<{ _id: unknown; }> & { ...; }, \"id\"> & "
+    },
+    {
+      "source": "services/main/routes/flags/ack/[flag_id]/post.js",
+      "context": "MainPOSTFlagsAckByFlagIdResultFlags",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/limits/get.js",
+      "context": "MainGETLimitsQueryKey",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/limits/get.js",
+      "context": "MainGETLimitsResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/main/query_url/get.js",
+      "context": "MainGETMainQueryUrlQueryUrl",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/main/query_url/get.js",
+      "context": "MainGETMainQueryUrlQueryIgnoreCache",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/main/query_url/get.js",
+      "context": "MainGETMainQueryUrlResult",
+      "reason": "heterogeneous union { ok: boolean; remoteHeaders: any; fromCache: boolean; } | { remoteHeaders: { [k: string]: string; }; fromCache: boolean; ok?: undefined; }"
+    },
+    {
+      "source": "services/main/routes/main/users_connected/get.js",
+      "context": "MainGETMainUsersConnectedQueryLimit",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/main/users_connected/get.js",
+      "context": "MainGETMainUsersConnectedQueryOffset",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/main/users_connected/get.js",
+      "context": "MainGETMainUsersConnectedResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/nfc/tag/id/[id]/delete.js",
+      "context": "MainDELETENfcTagIdByIdResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/nfc/tag/id/[id]/execute/get.js",
+      "context": "MainGETNfcTagIdByIdExecuteResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/nfc/tag/id/[id]/get.js",
+      "context": "MainGETNfcTagIdByIdResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/nfc/tag/register/[serial]/post.js",
+      "context": "MainPOSTNfcTagRegisterBySerialBodyAlias",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/nfc/tag/register/[serial]/post.js",
+      "context": "MainPOSTNfcTagRegisterBySerialBodyBehavior",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/nfc/tag/register/[serial]/post.js",
+      "context": "MainPOSTNfcTagRegisterBySerialBodyActive",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/nfc/tag/register/[serial]/post.js",
+      "context": "MainPOSTNfcTagRegisterBySerialBodyOrigin",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/nfc/tag/register/[serial]/post.js",
+      "context": "MainPOSTNfcTagRegisterBySerialResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/nfc/tag/serial/get.js",
+      "context": "MainGETNfcTagSerialResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/repo/auto-update/mobile/get.js",
+      "context": "MainGETRepoAutoUpdateMobileResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/repo/releases-notes/get.js",
+      "context": "MainGETRepoReleasesNotesResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/stickers/[id]/get.js",
+      "context": "MainGETStickersByIdQueryData",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/stickers/create/post.js",
+      "context": "MainPOSTStickersCreateBodyStickersSetId",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/stickers/create/post.js",
+      "context": "MainPOSTStickersCreateBodyEmoji",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/stickers/create/post.js",
+      "context": "MainPOSTStickersCreateBodyFileUrl",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/stickers/create/post.js",
+      "context": "MainPOSTStickersCreateBodyAnimated",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/stickers/create/post.js",
+      "context": "MainPOSTStickersCreateBodyVideo",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/stickers/packs/[id]/put.js",
+      "context": "MainPUTStickersPacksByIdBodyName",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/stickers/packs/[id]/put.js",
+      "context": "MainPUTStickersPacksByIdBodyThumbnail",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/stickers/packs/[id]/put.js",
+      "context": "MainPUTStickersPacksByIdBodyItems",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/stickers/packs/create/post.js",
+      "context": "MainPOSTStickersPacksCreateBodyName",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/stickers/packs/create/post.js",
+      "context": "MainPOSTStickersPacksCreateBodyThumbnail",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/routes/stickers/packs/create/post.js",
+      "context": "MainPOSTStickersPacksCreateBodyItems",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/ws_routes/main/findClientsByUserId.js",
+      "context": "MainWSMainByFindClientsByUserIdPayload",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/ws_routes/main/findClientsByUserId.js",
+      "context": "MainWSMainByFindClientsByUserIdResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/ws_routes/main/test.js",
+      "context": "MainWSMainByTestPayload",
+      "reason": "any"
+    },
+    {
+      "source": "services/main/ws_routes/main/test.js",
+      "context": "MainWSMainByTestResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/marketplace/routes/extensions/list/get.js",
+      "context": "MarketplaceGETExtensionsListQueryLimit",
+      "reason": "any"
+    },
+    {
+      "source": "services/marketplace/routes/extensions/list/get.js",
+      "context": "MarketplaceGETExtensionsListQueryOffset",
+      "reason": "any"
+    },
+    {
+      "source": "services/marketplace/routes/extensions/list/get.js",
+      "context": "MarketplaceGETExtensionsListResultItemsItem",
+      "reason": "any"
+    },
+    {
+      "source": "services/marketplace/routes/extensions/publish/put.js",
+      "context": "MarketplacePUTExtensionsPublishHeadersPkg",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/feed/get.js",
+      "context": "MusicGETMusicFeedQueryLimit",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/feed/get.js",
+      "context": "MusicGETMusicFeedQueryPage",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/feed/get.js",
+      "context": "MusicGETMusicFeedQueryOrder",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/my/library/favorite/get.js",
+      "context": "MusicGETMusicMyLibraryFavoriteQueryKind",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/my/library/favorite/get.js",
+      "context": "MusicGETMusicMyLibraryFavoriteQueryItemId",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/my/library/favorite/get.js",
+      "context": "MusicGETMusicMyLibraryFavoriteResult",
+      "reason": "heterogeneous union { item_id: any; liked: boolean; created_at: any; }[] | { liked: boolean; }"
+    },
+    {
+      "source": "services/music/routes/music/my/library/favorite/put.js",
+      "context": "MusicPUTMusicMyLibraryFavoriteBodyKind",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/my/library/favorite/put.js",
+      "context": "MusicPUTMusicMyLibraryFavoriteBodyItemId",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/my/library/favorite/put.js",
+      "context": "MusicPUTMusicMyLibraryFavoriteBodyTo",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/my/library/favorite/put.js",
+      "context": "MusicPUTMusicMyLibraryFavoriteResultItemId",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/my/library/favorite/put.js",
+      "context": "MusicPUTMusicMyLibraryFavoriteResultLibraryItemId",
+      "reason": "unknown"
+    },
+    {
+      "source": "services/music/routes/music/my/library/get.js",
+      "context": "MusicGETMusicMyLibraryQueryLimit",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/my/library/get.js",
+      "context": "MusicGETMusicMyLibraryQueryOffset",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/my/library/get.js",
+      "context": "MusicGETMusicMyLibraryQueryKind",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/my/library/get.js",
+      "context": "MusicGETMusicMyLibraryResult",
+      "reason": "unstructured type {}"
+    },
+    {
+      "source": "services/music/routes/music/my/releases/get.js",
+      "context": "MusicGETMusicMyReleasesQueryKeywords",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/my/releases/get.js",
+      "context": "MusicGETMusicMyReleasesQueryLimit",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/my/releases/get.js",
+      "context": "MusicGETMusicMyReleasesQueryOffset",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/my/releases/get.js",
+      "context": "MusicGETMusicMyReleasesQueryResolveItemsData",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/radio/list/get.js",
+      "context": "MusicGETMusicRadioListQueryLimit",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/radio/list/get.js",
+      "context": "MusicGETMusicRadioListQueryOffset",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/radio/list/get.js",
+      "context": "MusicGETMusicRadioListResultItem",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/radio/trendings/get.js",
+      "context": "MusicGETMusicRadioTrendingsResultItemsItem",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/radio/webhook/post.ts",
+      "context": "MusicPOSTMusicRadioWebhookHeadersAuthorization",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/radio/webhook/post.ts",
+      "context": "MusicPOSTMusicRadioWebhookBodyListeners",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/radio/webhook/post.ts",
+      "context": "MusicPOSTMusicRadioWebhookBodyStation",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/radio/webhook/post.ts",
+      "context": "MusicPOSTMusicRadioWebhookBodyNowPlaying",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/radio/webhook/post.ts",
+      "context": "MusicPOSTMusicRadioWebhookBodyIsOnline",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/radio/webhook/post.ts",
+      "context": "MusicPOSTMusicRadioWebhookResultRadioId",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/radio/webhook/post.ts",
+      "context": "MusicPOSTMusicRadioWebhookResultListeners",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/radio/webhook/post.ts",
+      "context": "MusicPOSTMusicRadioWebhookResultStationId",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/radio/webhook/post.ts",
+      "context": "MusicPOSTMusicRadioWebhookResultName",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/radio/webhook/post.ts",
+      "context": "MusicPOSTMusicRadioWebhookResultHlsSrc",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/radio/webhook/post.ts",
+      "context": "MusicPOSTMusicRadioWebhookResultHttpSrc",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/radio/webhook/post.ts",
+      "context": "MusicPOSTMusicRadioWebhookResultNowPlaying",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/radio/webhook/post.ts",
+      "context": "MusicPOSTMusicRadioWebhookResultBackground",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/recently/get.js",
+      "context": "MusicGETMusicRecentlyQueryLimit",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/recently/get.js",
+      "context": "MusicGETMusicRecentlyResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/releases/[release_id]/data/get.js",
+      "context": "MusicGETMusicReleasesByReleaseIdDataQueryLimit",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/releases/[release_id]/data/get.js",
+      "context": "MusicGETMusicReleasesByReleaseIdDataQueryOffset",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/releases/[release_id]/data/get.js",
+      "context": "MusicGETMusicReleasesByReleaseIdDataResult",
+      "reason": "heterogeneous union true | (Document<unknown, {}, Record<string, any>, { id: string; }, DefaultSchemaOptions> & Omit<Record<string, any> & Required<{ _id: unknown; }> & { ...; }, \""
+    },
+    {
+      "source": "services/music/routes/music/releases/[release_id]/delete.js",
+      "context": "MusicDELETEMusicReleasesByReleaseIdResult",
+      "reason": "heterogeneous union true | (Document<unknown, {}, Record<string, any>, { id: string; }, DefaultSchemaOptions> & Omit<Record<string, any> & Required<{ _id: unknown; }> & { ...; }, \""
+    },
+    {
+      "source": "services/music/routes/music/releases/get.js",
+      "context": "MusicGETMusicReleasesQueryLimit",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/releases/get.js",
+      "context": "MusicGETMusicReleasesQueryPage",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/releases/get.js",
+      "context": "MusicGETMusicReleasesQueryUserId",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/releases/put.js",
+      "context": "MusicPUTMusicReleasesBodyId",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/releases/put.js",
+      "context": "MusicPUTMusicReleasesResult",
+      "reason": "heterogeneous union true | (Document<unknown, {}, Record<string, any>, { id: string; }, DefaultSchemaOptions> & Omit<Record<string, any> & Required<{ _id: unknown; }> & { ...; }, \""
+    },
+    {
+      "source": "services/music/routes/music/tracks/[track_id]/data/get.js",
+      "context": "MusicGETMusicTracksByTrackIdDataResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/tracks/[track_id]/delete.js",
+      "context": "MusicDELETEMusicTracksByTrackIdResultTrack",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/tracks/[track_id]/lyrics/get.js",
+      "context": "MusicGETMusicTracksByTrackIdLyricsQueryLanguage",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/tracks/[track_id]/lyrics/get.js",
+      "context": "MusicGETMusicTracksByTrackIdLyricsQueryFetchAll",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/tracks/[track_id]/lyrics/put.js",
+      "context": "MusicPUTMusicTracksByTrackIdLyricsBodyLrc",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/tracks/[track_id]/lyrics/put.js",
+      "context": "MusicPUTMusicTracksByTrackIdLyricsBodyVideoSource",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/tracks/[track_id]/lyrics/put.js",
+      "context": "MusicPUTMusicTracksByTrackIdLyricsBodyVideoLoop",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/tracks/[track_id]/lyrics/put.js",
+      "context": "MusicPUTMusicTracksByTrackIdLyricsBodyVideoStartsAt",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/tracks/[track_id]/override/get.js",
+      "context": "MusicGETMusicTracksByTrackIdOverrideQueryService",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/tracks/[track_id]/override/get.js",
+      "context": "MusicGETMusicTracksByTrackIdOverrideResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/tracks/[track_id]/override/put.js",
+      "context": "MusicPUTMusicTracksByTrackIdOverrideBodyService",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/tracks/[track_id]/override/put.js",
+      "context": "MusicPUTMusicTracksByTrackIdOverrideBodyOverride",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/tracks/[track_id]/override/put.js",
+      "context": "MusicPUTMusicTracksByTrackIdOverrideResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/tracks/[track_id]/timings/get.js",
+      "context": "MusicGETMusicTracksByTrackIdTimingsResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/tracks/get.js",
+      "context": "MusicGETMusicTracksQueryLimit",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/tracks/get.js",
+      "context": "MusicGETMusicTracksQueryPage",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/tracks/get.js",
+      "context": "MusicGETMusicTracksQueryUserId",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/tracks/put.js",
+      "context": "MusicPUTMusicTracksBodyItems",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/routes/music/tracks/put.js",
+      "context": "MusicPUTMusicTracksResult",
+      "reason": "heterogeneous union (Record<string, any> & Required<{ _id: unknown; }> & { __v: number; }) | (Document<unknown, {}, Record<string, any>, { id: string; }, DefaultSchemaOptions> & Om"
+    },
+    {
+      "source": "services/music/ws_routes/sync_room/join.js",
+      "context": "MusicWSSyncRoomByJoinPayload",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/ws_routes/sync_room/leave.js",
+      "context": "MusicWSSyncRoomByLeave",
+      "reason": "no payload parameter declared"
+    },
+    {
+      "source": "services/music/ws_routes/sync_room/leave.js",
+      "context": "MusicWSSyncRoomByLeaveResult",
+      "reason": "heterogeneous union null | undefined"
+    },
+    {
+      "source": "services/music/ws_routes/sync_room/push.js",
+      "context": "MusicWSSyncRoomByPushPayload",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/ws_routes/sync_room/push_lyrics.js",
+      "context": "MusicWSSyncRoomByPushLyricsPayload",
+      "reason": "any"
+    },
+    {
+      "source": "services/music/ws_routes/sync_room/request_lyrics.js",
+      "context": "MusicWSSyncRoomByRequestLyrics",
+      "reason": "no payload parameter declared"
+    },
+    {
+      "source": "services/music/ws_routes/sync_room/request_lyrics.js",
+      "context": "MusicWSSyncRoomByRequestLyricsResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/notifications/routes/notifications/broadcast/post.js",
+      "context": "NotificationsPOSTNotificationsBroadcastResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/posts/routes/posts/[post_id]/data/get.js",
+      "context": "PostsGETPostsByPostIdDataResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/posts/routes/posts/[post_id]/replies/get.js",
+      "context": "PostsGETPostsByPostIdRepliesQueryPage",
+      "reason": "any"
+    },
+    {
+      "source": "services/posts/routes/posts/[post_id]/replies/get.js",
+      "context": "PostsGETPostsByPostIdRepliesQueryLimit",
+      "reason": "any"
+    },
+    {
+      "source": "services/posts/routes/posts/[post_id]/toggle_like/post.js",
+      "context": "PostsPOSTPostsByPostIdToggleLikeBodyTo",
+      "reason": "any"
+    },
+    {
+      "source": "services/posts/routes/posts/[post_id]/toggle_like/post.js",
+      "context": "PostsPOSTPostsByPostIdToggleLikeResultPostId",
+      "reason": "any"
+    },
+    {
+      "source": "services/posts/routes/posts/[post_id]/toggle_like/post.js",
+      "context": "PostsPOSTPostsByPostIdToggleLikeResultLiked",
+      "reason": "any"
+    },
+    {
+      "source": "services/posts/routes/posts/[post_id]/toggle_save/post.js",
+      "context": "PostsPOSTPostsByPostIdToggleSaveBodyTo",
+      "reason": "any"
+    },
+    {
+      "source": "services/posts/routes/posts/[post_id]/toggle_save/post.js",
+      "context": "PostsPOSTPostsByPostIdToggleSaveResultPostId",
+      "reason": "any"
+    },
+    {
+      "source": "services/posts/routes/posts/[post_id]/update/put.js",
+      "context": "PostsPUTPostsByPostIdUpdateResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/posts/routes/posts/feed/global/get.js",
+      "context": "PostsGETPostsFeedGlobalQueryLimit",
+      "reason": "any"
+    },
+    {
+      "source": "services/posts/routes/posts/feed/global/get.js",
+      "context": "PostsGETPostsFeedGlobalQueryPage",
+      "reason": "any"
+    },
+    {
+      "source": "services/posts/routes/posts/feed/global/get.js",
+      "context": "PostsGETPostsFeedGlobalResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/posts/routes/posts/feed/timeline/get.js",
+      "context": "PostsGETPostsFeedTimelineQueryLimit",
+      "reason": "any"
+    },
+    {
+      "source": "services/posts/routes/posts/feed/timeline/get.js",
+      "context": "PostsGETPostsFeedTimelineQueryPage",
+      "reason": "any"
+    },
+    {
+      "source": "services/posts/routes/posts/feed/timeline/get.js",
+      "context": "PostsGETPostsFeedTimelineResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/posts/routes/posts/liked/get.js",
+      "context": "PostsGETPostsLikedQueryPage",
+      "reason": "any"
+    },
+    {
+      "source": "services/posts/routes/posts/liked/get.js",
+      "context": "PostsGETPostsLikedQueryLimit",
+      "reason": "any"
+    },
+    {
+      "source": "services/posts/routes/posts/liked/get.js",
+      "context": "PostsGETPostsLikedResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/posts/routes/posts/new/post.js",
+      "context": "PostsPOSTPostsNewHeadersAuthorization",
+      "reason": "any"
+    },
+    {
+      "source": "services/posts/routes/posts/saved/get.js",
+      "context": "PostsGETPostsSavedQueryPage",
+      "reason": "any"
+    },
+    {
+      "source": "services/posts/routes/posts/saved/get.js",
+      "context": "PostsGETPostsSavedQueryLimit",
+      "reason": "any"
+    },
+    {
+      "source": "services/posts/routes/posts/saved/get.js",
+      "context": "PostsGETPostsSavedResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/posts/routes/posts/trending/[trending]/get.js",
+      "context": "PostsGETPostsTrendingByTrendingQueryLimit",
+      "reason": "any"
+    },
+    {
+      "source": "services/posts/routes/posts/trending/[trending]/get.js",
+      "context": "PostsGETPostsTrendingByTrendingQueryTrim",
+      "reason": "any"
+    },
+    {
+      "source": "services/posts/routes/posts/trendings/get.js",
+      "context": "PostsGETPostsTrendingsResultItemHashtag",
+      "reason": "any"
+    },
+    {
+      "source": "services/posts/routes/posts/trendings/get.js",
+      "context": "PostsGETPostsTrendingsResultItemCount",
+      "reason": "any"
+    },
+    {
+      "source": "services/posts/routes/posts/user/[user_id]/get.js",
+      "context": "PostsGETPostsUserByUserIdQueryLimit",
+      "reason": "any"
+    },
+    {
+      "source": "services/posts/routes/posts/user/[user_id]/get.js",
+      "context": "PostsGETPostsUserByUserIdQueryPage",
+      "reason": "any"
+    },
+    {
+      "source": "services/posts/routes/posts/user/[user_id]/get.js",
+      "context": "PostsGETPostsUserByUserIdResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/posts/ws_routes/posts/subscribe.ts",
+      "context": "PostsWSPostsBySubscribePayload",
+      "reason": "any"
+    },
+    {
+      "source": "services/posts/ws_routes/posts/unsubscribe.js",
+      "context": "PostsWSPostsByUnsubscribePayload",
+      "reason": "any"
+    },
+    {
+      "source": "services/rtc/routes/rtc/groups/[group_id]/[channel_id]/[user_id]/disconnect/post.js",
+      "context": "RtcPOSTRtcGroupsByGroupIdByChannelIdByUserIdDisconnectResultUserId",
+      "reason": "any"
+    },
+    {
+      "source": "services/rtc/routes/rtc/groups/[group_id]/[channel_id]/[user_id]/disconnect/post.js",
+      "context": "RtcPOSTRtcGroupsByGroupIdByChannelIdByUserIdDisconnectResultClientId",
+      "reason": "any"
+    },
+    {
+      "source": "services/rtc/routes/rtc/groups/[group_id]/[channel_id]/[user_id]/disconnect/post.js",
+      "context": "RtcPOSTRtcGroupsByGroupIdByChannelIdByUserIdDisconnectResultChannelId",
+      "reason": "any"
+    },
+    {
+      "source": "services/rtc/routes/rtc/groups/[group_id]/state/get.ts",
+      "context": "RtcGETRtcGroupsByGroupIdStateResultItem",
+      "reason": "SerializedStateMediaChannel"
+    },
+    {
+      "source": "services/rtc/ws_routes/channel/client_event.ts",
+      "context": "RtcWSChannelByClientEventPayloadData",
+      "reason": "any"
+    },
+    {
+      "source": "services/rtc/ws_routes/channel/connect_transport.ts",
+      "context": "RtcWSChannelByConnectTransportPayloadDtlsParameters",
+      "reason": "any"
+    },
+    {
+      "source": "services/rtc/ws_routes/channel/consume.ts",
+      "context": "RtcWSChannelByConsumePayloadRtpCapabilities",
+      "reason": "any"
+    },
+    {
+      "source": "services/rtc/ws_routes/channel/consume.ts",
+      "context": "RtcWSChannelByConsumeResultId",
+      "reason": "any"
+    },
+    {
+      "source": "services/rtc/ws_routes/channel/consume.ts",
+      "context": "RtcWSChannelByConsumeResultKind",
+      "reason": "any"
+    },
+    {
+      "source": "services/rtc/ws_routes/channel/consume.ts",
+      "context": "RtcWSChannelByConsumeResultRtpParameters",
+      "reason": "any"
+    },
+    {
+      "source": "services/rtc/ws_routes/channel/consumer_control.ts",
+      "context": "RtcWSChannelByConsumerControlResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/rtc/ws_routes/channel/create_transport.ts",
+      "context": "RtcWSChannelByCreateTransportPayload",
+      "reason": "any"
+    },
+    {
+      "source": "services/rtc/ws_routes/channel/join.ts",
+      "context": "RtcWSChannelByJoinResultRoom",
+      "reason": "any"
+    },
+    {
+      "source": "services/rtc/ws_routes/channel/join.ts",
+      "context": "RtcWSChannelByJoinResultRtpCapabilitiesCodecsItemParametersEntry",
+      "reason": "unknown"
+    },
+    {
+      "source": "services/rtc/ws_routes/channel/join.ts",
+      "context": "RtcWSChannelByJoinResultProducersItem",
+      "reason": "any"
+    },
+    {
+      "source": "services/rtc/ws_routes/channel/leave.ts",
+      "context": "RtcWSChannelByLeaveResult",
+      "reason": "heterogeneous union string | void"
+    },
+    {
+      "source": "services/rtc/ws_routes/channel/produce.ts",
+      "context": "RtcWSChannelByProducePayloadRtpParameters",
+      "reason": "any"
+    },
+    {
+      "source": "services/rtc/ws_routes/channel/produce.ts",
+      "context": "RtcWSChannelByProduceResultAppData",
+      "reason": "any"
+    },
+    {
+      "source": "services/rtc/ws_routes/channel/request_keyframe.ts",
+      "context": "RtcWSChannelByRequestKeyframeResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/search/routes/search/get.js",
+      "context": "SearchGETSearchQueryKeywords",
+      "reason": "any"
+    },
+    {
+      "source": "services/search/routes/search/get.js",
+      "context": "SearchGETSearchQueryLimit",
+      "reason": "any"
+    },
+    {
+      "source": "services/search/routes/search/get.js",
+      "context": "SearchGETSearchQueryOffset",
+      "reason": "any"
+    },
+    {
+      "source": "services/search/routes/search/get.js",
+      "context": "SearchGETSearchQueryFields",
+      "reason": "any"
+    },
+    {
+      "source": "services/search/routes/search/get.js",
+      "context": "SearchGETSearchResult",
+      "reason": "unstructured type {}"
+    },
+    {
+      "source": "services/users/routes/users/[user_id]/avatar/get.js",
+      "context": "UsersGETUsersByUserIdAvatarResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/users/routes/users/[user_id]/badges/get.js",
+      "context": "UsersGETUsersByUserIdBadgesQueryLimit",
+      "reason": "any"
+    },
+    {
+      "source": "services/users/routes/users/[user_id]/badges/get.js",
+      "context": "UsersGETUsersByUserIdBadgesQueryOffset",
+      "reason": "any"
+    },
+    {
+      "source": "services/users/routes/users/[user_id]/data/get.js",
+      "context": "UsersGETUsersByUserIdDataQueryBasic",
+      "reason": "any"
+    },
+    {
+      "source": "services/users/routes/users/[user_id]/data/get.js",
+      "context": "UsersGETUsersByUserIdDataResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/users/routes/users/[user_id]/decorations/get.ts",
+      "context": "UsersGETUsersByUserIdDecorationsResult",
+      "reason": "unstructured type {}"
+    },
+    {
+      "source": "services/users/routes/users/[user_id]/follow/post.js",
+      "context": "UsersPOSTUsersByUserIdFollowBodyTo",
+      "reason": "any"
+    },
+    {
+      "source": "services/users/routes/users/[user_id]/follow/post.js",
+      "context": "UsersPOSTUsersByUserIdFollowResultFollowing",
+      "reason": "any"
+    },
+    {
+      "source": "services/users/routes/users/[user_id]/followers/get.js",
+      "context": "UsersGETUsersByUserIdFollowersQueryFetchData",
+      "reason": "any"
+    },
+    {
+      "source": "services/users/routes/users/[user_id]/followers/get.js",
+      "context": "UsersGETUsersByUserIdFollowersQueryLimit",
+      "reason": "any"
+    },
+    {
+      "source": "services/users/routes/users/[user_id]/followers/get.js",
+      "context": "UsersGETUsersByUserIdFollowersQueryPage",
+      "reason": "any"
+    },
+    {
+      "source": "services/users/routes/users/[user_id]/followers/get.js",
+      "context": "UsersGETUsersByUserIdFollowersResult",
+      "reason": "heterogeneous union { items: (Document<unknown, {}, Record<string, any>, { id: string; }, DefaultSchemaOptions> & Omit<Record<string, any> & Required<{ _id: unknown; }> & { ...; },"
+    },
+    {
+      "source": "services/users/routes/users/[user_id]/is-connected/get.js",
+      "context": "UsersGETUsersByUserIdIsConnectedResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/users/routes/users/[user_id]/resolve-user_id/get.js",
+      "context": "UsersGETUsersByUserIdResolveUserIdResultUserId",
+      "reason": "any"
+    },
+    {
+      "source": "services/users/routes/users/[user_id]/roles/get.js",
+      "context": "UsersGETUsersByUserIdRolesResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/users/routes/users/self/2fa/delete.ts",
+      "context": "UsersDELETEUsersSelf2faBodyCode",
+      "reason": "any"
+    },
+    {
+      "source": "services/users/routes/users/self/2fa/enable/post.ts",
+      "context": "UsersPOSTUsersSelf2faEnableBodyCode",
+      "reason": "any"
+    },
+    {
+      "source": "services/users/routes/users/self/config/get.js",
+      "context": "UsersGETUsersSelfConfigQueryKey",
+      "reason": "any"
+    },
+    {
+      "source": "services/users/routes/users/self/config/get.js",
+      "context": "UsersGETUsersSelfConfigResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/users/routes/users/self/config/put.js",
+      "context": "UsersPUTUsersSelfConfigResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/users/routes/users/self/fav-stickers-set/get.js",
+      "context": "UsersGETUsersSelfFavStickersSetQueryLimit",
+      "reason": "any"
+    },
+    {
+      "source": "services/users/routes/users/self/fav-stickers-set/get.js",
+      "context": "UsersGETUsersSelfFavStickersSetQueryPage",
+      "reason": "any"
+    },
+    {
+      "source": "services/users/routes/users/self/fav-stickers-set/get.js",
+      "context": "UsersGETUsersSelfFavStickersSetResultItemsItemName",
+      "reason": "any"
+    },
+    {
+      "source": "services/users/routes/users/self/fav-stickers-set/get.js",
+      "context": "UsersGETUsersSelfFavStickersSetResultItemsItemItems",
+      "reason": "any"
+    },
+    {
+      "source": "services/users/routes/users/self/get.js",
+      "context": "UsersGETUsersSelfResult",
+      "reason": "any"
+    },
+    {
+      "source": "services/users/routes/users/self/roles/get.js",
+      "context": "UsersGETUsersSelfRolesResult",
+      "reason": "any"
+    }
+  ],
+  "exclusions": [
+    "SFU IPC/server-to-server handlers",
+    "desktop-local API",
+    "web-wrapper routes",
+    "Linebridge built-in / and /_map",
+    "external /spectrum proxy",
+    "unreferenced persistence schemas and internal event DTOs"
+  ],
+  "limitations": [
+    "No gRPC server or HTTP/WS adapter is implemented.",
+    "Observed request fields are not exhaustive validation schemas.",
+    "Unknown/dynamic values use Value/Struct; the report includes intermediate inference attempts.",
+    "TS number maps to double; integer semantics are not invented.",
+    "Heterogeneous unions, Date|string, runtime classes and tuples may use Value.",
+    "WS RPCs document request/reply semantics, not invented bidirectional streams. SSE and binary streaming endpoints require a transport adapter.",
+    "Server HTTP routes include permission-restricted handlers; listing an RPC does not grant access."
+  ],
+  "sources": [
+    "classes/AuthToken/index.ts",
+    "classes/BotToken/index.js",
+    "classes/CacheService/index.js",
+    "classes/ChunkFileUpload/index.js",
+    "classes/DbManager/index.js",
+    "classes/FFMPEGLib/index.js",
+    "classes/KV/bucket.ts",
+    "classes/KV/index.ts",
+    "classes/KV/manager.ts",
+    "classes/KlipyAPI/index.ts",
+    "classes/Languages/index.js",
+    "classes/Limits/index.ts",
+    "classes/Multipart/complete.ts",
+    "classes/Multipart/index.ts",
+    "classes/Multipart/start.ts",
+    "classes/MultiqualityHLSJob/index.js",
+    "classes/RedisClient/index.ts",
+    "classes/SegmentedAudioMPDJob/index.js",
+    "classes/ServerToken/index.js",
+    "classes/Snowflake/index.ts",
+    "classes/Spaces/ChatChannel/delete.ts",
+    "classes/Spaces/ChatChannel/index.ts",
+    "classes/Spaces/ChatChannel/read.ts",
+    "classes/Spaces/ChatChannel/update.ts",
+    "classes/Spaces/ChatChannel/write.ts",
+    "classes/Spaces/GroupChannels/index.ts",
+    "classes/Spaces/GroupChannels/methods/create.ts",
+    "classes/Spaces/GroupChannels/methods/delete.ts",
+    "classes/Spaces/GroupChannels/methods/get.ts",
+    "classes/Spaces/GroupChannels/methods/getAllByGroup.ts",
+    "classes/Spaces/GroupChannels/methods/getTotalByGroup.ts",
+    "classes/Spaces/GroupChannels/methods/order.ts",
+    "classes/Spaces/GroupChannels/methods/update.ts",
+    "classes/Spaces/GroupInvites/index.ts",
+    "classes/Spaces/GroupInvites/methods/create.ts",
+    "classes/Spaces/GroupInvites/methods/delete.ts",
+    "classes/Spaces/GroupInvites/methods/get.ts",
+    "classes/Spaces/GroupInvites/methods/getAllByGroup.ts",
+    "classes/Spaces/GroupMemberships/index.ts",
+    "classes/Spaces/GroupMemberships/methods/create.ts",
+    "classes/Spaces/GroupMemberships/methods/delete.ts",
+    "classes/Spaces/GroupMemberships/methods/get.ts",
+    "classes/Spaces/GroupMemberships/methods/getByGroupId.ts",
+    "classes/Spaces/GroupMemberships/methods/getByUserId.ts",
+    "classes/Spaces/GroupMemberships/methods/getOneById.ts",
+    "classes/Spaces/GroupMemberships/methods/getOneByUserId.ts",
+    "classes/Spaces/GroupMemberships/methods/getTotalMembersByGroupId.ts",
+    "classes/Spaces/GroupMemberships/methods/isUserIdOnMembers.ts",
+    "classes/Spaces/GroupPermissions/enum.ts",
+    "classes/Spaces/GroupPermissions/index.ts",
+    "classes/Spaces/GroupPermissions/methods/canPerformAction.ts",
+    "classes/Spaces/GroupRoles/index.ts",
+    "classes/Spaces/GroupRoles/updateMember.ts",
+    "classes/Spaces/GroupSoundpad/index.ts",
+    "classes/Spaces/Groups/index.ts",
+    "classes/Spaces/Groups/methods/canUserIdReach.ts",
+    "classes/Spaces/Groups/methods/create.ts",
+    "classes/Spaces/Groups/methods/createInviteKey.ts",
+    "classes/Spaces/Groups/methods/delete.ts",
+    "classes/Spaces/Groups/methods/get.ts",
+    "classes/Spaces/Groups/methods/getMany.ts",
+    "classes/Spaces/Groups/methods/getManyByJoinedUserId.ts",
+    "classes/Spaces/Groups/methods/sendSystemMessage.ts",
+    "classes/Spaces/Groups/methods/sort.ts",
+    "classes/Spaces/Groups/methods/update.ts",
+    "classes/StorageClient/index.ts",
+    "classes/SyncRoomManager/index.js",
+    "classes/TaskQueueManager/index.js",
+    "classes/Transformation/handlers/a-dash.js",
+    "classes/Transformation/handlers/mq-hls.js",
+    "classes/Transformation/handlers/optimize.ts",
+    "classes/Transformation/index.ts",
+    "classes/Upload/index.ts",
+    "classes/Upload/putObject.js",
+    "classes/UserConnections/index.ts",
+    "db_models/NFCTags/index.ts",
+    "db_models/activationCode/index.ts",
+    "db_models/badge/index.ts",
+    "db_models/bot/index.ts",
+    "db_models/comment/index.ts",
+    "db_models/config/index.ts",
+    "db_models/decorations/index.ts",
+    "db_models/event/index.ts",
+    "db_models/extension/index.ts",
+    "db_models/favSticker/index.ts",
+    "db_models/featuredPlaylist/index.ts",
+    "db_models/featuredWallpaper/index.ts",
+    "db_models/groupSoundpadItem/index.ts",
+    "db_models/index.ts",
+    "db_models/mfaSessions/index.ts",
+    "db_models/musicLibraryItem/index.ts",
+    "db_models/musicRelease/index.ts",
+    "db_models/oauth_code/index.ts",
+    "db_models/oidc_apps/index.ts",
+    "db_models/oidc_store/index.ts",
+    "db_models/operationLog/index.ts",
+    "db_models/passwordHash/index.ts",
+    "db_models/passwordRecover/index.ts",
+    "db_models/playlist/index.ts",
+    "db_models/post/index.ts",
+    "db_models/postLike/index.ts",
+    "db_models/postSave/index.ts",
+    "db_models/radioProfile/index.ts",
+    "db_models/recentActivity/index.ts",
+    "db_models/recentChat/index.ts",
+    "db_models/role/index.ts",
+    "db_models/serverKeys/index.ts",
+    "db_models/serverLimit/index.ts",
+    "db_models/sticker/index.ts",
+    "db_models/stickerSet/index.ts",
+    "db_models/tosViolations/index.ts",
+    "db_models/track/index.ts",
+    "db_models/trackLike/index.ts",
+    "db_models/trackLyrics/index.ts",
+    "db_models/trackOverride/index.ts",
+    "db_models/user/index.ts",
+    "db_models/userConfig/index.ts",
+    "db_models/userFollow/index.ts",
+    "db_models/userTotp/index.ts",
+    "db_models/votePoll/index.ts",
+    "db_models/widget/index.ts",
+    "lbuw-plugins/wsauth.js",
+    "middlewares/botAuthentication/index.js",
+    "middlewares/index.ts",
+    "middlewares/onlyAdmin/index.js",
+    "middlewares/roles/index.js",
+    "middlewares/withAuthentication/index.ts",
+    "middlewares/withOptionalAuthentication/index.ts",
+    "services/auth/auth.service.ts",
+    "services/auth/classes/account/index.js",
+    "services/auth/classes/account/methods/activateAccount.js",
+    "services/auth/classes/account/methods/changePassword.js",
+    "services/auth/classes/account/methods/create.js",
+    "services/auth/classes/account/methods/disableAccount.js",
+    "services/auth/classes/account/methods/loginStrategy.js",
+    "services/auth/classes/account/methods/passwordMeetPolicy.js",
+    "services/auth/classes/account/methods/sendActivationCode.js",
+    "services/auth/classes/account/methods/usernameMeetPolicy.js",
+    "services/auth/classes/login/index.ts",
+    "services/auth/classes/login/processor.ts",
+    "services/auth/classes/login/stages/authentication.ts",
+    "services/auth/classes/login/stages/authorization.ts",
+    "services/auth/classes/login/stages/identification.ts",
+    "services/auth/classes/login/stages/mfa.ts",
+    "services/auth/classes/login/stages/validation.ts",
+    "services/auth/classes/oauth/index.ts",
+    "services/auth/classes/oauth/methods/createAuthorizationCode.ts",
+    "services/auth/classes/oauth/methods/deleteApp.ts",
+    "services/auth/classes/oauth/methods/ensureTTLIndex.ts",
+    "services/auth/classes/oauth/methods/exchangeCode.ts",
+    "services/auth/classes/oauth/methods/getUserApps.ts",
+    "services/auth/classes/oauth/methods/getUserInfo.ts",
+    "services/auth/classes/oauth/methods/refreshAccessToken.ts",
+    "services/auth/classes/oauth/methods/regenerateSecret.ts",
+    "services/auth/classes/oauth/methods/registerApp.ts",
+    "services/auth/classes/oauth/methods/revokeToken.ts",
+    "services/auth/classes/oauth/methods/updateApp.ts",
+    "services/auth/classes/oauth/methods/validateClient.ts",
+    "services/auth/classes/oauth/utils.ts",
+    "services/auth/classes/session/create.ts",
+    "services/auth/classes/session/delete.ts",
+    "services/auth/classes/session/deleteAllByUserId.ts",
+    "services/auth/classes/session/get.js",
+    "services/auth/classes/session/getAllByUserId.ts",
+    "services/auth/classes/session/handleRefresh.js",
+    "services/auth/classes/session/index.js",
+    "services/auth/queues/NotifyNewLogin/index.js",
+    "services/auth/queues/NotifyNewLogin/worker.ts",
+    "services/auth/routes/auth/[username]/exists/get.js",
+    "services/auth/routes/auth/activate/post.js",
+    "services/auth/routes/auth/delete.js",
+    "services/auth/routes/auth/disable-account/post.js",
+    "services/auth/routes/auth/jwks/get.ts",
+    "services/auth/routes/auth/password/put.js",
+    "services/auth/routes/auth/post.ts",
+    "services/auth/routes/auth/recover-password/post.js",
+    "services/auth/routes/auth/resend-activation-code/post.js",
+    "services/auth/routes/auth/token/post.js",
+    "services/auth/routes/availability/get.js",
+    "services/auth/routes/forgot/[apr_code]/post.js",
+    "services/auth/routes/forgot/post.js",
+    "services/auth/routes/oauth/.well-known/openid-configuration/get.ts",
+    "services/auth/routes/oauth/apps/[clientId]/delete.ts",
+    "services/auth/routes/oauth/apps/[clientId]/get.ts",
+    "services/auth/routes/oauth/apps/[clientId]/put.ts",
+    "services/auth/routes/oauth/apps/[clientId]/regenerate-secret/post.ts",
+    "services/auth/routes/oauth/apps/get.ts",
+    "services/auth/routes/oauth/apps/post.ts",
+    "services/auth/routes/oauth/authorize/post.ts",
+    "services/auth/routes/oauth/token/post.ts",
+    "services/auth/routes/oauth/userinfo/get.ts",
+    "services/auth/routes/register/post.js",
+    "services/auth/routes/server-keys/[access_id]/delete.js",
+    "services/auth/routes/server-keys/[access_id]/regenerate/post.js",
+    "services/auth/routes/server-keys/generate/post.js",
+    "services/auth/routes/server-keys/my/get.js",
+    "services/auth/routes/sessions/all/delete.js",
+    "services/auth/routes/sessions/all/get.js",
+    "services/auth/routes/sessions/current/get.js",
+    "services/auth/utils/verifyTurnstileToken.js",
+    "services/chats/chats.service.ts",
+    "services/chats/classes/DMChatChannelController/index.ts",
+    "services/chats/classes/DMChatChannelController/instance.ts",
+    "services/chats/classes/GroupChatChannelController/index.ts",
+    "services/chats/classes/GroupChatChannelController/instance.ts",
+    "services/chats/routes/chats/acks/get.ts",
+    "services/chats/routes/chats/channels/[group_id]/[channel_id]/[message_id]/delete.js",
+    "services/chats/routes/chats/channels/[group_id]/[channel_id]/[message_id]/update.js",
+    "services/chats/routes/chats/channels/[group_id]/[channel_id]/get.js",
+    "services/chats/routes/chats/channels/[group_id]/[channel_id]/last/get.js",
+    "services/chats/routes/chats/channels/[group_id]/[channel_id]/post.js",
+    "services/chats/routes/chats/channels/[group_id]/[channel_id]/sync/get.ts",
+    "services/chats/routes/chats/dm/[to_user_id]/[message_id]/delete.js",
+    "services/chats/routes/chats/dm/[to_user_id]/[message_id]/patch.js",
+    "services/chats/routes/chats/dm/[to_user_id]/get.js",
+    "services/chats/routes/chats/dm/[to_user_id]/post.js",
+    "services/chats/routes/chats/dm/get.ts",
+    "services/chats/utils/buildFunctionHandler/index.js",
+    "services/chats/utils/chat/send/message.js",
+    "services/chats/utils/chat/state/typing.js",
+    "services/chats/ws_routes/channel/ack.ts",
+    "services/chats/ws_routes/channel/message/delete.ts",
+    "services/chats/ws_routes/channel/message/update.ts",
+    "services/chats/ws_routes/channel/send.ts",
+    "services/chats/ws_routes/channel/subscribe.ts",
+    "services/chats/ws_routes/channel/typing.ts",
+    "services/chats/ws_routes/channel/unsubscribe.ts",
+    "services/chats/ws_routes/dm/ack.ts",
+    "services/chats/ws_routes/dm/message/delete.ts",
+    "services/chats/ws_routes/dm/message/update.ts",
+    "services/chats/ws_routes/dm/send.ts",
+    "services/chats/ws_routes/dm/subscribe.ts",
+    "services/chats/ws_routes/dm/typing.ts",
+    "services/chats/ws_routes/dm/unsubscribe.ts",
+    "services/ems/ems.service.js",
+    "services/ems/ipcEvents/accountActivation.js",
+    "services/ems/ipcEvents/aprSend.js",
+    "services/ems/ipcEvents/mfaSend.js",
+    "services/ems/ipcEvents/newLogin.js",
+    "services/ems/ipcEvents/passwordChanged.js",
+    "services/ems/routes/dispatch/post.js",
+    "services/ems/routes/preview/email/[email]/get.js",
+    "services/ems/templates/index.js",
+    "services/files/classes/Capabilities/checks/h264Nvenc.js",
+    "services/files/classes/Capabilities/checks/h264Vaapi.js",
+    "services/files/classes/Capabilities/checks/h265Nvenc.js",
+    "services/files/classes/Capabilities/checks/h265Vaapi.js",
+    "services/files/classes/Capabilities/index.js",
+    "services/files/classes/ChunkFile/index.js",
+    "services/files/files.service.ts",
+    "services/files/queues/fileProcess/index.ts",
+    "services/files/queues/transformations/index.ts",
+    "services/files/routes/upload/chunk/post.ts",
+    "services/files/routes/upload/file/post.js",
+    "services/files/routes/upload/get.js",
+    "services/files/routes/upload/parts/complete/post.ts",
+    "services/files/routes/upload/parts/url/get.ts",
+    "services/groups/groups.service.ts",
+    "services/groups/routes/groups/[group_id]/canPerform/[action]/get.js",
+    "services/groups/routes/groups/[group_id]/channels/[channel_id]/delete.js",
+    "services/groups/routes/groups/[group_id]/channels/[channel_id]/get.js",
+    "services/groups/routes/groups/[group_id]/channels/[channel_id]/put.js",
+    "services/groups/routes/groups/[group_id]/channels/create/post.js",
+    "services/groups/routes/groups/[group_id]/channels/get.js",
+    "services/groups/routes/groups/[group_id]/channels/order/post.js",
+    "services/groups/routes/groups/[group_id]/delete.js",
+    "services/groups/routes/groups/[group_id]/get.ts",
+    "services/groups/routes/groups/[group_id]/invites/[invite_key]/delete.js",
+    "services/groups/routes/groups/[group_id]/invites/[invite_key]/get.js",
+    "services/groups/routes/groups/[group_id]/invites/create/post.js",
+    "services/groups/routes/groups/[group_id]/invites/get.js",
+    "services/groups/routes/groups/[group_id]/join/post.js",
+    "services/groups/routes/groups/[group_id]/leave/post.js",
+    "services/groups/routes/groups/[group_id]/members/[member_id]/delete.js",
+    "services/groups/routes/groups/[group_id]/members/[member_id]/get.js",
+    "services/groups/routes/groups/[group_id]/members/[member_id]/put.ts",
+    "services/groups/routes/groups/[group_id]/members/connections/get.ts",
+    "services/groups/routes/groups/[group_id]/members/get.ts",
+    "services/groups/routes/groups/[group_id]/members/post.js",
+    "services/groups/routes/groups/[group_id]/meta/get.ts",
+    "services/groups/routes/groups/[group_id]/put.js",
+    "services/groups/routes/groups/[group_id]/soundpad/items/[item_id]/delete.js",
+    "services/groups/routes/groups/[group_id]/soundpad/items/[item_id]/get.js",
+    "services/groups/routes/groups/[group_id]/soundpad/items/get.js",
+    "services/groups/routes/groups/[group_id]/soundpad/items/post.js",
+    "services/groups/routes/groups/create/post.js",
+    "services/groups/routes/groups/my/get.js",
+    "services/groups/routes/groups/my/sort/put.js",
+    "services/main/events/index.js",
+    "services/main/events/user_connected.js",
+    "services/main/events/user_created.js",
+    "services/main/events/user_disconnected.js",
+    "services/main/main.service.ts",
+    "services/main/middlewares/index.js",
+    "services/main/middlewares/permissions/index.js",
+    "services/main/routes/activity/client/post.js",
+    "services/main/routes/activity/recent/get.js",
+    "services/main/routes/badges/[ids]/get.js",
+    "services/main/routes/bots/[bot_id]/delete.js",
+    "services/main/routes/bots/[bot_id]/get.js",
+    "services/main/routes/bots/[bot_id]/patch.js",
+    "services/main/routes/bots/create/post.js",
+    "services/main/routes/bots/my/get.js",
+    "services/main/routes/config/global/get.js",
+    "services/main/routes/decorations/[ids]/get.js",
+    "services/main/routes/events/[event_id]/data/get.js",
+    "services/main/routes/expressions/gif/fav/get.ts",
+    "services/main/routes/expressions/gif/fav/post.ts",
+    "services/main/routes/expressions/gif/search/get.ts",
+    "services/main/routes/featured/events/get.js",
+    "services/main/routes/featured/wallpapers/get.js",
+    "services/main/routes/flags/ack/[flag_id]/post.js",
+    "services/main/routes/limits/get.js",
+    "services/main/routes/main/get.js",
+    "services/main/routes/main/query_url/get.js",
+    "services/main/routes/main/turnstile/get.js",
+    "services/main/routes/main/users_connected/get.js",
+    "services/main/routes/nfc/tag/id/[id]/delete.js",
+    "services/main/routes/nfc/tag/id/[id]/execute/get.js",
+    "services/main/routes/nfc/tag/id/[id]/get.js",
+    "services/main/routes/nfc/tag/my/get.js",
+    "services/main/routes/nfc/tag/register/[serial]/post.js",
+    "services/main/routes/nfc/tag/serial/get.js",
+    "services/main/routes/ping/get.js",
+    "services/main/routes/repo/auto-update/mobile/get.js",
+    "services/main/routes/repo/releases-notes/get.js",
+    "services/main/routes/stickers/[id]/get.js",
+    "services/main/routes/stickers/create/post.js",
+    "services/main/routes/stickers/packs/[id]/put.js",
+    "services/main/routes/stickers/packs/create/post.js",
+    "services/main/ws_routes/main/findClientsByUserId.js",
+    "services/main/ws_routes/main/test.js",
+    "services/marketplace/classes/extension/index.js",
+    "services/marketplace/classes/extension/methods/resolve.js",
+    "services/marketplace/marketplace.service.js",
+    "services/marketplace/routes/extensions/[user_id]/[pkg]/get.js",
+    "services/marketplace/routes/extensions/list/get.js",
+    "services/marketplace/routes/extensions/publish/put.js",
+    "services/marketplace/utils/compileWidgetCode/index.js",
+    "services/marketplace/utils/createRoutesFromDirectory/index.js",
+    "services/marketplace/utils/getWidgetCode/index.js",
+    "services/marketplace/utils/replaceImportsWithRemoteURL/index.js",
+    "services/marketplace/utils/resolveUrl/index.js",
+    "services/music/classes/library/index.js",
+    "services/music/classes/library/methods/getUserLibrary.js",
+    "services/music/classes/library/methods/isFavorite.js",
+    "services/music/classes/library/methods/toggleFavorite.js",
+    "services/music/classes/playlist/index.js",
+    "services/music/classes/playlist/methods/appendItem.js",
+    "services/music/classes/playlist/methods/create.js",
+    "services/music/classes/playlist/methods/deletePlaylist.js",
+    "services/music/classes/playlist/methods/getData.js",
+    "services/music/classes/playlist/methods/modify.js",
+    "services/music/classes/playlist/methods/removeItem.js",
+    "services/music/classes/radio/index.js",
+    "services/music/classes/release/index.js",
+    "services/music/classes/track/index.js",
+    "services/music/classes/track/methods/create.js",
+    "services/music/classes/track/methods/delete.js",
+    "services/music/classes/track/methods/get.js",
+    "services/music/classes/track/methods/modify.js",
+    "services/music/music.service.ts",
+    "services/music/routes/music/feed/get.js",
+    "services/music/routes/music/my/library/favorite/get.js",
+    "services/music/routes/music/my/library/favorite/put.js",
+    "services/music/routes/music/my/library/get.js",
+    "services/music/routes/music/my/releases/get.js",
+    "services/music/routes/music/radio/[radio_id]/get.ts",
+    "services/music/routes/music/radio/list/get.js",
+    "services/music/routes/music/radio/sse/[channel_id]/get.js",
+    "services/music/routes/music/radio/trendings/get.js",
+    "services/music/routes/music/radio/webhook/post.ts",
+    "services/music/routes/music/recently/get.js",
+    "services/music/routes/music/releases/[release_id]/data/get.js",
+    "services/music/routes/music/releases/[release_id]/delete.js",
+    "services/music/routes/music/releases/get.js",
+    "services/music/routes/music/releases/put.js",
+    "services/music/routes/music/tracks/[track_id]/data/get.js",
+    "services/music/routes/music/tracks/[track_id]/delete.js",
+    "services/music/routes/music/tracks/[track_id]/lyrics/get.js",
+    "services/music/routes/music/tracks/[track_id]/lyrics/put.js",
+    "services/music/routes/music/tracks/[track_id]/override/get.js",
+    "services/music/routes/music/tracks/[track_id]/override/put.js",
+    "services/music/routes/music/tracks/[track_id]/timings/get.js",
+    "services/music/routes/music/tracks/get.js",
+    "services/music/routes/music/tracks/put.js",
+    "services/music/ws_routes/sync_room/join.js",
+    "services/music/ws_routes/sync_room/leave.js",
+    "services/music/ws_routes/sync_room/push.js",
+    "services/music/ws_routes/sync_room/push_lyrics.js",
+    "services/music/ws_routes/sync_room/request_lyrics.js",
+    "services/notifications/notifications.service.js",
+    "services/notifications/routes/notifications/broadcast/post.js",
+    "services/posts/classes/posts/index.js",
+    "services/posts/classes/posts/methods/create.js",
+    "services/posts/classes/posts/methods/data.js",
+    "services/posts/classes/posts/methods/delete.js",
+    "services/posts/classes/posts/methods/deletePollVote.js",
+    "services/posts/classes/posts/methods/flag.js",
+    "services/posts/classes/posts/methods/fromUserId.js",
+    "services/posts/classes/posts/methods/getLiked.js",
+    "services/posts/classes/posts/methods/getSaved.js",
+    "services/posts/classes/posts/methods/globalTimeline.js",
+    "services/posts/classes/posts/methods/replies.js",
+    "services/posts/classes/posts/methods/report.js",
+    "services/posts/classes/posts/methods/stage.js",
+    "services/posts/classes/posts/methods/timeline.js",
+    "services/posts/classes/posts/methods/toggleLike.js",
+    "services/posts/classes/posts/methods/toggleSave.js",
+    "services/posts/classes/posts/methods/update.js",
+    "services/posts/classes/posts/methods/votePoll.js",
+    "services/posts/posts.service.js",
+    "services/posts/queues/classify_post_attachments/index.js",
+    "services/posts/routes/posts/[post_id]/data/get.js",
+    "services/posts/routes/posts/[post_id]/delete.js",
+    "services/posts/routes/posts/[post_id]/replies/get.js",
+    "services/posts/routes/posts/[post_id]/toggle_like/post.js",
+    "services/posts/routes/posts/[post_id]/toggle_save/post.js",
+    "services/posts/routes/posts/[post_id]/update/put.js",
+    "services/posts/routes/posts/[post_id]/vote_poll/[option_id]/delete.js",
+    "services/posts/routes/posts/[post_id]/vote_poll/[option_id]/post.js",
+    "services/posts/routes/posts/feed/global/get.js",
+    "services/posts/routes/posts/feed/timeline/get.js",
+    "services/posts/routes/posts/liked/get.js",
+    "services/posts/routes/posts/new/post.js",
+    "services/posts/routes/posts/saved/get.js",
+    "services/posts/routes/posts/trending/[trending]/get.js",
+    "services/posts/routes/posts/trendings/get.js",
+    "services/posts/routes/posts/user/[user_id]/get.js",
+    "services/posts/ws_routes/posts/subscribe.ts",
+    "services/posts/ws_routes/posts/unsubscribe.js",
+    "services/rtc/classes/MediaChannel/defaults.ts",
+    "services/rtc/classes/MediaChannel/handlers/clientEvent.ts",
+    "services/rtc/classes/MediaChannel/handlers/close.ts",
+    "services/rtc/classes/MediaChannel/handlers/connectTransport.ts",
+    "services/rtc/classes/MediaChannel/handlers/consume.ts",
+    "services/rtc/classes/MediaChannel/handlers/consumerControl.ts",
+    "services/rtc/classes/MediaChannel/handlers/createTransport.ts",
+    "services/rtc/classes/MediaChannel/handlers/joinClient.ts",
+    "services/rtc/classes/MediaChannel/handlers/leaveClient.ts",
+    "services/rtc/classes/MediaChannel/handlers/produce.ts",
+    "services/rtc/classes/MediaChannel/handlers/stopConsume.ts",
+    "services/rtc/classes/MediaChannel/handlers/stopProduce.ts",
+    "services/rtc/classes/MediaChannel/index.ts",
+    "services/rtc/classes/MediaChannel/producer.ts",
+    "services/rtc/classes/MediaChannel/utils/getTurnServers.ts",
+    "services/rtc/classes/MediaChannel/utils/validateRtpParameters.ts",
+    "services/rtc/classes/MediaChannelsController/handlers/createChannelInstance.ts",
+    "services/rtc/classes/MediaChannelsController/handlers/findChannelsByGroupId.ts",
+    "services/rtc/classes/MediaChannelsController/handlers/flushDirtyInstancesState.ts",
+    "services/rtc/classes/MediaChannelsController/handlers/getInstance.ts",
+    "services/rtc/classes/MediaChannelsController/handlers/getUserJoinedGroupsIds.ts",
+    "services/rtc/classes/MediaChannelsController/handlers/handleUserConnectedToSocket.ts",
+    "services/rtc/classes/MediaChannelsController/handlers/handleUserDisconnectedToSocket.ts",
+    "services/rtc/classes/MediaChannelsController/handlers/joinClient.ts",
+    "services/rtc/classes/MediaChannelsController/handlers/leaveClient.ts",
+    "services/rtc/classes/MediaChannelsController/handlers/validateGroupAccess.ts",
+    "services/rtc/classes/MediaChannelsController/index.ts",
+    "services/rtc/classes/MediaChannelsController/ipc.ts",
+    "services/rtc/classes/MediaChannelsController/sfu/consumer.ts",
+    "services/rtc/classes/MediaChannelsController/sfu/node.ts",
+    "services/rtc/classes/MediaChannelsController/sfu/producer.ts",
+    "services/rtc/classes/MediaChannelsController/sfu/router.ts",
+    "services/rtc/classes/MediaChannelsController/sfu/transport.ts",
+    "services/rtc/classes/MediaChannelsController/sfu_discovery.ts",
+    "services/rtc/classes/MediaChannelsController/users.ts",
+    "services/rtc/routes/rtc/groups/[group_id]/[channel_id]/[user_id]/disconnect/post.js",
+    "services/rtc/routes/rtc/groups/[group_id]/state/get.ts",
+    "services/rtc/rtc.service.ts",
+    "services/rtc/types.ts",
+    "services/rtc/utils/getAnnouncedIp.js",
+    "services/rtc/ws_routes/channel/client_event.ts",
+    "services/rtc/ws_routes/channel/connect_transport.ts",
+    "services/rtc/ws_routes/channel/consume.ts",
+    "services/rtc/ws_routes/channel/consumer_control.ts",
+    "services/rtc/ws_routes/channel/consumer_stop.ts",
+    "services/rtc/ws_routes/channel/create_transport.ts",
+    "services/rtc/ws_routes/channel/join.ts",
+    "services/rtc/ws_routes/channel/leave.ts",
+    "services/rtc/ws_routes/channel/produce.ts",
+    "services/rtc/ws_routes/channel/producer_stop.ts",
+    "services/rtc/ws_routes/channel/request_keyframe.ts",
+    "services/rtc/ws_routes/channel/soundpad_dispatch.ts",
+    "services/rtc/ws_routes/group/subscribe.ts",
+    "services/rtc/ws_routes/group/unsubscribe.ts",
+    "services/search/collectors/extensions.js",
+    "services/search/collectors/tracks.js",
+    "services/search/collectors/users.js",
+    "services/search/routes/search/get.js",
+    "services/search/search.service.js",
+    "services/users/classes/users/index.js",
+    "services/users/classes/users/method/data.ts",
+    "services/users/classes/users/method/getFollowers.js",
+    "services/users/classes/users/method/resolveUserId.js",
+    "services/users/classes/users/method/toggleFollow.js",
+    "services/users/classes/users/method/update.js",
+    "services/users/routes/users/[user_id]/avatar/get.js",
+    "services/users/routes/users/[user_id]/badges/get.js",
+    "services/users/routes/users/[user_id]/data/get.js",
+    "services/users/routes/users/[user_id]/decorations/get.ts",
+    "services/users/routes/users/[user_id]/follow/post.js",
+    "services/users/routes/users/[user_id]/followers/get.js",
+    "services/users/routes/users/[user_id]/is-connected/get.js",
+    "services/users/routes/users/[user_id]/resolve-user_id/get.js",
+    "services/users/routes/users/[user_id]/roles/get.js",
+    "services/users/routes/users/check-versions/post.ts",
+    "services/users/routes/users/self/2fa/delete.ts",
+    "services/users/routes/users/self/2fa/enable/post.ts",
+    "services/users/routes/users/self/2fa/generate/get.ts",
+    "services/users/routes/users/self/config/get.js",
+    "services/users/routes/users/self/config/put.js",
+    "services/users/routes/users/self/data/put.js",
+    "services/users/routes/users/self/fav-stickers-set/get.js",
+    "services/users/routes/users/self/get.js",
+    "services/users/routes/users/self/roles/get.js",
+    "services/users/users.service.ts",
+    "utils/bufferToStream.js",
+    "utils/flatRouteredFunctions.js",
+    "utils/getRouteredFunctions.js",
+    "utils/isEmail.js",
+    "utils/mfa.ts",
+    "utils/obscureEmail.js",
+    "utils/readChunk.js",
+    "utils/readFileHash.js",
+    "utils/requiredFields.js",
+    "utils/resolveDbModelsPath.ts",
+    "utils/resolvePublicIP.ts",
+    "utils/scyllaRawQuery.ts",
+    "utils/setFind.ts",
+    "vitest.config.ts",
+    "../shared/db/auth_session.ts",
+    "../shared/db/channel_acks.ts",
+    "../shared/db/channel_deleted_messages.ts",
+    "../shared/db/channel_log.ts",
+    "../shared/db/channel_messages.ts",
+    "../shared/db/channel_orders.ts",
+    "../shared/db/direct_messages_activity.ts",
+    "../shared/db/direct_messages_rooms.ts",
+    "../shared/db/expressions_favs.ts",
+    "../shared/db/group_channels.ts",
+    "../shared/db/group_channels_last_message_id.ts",
+    "../shared/db/group_invite_key.ts",
+    "../shared/db/group_memberships.ts",
+    "../shared/db/group_memberships_counter.ts",
+    "../shared/db/group_memberships_ref.ts",
+    "../shared/db/group_roles.ts",
+    "../shared/db/group_versions.ts",
+    "../shared/db/groups.ts",
+    "../shared/db/groups_user_orders.ts",
+    "../shared/db/multipart_uploads.ts",
+    "../shared/db/notifications.ts",
+    "../shared/db/user_sessions.ts",
+    "../shared/types/auth.ts",
+    "../shared/types/bucket.ts",
+    "../shared/types/event_data.ts",
+    "../shared/types/files.ts",
+    "../shared/types/multipart.ts",
+    "../shared/types/pagination.ts",
+    "../shared/types/rtc/client.ts",
+    "../shared/types/rtc/clientEvent.ts",
+    "../shared/types/rtc/events/inbound.ts",
+    "../shared/types/rtc/events/index.ts",
+    "../shared/types/rtc/events/ipc.ts",
+    "../shared/types/rtc/events/outbound.ts",
+    "../shared/types/rtc/handlers/connectTransport.ts",
+    "../shared/types/rtc/handlers/createTransport.ts",
+    "../shared/types/rtc/handlers/joinChannel.ts",
+    "../shared/types/rtc/producer.ts",
+    "../shared/types/rtc/statedChannel.ts",
+    "../shared/types/rtc/voiceState.ts",
+    "../shared/types/session.ts",
+    "../shared/types/spaces/channel.ts",
+    "../shared/types/spaces/events/chat.ts",
+    "../shared/types/spaces/events/group.ts",
+    "../shared/types/spaces/events/index.ts",
+    "../shared/types/spaces/events/membership.ts",
+    "../shared/types/spaces/events/presence.ts",
+    "../shared/types/spaces/group.ts",
+    "../shared/types/spaces/member.ts",
+    "../shared/types/spaces/message.ts",
+    "../shared/types/spaces/soundpad.ts",
+    "../shared/types/user.ts",
+    "../shared/utils/bind.ts",
+    "../shared/utils/index.ts"
+  ]
+}

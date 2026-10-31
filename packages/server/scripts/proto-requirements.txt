@@ -1,0 +1,2 @@
+# Optional compiler/validator; the generator itself only needs Bun and TypeScript.
+grpcio-tools==1.85.1

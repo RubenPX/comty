@@ -1,0 +1,7022 @@
+{
+  "AuthGETAuthByUsernameExistsRequest": {
+    "username": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthGETAuthByUsernameExistsResult": {
+    "exists": {
+      "number": 1,
+      "signature": "bool"
+    }
+  },
+  "AuthPOSTAuthActivateRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthPOSTAuthActivateResult": {
+    "_id": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "additional_properties": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthDELETEAuthRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthDELETEAuthResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "AuthPOSTAuthDisableAccountRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthGETAuthJwksRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthGETAuthJwksResult": {
+    "keys": {
+      "number": 1,
+      "signature": "repeated google.protobuf.Value"
+    }
+  },
+  "AuthPUTAuthPasswordBody": {
+    "old_password": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "new_password": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "verificationToken": {
+      "number": 3,
+      "signature": "google.protobuf.Value"
+    },
+    "code": {
+      "number": 4,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 5,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthPUTAuthPasswordHeaders": {
+    "x-forwarded-for": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "user-agent": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthPUTAuthPasswordRequest": {
+    "body": {
+      "number": 1,
+      "signature": "AuthPUTAuthPasswordBody"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "AuthPUTAuthPasswordHeaders"
+    }
+  },
+  "AuthPUTAuthPasswordResult": {
+    "message": {
+      "number": 1,
+      "signature": "string"
+    }
+  },
+  "AuthPOSTAuthBody": {
+    "username": {
+      "number": 1,
+      "signature": "string"
+    },
+    "password": {
+      "number": 2,
+      "signature": "string"
+    },
+    "mfa_code": {
+      "number": 3,
+      "signature": "string"
+    },
+    "refreshToken": {
+      "number": 4,
+      "signature": "string"
+    },
+    "authToken": {
+      "number": 5,
+      "signature": "string"
+    }
+  },
+  "AuthPOSTAuthRequest": {
+    "body": {
+      "number": 1,
+      "signature": "AuthPOSTAuthBody"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthPOSTAuthResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "AuthPOSTAuthRecoverPasswordBody": {
+    "account": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthPOSTAuthRecoverPasswordHeaders": {
+    "x-forwarded-for": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "user-agent": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthPOSTAuthRecoverPasswordRequest": {
+    "body": {
+      "number": 1,
+      "signature": "AuthPOSTAuthRecoverPasswordBody"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "AuthPOSTAuthRecoverPasswordHeaders"
+    }
+  },
+  "AuthPOSTAuthRecoverPasswordResult": {
+    "user_id": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "email": {
+      "number": 2,
+      "signature": "string"
+    },
+    "expires_at": {
+      "number": 3,
+      "signature": "google.protobuf.Value"
+    },
+    "expires_in": {
+      "number": 4,
+      "signature": "double"
+    },
+    "code_length": {
+      "number": 5,
+      "signature": "google.protobuf.Value"
+    },
+    "verificationToken": {
+      "number": 6,
+      "signature": "string"
+    }
+  },
+  "AuthPOSTAuthResendActivationCodeBody": {
+    "user_id": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthPOSTAuthResendActivationCodeRequest": {
+    "body": {
+      "number": 1,
+      "signature": "AuthPOSTAuthResendActivationCodeBody"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthPOSTAuthResendActivationCodeResult": {
+    "ok": {
+      "number": 1,
+      "signature": "bool"
+    },
+    "event": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "user_id": {
+      "number": 3,
+      "signature": "google.protobuf.Value"
+    },
+    "date": {
+      "number": 4,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "AuthPOSTAuthTokenBody": {
+    "token": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthPOSTAuthTokenRequest": {
+    "body": {
+      "number": 1,
+      "signature": "AuthPOSTAuthTokenBody"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthPOSTAuthTokenResult": {
+    "token": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "decoded": {
+      "number": 2,
+      "signature": "AuthPOSTAuthTokenResultDecoded"
+    },
+    "session": {
+      "number": 3,
+      "signature": "google.protobuf.Value"
+    },
+    "user": {
+      "number": 4,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "AuthPOSTAuthTokenResultDecoded": {
+    "_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "session_id": {
+      "number": 2,
+      "signature": "string"
+    },
+    "user_id": {
+      "number": 3,
+      "signature": "string"
+    },
+    "sign_location": {
+      "number": 4,
+      "signature": "string"
+    },
+    "ip_address": {
+      "number": 5,
+      "signature": "string"
+    },
+    "created_at": {
+      "number": 6,
+      "signature": "google.protobuf.Timestamp"
+    },
+    "iss": {
+      "number": 7,
+      "signature": "string"
+    },
+    "sub": {
+      "number": 8,
+      "signature": "string"
+    },
+    "aud": {
+      "number": 9,
+      "signature": "google.protobuf.Value"
+    },
+    "exp": {
+      "number": 10,
+      "signature": "double"
+    },
+    "nbf": {
+      "number": 11,
+      "signature": "double"
+    },
+    "iat": {
+      "number": 12,
+      "signature": "double"
+    },
+    "jti": {
+      "number": 13,
+      "signature": "string"
+    },
+    "client_id": {
+      "number": 14,
+      "signature": "string"
+    },
+    "type": {
+      "number": 15,
+      "signature": "string"
+    },
+    "scope": {
+      "number": 16,
+      "signature": "string"
+    }
+  },
+  "AuthGETAvailabilityQuery": {
+    "username": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "email": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthGETAvailabilityRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "AuthGETAvailabilityQuery"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthGETAvailabilityResult": {
+    "message": {
+      "number": 1,
+      "signature": "string"
+    },
+    "exists": {
+      "number": 2,
+      "signature": "bool"
+    }
+  },
+  "AuthPOSTForgotByAprCodeBody": {
+    "new_password": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthPOSTForgotByAprCodeHeaders": {
+    "x-forwarded-for": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "user-agent": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthPOSTForgotByAprCodeRequest": {
+    "apr_code": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "AuthPOSTForgotByAprCodeBody"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "AuthPOSTForgotByAprCodeHeaders"
+    }
+  },
+  "AuthPOSTForgotByAprCodeResult": {
+    "message": {
+      "number": 1,
+      "signature": "string"
+    }
+  },
+  "AuthPOSTForgotBody": {
+    "email": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthPOSTForgotHeaders": {
+    "x-forwarded-for": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "user-agent": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthPOSTForgotRequest": {
+    "body": {
+      "number": 1,
+      "signature": "AuthPOSTForgotBody"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "AuthPOSTForgotHeaders"
+    }
+  },
+  "AuthPOSTForgotResult": {
+    "message": {
+      "number": 1,
+      "signature": "string"
+    },
+    "sent": {
+      "number": 2,
+      "signature": "bool"
+    }
+  },
+  "AuthGETOauthWellKnownOpenidConfigurationRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthGETOauthWellKnownOpenidConfigurationResult": {
+    "issuer": {
+      "number": 1,
+      "signature": "string"
+    },
+    "authorization_endpoint": {
+      "number": 2,
+      "signature": "string"
+    },
+    "token_endpoint": {
+      "number": 3,
+      "signature": "string"
+    },
+    "userinfo_endpoint": {
+      "number": 4,
+      "signature": "string"
+    },
+    "jwks_uri": {
+      "number": 5,
+      "signature": "string"
+    },
+    "scopes_supported": {
+      "number": 6,
+      "signature": "repeated string"
+    },
+    "response_types_supported": {
+      "number": 7,
+      "signature": "repeated string"
+    },
+    "grant_types_supported": {
+      "number": 8,
+      "signature": "repeated string"
+    },
+    "token_endpoint_auth_methods_supported": {
+      "number": 9,
+      "signature": "repeated string"
+    },
+    "code_challenge_methods_supported": {
+      "number": 10,
+      "signature": "repeated string"
+    },
+    "claims_supported": {
+      "number": 11,
+      "signature": "repeated string"
+    }
+  },
+  "AuthDELETEOauthAppsByClientIdRequest": {
+    "clientId": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthDELETEOauthAppsByClientIdResult": {
+    "success": {
+      "number": 1,
+      "signature": "bool"
+    }
+  },
+  "AuthGETOauthAppsByClientIdRequest": {
+    "clientId": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthGETOauthAppsByClientIdResult": {
+    "_id": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "__v": {
+      "number": 2,
+      "signature": "double"
+    },
+    "additional_properties": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthPUTOauthAppsByClientIdBody": {
+    "client_name": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "redirect_uris": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "logo_url": {
+      "number": 3,
+      "signature": "google.protobuf.Value"
+    },
+    "website_url": {
+      "number": 4,
+      "signature": "google.protobuf.Value"
+    },
+    "scopes": {
+      "number": 5,
+      "signature": "google.protobuf.Value"
+    },
+    "grant_types": {
+      "number": 6,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 7,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthPUTOauthAppsByClientIdRequest": {
+    "clientId": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "AuthPUTOauthAppsByClientIdBody"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthPUTOauthAppsByClientIdResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "AuthPOSTOauthAppsByClientIdRegenerateSecretRequest": {
+    "clientId": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthPOSTOauthAppsByClientIdRegenerateSecretResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "AuthGETOauthAppsRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthGETOauthAppsResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "AuthPOSTOauthAppsBody": {
+    "client_name": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "redirect_uris": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthPOSTOauthAppsRequest": {
+    "body": {
+      "number": 1,
+      "signature": "AuthPOSTOauthAppsBody"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthPOSTOauthAppsResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "AuthPOSTOauthAuthorizeQuery": {
+    "client_id": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "redirect_uri": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "response_type": {
+      "number": 3,
+      "signature": "google.protobuf.Value"
+    },
+    "scope": {
+      "number": 4,
+      "signature": "google.protobuf.Value"
+    },
+    "state": {
+      "number": 5,
+      "signature": "google.protobuf.Value"
+    },
+    "code_challenge": {
+      "number": 6,
+      "signature": "google.protobuf.Value"
+    },
+    "code_challenge_method": {
+      "number": 7,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 8,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthPOSTOauthAuthorizeRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "AuthPOSTOauthAuthorizeQuery"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthPOSTOauthAuthorizeResult": {
+    "redirect_uri": {
+      "number": 1,
+      "signature": "string"
+    },
+    "code": {
+      "number": 2,
+      "signature": "string"
+    }
+  },
+  "AuthPOSTOauthTokenBody": {
+    "grant_type": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "code": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "redirect_uri": {
+      "number": 3,
+      "signature": "google.protobuf.Value"
+    },
+    "client_id": {
+      "number": 4,
+      "signature": "google.protobuf.Value"
+    },
+    "client_secret": {
+      "number": 5,
+      "signature": "google.protobuf.Value"
+    },
+    "refresh_token": {
+      "number": 6,
+      "signature": "google.protobuf.Value"
+    },
+    "code_verifier": {
+      "number": 7,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 8,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthPOSTOauthTokenRequest": {
+    "body": {
+      "number": 1,
+      "signature": "AuthPOSTOauthTokenBody"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthPOSTOauthTokenResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "AuthGETOauthUserinfoHeaders": {
+    "authorization": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthGETOauthUserinfoRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "AuthGETOauthUserinfoHeaders"
+    }
+  },
+  "AuthGETOauthUserinfoResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "AuthPOSTRegisterRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthPOSTRegisterResult": {
+    "activation_required": {
+      "number": 1,
+      "signature": "bool"
+    },
+    "user": {
+      "number": 2,
+      "signature": "AuthPOSTRegisterResultUser"
+    }
+  },
+  "AuthPOSTRegisterResultUser": {
+    "_id": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "$locals": {
+      "number": 2,
+      "signature": "map<string, google.protobuf.Value>"
+    },
+    "$op": {
+      "number": 3,
+      "signature": "string"
+    },
+    "$where": {
+      "number": 4,
+      "signature": "map<string, google.protobuf.Value>"
+    },
+    "baseModelName": {
+      "number": 5,
+      "signature": "string"
+    },
+    "collection": {
+      "number": 6,
+      "signature": "google.protobuf.Value"
+    },
+    "db": {
+      "number": 7,
+      "signature": "google.protobuf.Value"
+    },
+    "errors": {
+      "number": 8,
+      "signature": "google.protobuf.Value"
+    },
+    "isNew": {
+      "number": 9,
+      "signature": "bool"
+    },
+    "schema": {
+      "number": 10,
+      "signature": "google.protobuf.Value"
+    },
+    "id": {
+      "number": 11,
+      "signature": "string"
+    },
+    "additional_properties": {
+      "number": 12,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthDELETEServerKeysByAccessIdRequest": {
+    "access_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthDELETEServerKeysByAccessIdResult": {
+    "deleted": {
+      "number": 1,
+      "signature": "bool"
+    }
+  },
+  "AuthPOSTServerKeysByAccessIdRegenerateRequest": {
+    "access_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthPOSTServerKeysGenerateBody": {
+    "name": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthPOSTServerKeysGenerateRequest": {
+    "body": {
+      "number": 1,
+      "signature": "AuthPOSTServerKeysGenerateBody"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthGETServerKeysMyRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthGETServerKeysMyResponse": {
+    "value": {
+      "number": 1,
+      "signature": "repeated AuthPOSTRegisterResultUser"
+    }
+  },
+  "AuthDELETESessionsAllRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthDELETESessionsAllResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "AuthGETSessionsAllRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthGETSessionsAllResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "AuthGETSessionsCurrentRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "AuthGETSessionsCurrentResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "ChatsGETChatsAcksRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "ChatsGETChatsAcksResponse": {
+    "value": {
+      "number": 1,
+      "signature": "repeated google.protobuf.Value"
+    }
+  },
+  "ChatsDELETEChatsChannelsByGroupIdByChannelIdByMessageIdRequest": {
+    "group_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "channel_id": {
+      "number": 2,
+      "signature": "string"
+    },
+    "message_id": {
+      "number": 3,
+      "signature": "string"
+    },
+    "body": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 5,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 6,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "ChatsDELETEChatsChannelsByGroupIdByChannelIdByMessageIdResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "ChatsGETChatsChannelsByGroupIdByChannelIdQuery": {
+    "limit": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "beforeId": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "afterId": {
+      "number": 3,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "ChatsGETChatsChannelsByGroupIdByChannelIdRequest": {
+    "group_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "channel_id": {
+      "number": 2,
+      "signature": "string"
+    },
+    "body": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 4,
+      "signature": "ChatsGETChatsChannelsByGroupIdByChannelIdQuery"
+    },
+    "headers": {
+      "number": 5,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "ChatsGETChatsChannelsByGroupIdByChannelIdResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "ChatsGETChatsChannelsByGroupIdByChannelIdLastRequest": {
+    "group_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "channel_id": {
+      "number": 2,
+      "signature": "string"
+    },
+    "body": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 5,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "ChatsGETChatsChannelsByGroupIdByChannelIdLastResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "ChatsPOSTChatsChannelsByGroupIdByChannelIdRequest": {
+    "group_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "channel_id": {
+      "number": 2,
+      "signature": "string"
+    },
+    "body": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 5,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "ChatsPOSTChatsChannelsByGroupIdByChannelIdResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "ChatsGETChatsChannelsByGroupIdByChannelIdSyncQuery": {
+    "last_synced_at": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "last_message_id": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "ChatsGETChatsChannelsByGroupIdByChannelIdSyncRequest": {
+    "group_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "channel_id": {
+      "number": 2,
+      "signature": "string"
+    },
+    "body": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 4,
+      "signature": "ChatsGETChatsChannelsByGroupIdByChannelIdSyncQuery"
+    },
+    "headers": {
+      "number": 5,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "ChatsGETChatsChannelsByGroupIdByChannelIdSyncResult": {
+    "logs": {
+      "number": 1,
+      "signature": "repeated ChatsGETChatsChannelsByGroupIdByChannelIdSyncResultLogsItem"
+    },
+    "newMessages": {
+      "number": 2,
+      "signature": "repeated google.protobuf.Value"
+    },
+    "updatedMessages": {
+      "number": 3,
+      "signature": "repeated google.protobuf.Value"
+    },
+    "users": {
+      "number": 4,
+      "signature": "repeated google.protobuf.Value"
+    }
+  },
+  "ChatsGETChatsChannelsByGroupIdByChannelIdSyncResultLogsItem": {
+    "type": {
+      "number": 1,
+      "signature": "string"
+    },
+    "target_id": {
+      "number": 2,
+      "signature": "string"
+    },
+    "timestamp": {
+      "number": 3,
+      "signature": "google.protobuf.Timestamp"
+    }
+  },
+  "ChatsDELETEChatsDmByToUserIdByMessageIdRequest": {
+    "to_user_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "message_id": {
+      "number": 2,
+      "signature": "string"
+    },
+    "body": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 5,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "ChatsDELETEChatsDmByToUserIdByMessageIdResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "ChatsPATCHChatsDmByToUserIdByMessageIdRequest": {
+    "to_user_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "message_id": {
+      "number": 2,
+      "signature": "string"
+    },
+    "body": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 5,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "ChatsPATCHChatsDmByToUserIdByMessageIdResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "ChatsGETChatsDmByToUserIdQuery": {
+    "limit": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "beforeId": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "afterId": {
+      "number": 3,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "ChatsGETChatsDmByToUserIdRequest": {
+    "to_user_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "ChatsGETChatsDmByToUserIdQuery"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "ChatsGETChatsDmByToUserIdResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "ChatsPOSTChatsDmByToUserIdRequest": {
+    "to_user_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "ChatsPOSTChatsDmByToUserIdResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "ChatsGETChatsDmRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "ChatsGETChatsDmResultItem": {
+    "_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "pair_key": {
+      "number": 2,
+      "signature": "string"
+    },
+    "name": {
+      "number": 3,
+      "signature": "string"
+    },
+    "created_at": {
+      "number": 4,
+      "signature": "google.protobuf.Timestamp"
+    },
+    "user_id": {
+      "number": 5,
+      "signature": "string"
+    },
+    "room_id": {
+      "number": 6,
+      "signature": "string"
+    },
+    "to_user_id": {
+      "number": 7,
+      "signature": "string"
+    },
+    "last_message_at": {
+      "number": 8,
+      "signature": "google.protobuf.Timestamp"
+    },
+    "direction": {
+      "number": 9,
+      "signature": "string"
+    },
+    "short_message": {
+      "number": 10,
+      "signature": "string"
+    },
+    "user": {
+      "number": 11,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "ChatsGETChatsDmResponse": {
+    "value": {
+      "number": 1,
+      "signature": "repeated ChatsGETChatsDmResultItem"
+    }
+  },
+  "ChatsWSChannelByAckRequest": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "ChatsWSChannelByAckResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "ChatsWSChannelByMessageByDeleteRequest": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "ChatsWSChannelByMessageByDeleteResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "ChatsWSChannelByMessageByUpdateRequest": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "ChatsWSChannelByMessageByUpdateResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "ChatsWSChannelBySendPayload": {
+    "group_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "channel_id": {
+      "number": 2,
+      "signature": "string"
+    },
+    "created_at": {
+      "number": 3,
+      "signature": "google.protobuf.Value"
+    },
+    "updated_at": {
+      "number": 4,
+      "signature": "google.protobuf.Value"
+    },
+    "user": {
+      "number": 5,
+      "signature": "ChatsWSChannelBySendPayloadUser"
+    },
+    "cached_at": {
+      "number": 6,
+      "signature": "double"
+    },
+    "flags": {
+      "number": 7,
+      "signature": "repeated string"
+    },
+    "_id": {
+      "number": 8,
+      "signature": "string"
+    },
+    "message": {
+      "number": 9,
+      "signature": "string"
+    },
+    "user_id": {
+      "number": 10,
+      "signature": "string"
+    },
+    "attachments": {
+      "number": 11,
+      "signature": "repeated ChatsWSChannelBySendPayloadAttachmentsItemList"
+    },
+    "sticker": {
+      "number": 12,
+      "signature": "string"
+    },
+    "reply_to_id": {
+      "number": 13,
+      "signature": "string"
+    },
+    "nonce": {
+      "number": 14,
+      "signature": "string"
+    }
+  },
+  "ChatsWSChannelBySendPayloadUser": {
+    "__v": {
+      "number": 1,
+      "signature": "double"
+    },
+    "cached_at": {
+      "number": 2,
+      "signature": "double"
+    },
+    "_id": {
+      "number": 3,
+      "signature": "string"
+    },
+    "user_id": {
+      "number": 4,
+      "signature": "string"
+    },
+    "username": {
+      "number": 5,
+      "signature": "string"
+    },
+    "public_name": {
+      "number": 6,
+      "signature": "string"
+    },
+    "description": {
+      "number": 7,
+      "signature": "string"
+    },
+    "avatar": {
+      "number": 8,
+      "signature": "string"
+    },
+    "cover": {
+      "number": 9,
+      "signature": "string"
+    },
+    "decorations": {
+      "number": 10,
+      "signature": "map<string, string>"
+    },
+    "links": {
+      "number": 11,
+      "signature": "map<string, string>"
+    },
+    "roles": {
+      "number": 12,
+      "signature": "repeated string"
+    },
+    "verified": {
+      "number": 13,
+      "signature": "bool"
+    },
+    "flags": {
+      "number": 14,
+      "signature": "repeated string"
+    }
+  },
+  "ChatsWSChannelBySendPayloadAttachmentsItemList": {
+    "items": {
+      "number": 1,
+      "signature": "map<string, string>"
+    }
+  },
+  "ChatsWSChannelBySendResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "ChatsWSChannelBySubscribePayload": {
+    "group_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "channel_id": {
+      "number": 2,
+      "signature": "string"
+    }
+  },
+  "ChatsWSChannelBySubscribeResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "ChatsWSChannelByTypingPayload": {
+    "group_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "channel_id": {
+      "number": 2,
+      "signature": "string"
+    },
+    "isTyping": {
+      "number": 3,
+      "signature": "bool"
+    }
+  },
+  "ChatsWSChannelByTypingResponse": {
+    "value": {
+      "number": 1,
+      "signature": "bool"
+    }
+  },
+  "ChatsWSChannelByUnsubscribePayload": {
+    "channel_id": {
+      "number": 1,
+      "signature": "string"
+    }
+  },
+  "ChatsWSChannelByUnsubscribeResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "ChatsWSDmByAckRequest": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "ChatsWSDmByAckResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "ChatsWSDmByMessageByDeleteRequest": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "ChatsWSDmByMessageByDeleteResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "ChatsWSDmByMessageByUpdateRequest": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "ChatsWSDmByMessageByUpdateResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "ChatsWSDmBySendRequest": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "ChatsWSDmBySendResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "ChatsWSDmBySubscribePayload": {
+    "to_user_id": {
+      "number": 1,
+      "signature": "string"
+    }
+  },
+  "ChatsWSDmBySubscribeResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "ChatsWSDmByTypingPayload": {
+    "to_user_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "isTyping": {
+      "number": 2,
+      "signature": "bool"
+    }
+  },
+  "ChatsWSDmByTypingResponse": {
+    "value": {
+      "number": 1,
+      "signature": "bool"
+    }
+  },
+  "ChatsWSDmByUnsubscribePayload": {
+    "to_user_id": {
+      "number": 1,
+      "signature": "string"
+    }
+  },
+  "ChatsWSDmByUnsubscribeResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "EmsPOSTDispatchBody": {
+    "to": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "subject": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "body": {
+      "number": 3,
+      "signature": "google.protobuf.Value"
+    },
+    "template": {
+      "number": 4,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 5,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "EmsPOSTDispatchRequest": {
+    "body": {
+      "number": 1,
+      "signature": "EmsPOSTDispatchBody"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "EmsPOSTDispatchResult": {
+    "code": {
+      "number": 1,
+      "signature": "double"
+    },
+    "message": {
+      "number": 2,
+      "signature": "string"
+    },
+    "result": {
+      "number": 3,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "EmsGETPreviewEmailByEmailRequest": {
+    "email": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "EmsGETPreviewEmailByEmailResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "FilesPOSTUploadChunkHeaders": {
+    "uploader-file-id": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "use-provider": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "transformations": {
+      "number": 3,
+      "signature": "google.protobuf.Value"
+    },
+    "uploader-original-name": {
+      "number": 4,
+      "signature": "google.protobuf.Value"
+    },
+    "prefer-no-job": {
+      "number": 5,
+      "signature": "google.protobuf.Value"
+    },
+    "uploader-chunk-number": {
+      "number": 6,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 7,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "FilesPOSTUploadChunkRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "FilesPOSTUploadChunkHeaders"
+    },
+    "raw_body": {
+      "number": 4,
+      "signature": "bytes"
+    }
+  },
+  "FilesPOSTUploadChunkResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "FilesPOSTUploadFileHeaders": {
+    "transformations": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MultipartPart": {
+    "name": {
+      "number": 1,
+      "signature": "string"
+    },
+    "filename": {
+      "number": 2,
+      "signature": "string"
+    },
+    "content_type": {
+      "number": 3,
+      "signature": "string"
+    },
+    "data": {
+      "number": 4,
+      "signature": "bytes"
+    }
+  },
+  "FilesPOSTUploadFileRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "FilesPOSTUploadFileHeaders"
+    },
+    "parts": {
+      "number": 4,
+      "signature": "repeated MultipartPart"
+    }
+  },
+  "FilesPOSTUploadFileResult": {
+    "id": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "url": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "metadata": {
+      "number": 3,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "FilesGETUploadRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "FilesGETUploadResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "FilesPOSTUploadPartsCompleteBody": {
+    "task_id": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "file_hash": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "upload_id": {
+      "number": 3,
+      "signature": "google.protobuf.Value"
+    },
+    "object_path": {
+      "number": 4,
+      "signature": "google.protobuf.Value"
+    },
+    "parts": {
+      "number": 5,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 6,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "FilesPOSTUploadPartsCompleteHeaders": {
+    "transformations": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "FilesPOSTUploadPartsCompleteRequest": {
+    "body": {
+      "number": 1,
+      "signature": "FilesPOSTUploadPartsCompleteBody"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "FilesPOSTUploadPartsCompleteHeaders"
+    }
+  },
+  "FilesPOSTUploadPartsCompleteResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "FilesGETUploadPartsUrlHeaders": {
+    "uploader-file-hash": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "uploader-file-name": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "uploader-file-chunks": {
+      "number": 3,
+      "signature": "google.protobuf.Value"
+    },
+    "uploader-file-mime": {
+      "number": 4,
+      "signature": "google.protobuf.Value"
+    },
+    "uploader-file-size": {
+      "number": 5,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 6,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "FilesGETUploadPartsUrlRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "FilesGETUploadPartsUrlHeaders"
+    }
+  },
+  "FilesGETUploadPartsUrlResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "GroupsGETGroupsByGroupIdCanPerformByActionRequest": {
+    "group_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "action": {
+      "number": 2,
+      "signature": "string"
+    },
+    "body": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 5,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "GroupsGETGroupsByGroupIdCanPerformByActionResult": {
+    "result": {
+      "number": 1,
+      "signature": "bool"
+    }
+  },
+  "GroupsDELETEGroupsByGroupIdChannelsByChannelIdRequest": {
+    "group_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "channel_id": {
+      "number": 2,
+      "signature": "string"
+    },
+    "body": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 5,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "GroupsDELETEGroupsByGroupIdChannelsByChannelIdResult": {
+    "_model": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "_id": {
+      "number": 2,
+      "signature": "string"
+    },
+    "group_id": {
+      "number": 3,
+      "signature": "string"
+    },
+    "__v": {
+      "number": 4,
+      "signature": "int64"
+    },
+    "kind": {
+      "number": 5,
+      "signature": "string"
+    },
+    "name": {
+      "number": 6,
+      "signature": "string"
+    },
+    "description": {
+      "number": 7,
+      "signature": "string"
+    },
+    "explicit": {
+      "number": 8,
+      "signature": "bool"
+    },
+    "params": {
+      "number": 9,
+      "signature": "map<string, string>"
+    },
+    "created_at": {
+      "number": 10,
+      "signature": "google.protobuf.Timestamp"
+    }
+  },
+  "GroupsGETGroupsByGroupIdChannelsByChannelIdRequest": {
+    "group_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "channel_id": {
+      "number": 2,
+      "signature": "string"
+    },
+    "body": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 5,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "GroupsPUTGroupsByGroupIdChannelsByChannelIdRequest": {
+    "group_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "channel_id": {
+      "number": 2,
+      "signature": "string"
+    },
+    "body": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 5,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "GroupsPOSTGroupsByGroupIdChannelsCreateRequest": {
+    "group_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "GroupsPOSTGroupsByGroupIdChannelsCreateResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "GroupsGETGroupsByGroupIdChannelsRequest": {
+    "group_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "GroupsGETGroupsByGroupIdChannelsResult": {
+    "total_items": {
+      "number": 1,
+      "signature": "double"
+    },
+    "items": {
+      "number": 2,
+      "signature": "repeated GroupsDELETEGroupsByGroupIdChannelsByChannelIdResult"
+    }
+  },
+  "GroupsPOSTGroupsByGroupIdChannelsOrderBody": {
+    "order": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "GroupsPOSTGroupsByGroupIdChannelsOrderRequest": {
+    "group_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "GroupsPOSTGroupsByGroupIdChannelsOrderBody"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "GroupsPOSTGroupsByGroupIdChannelsOrderResultItem": {
+    "_model": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "group_id": {
+      "number": 2,
+      "signature": "string"
+    },
+    "order": {
+      "number": 3,
+      "signature": "repeated string"
+    }
+  },
+  "GroupsPOSTGroupsByGroupIdChannelsOrderResponse": {
+    "value": {
+      "number": 1,
+      "signature": "repeated GroupsPOSTGroupsByGroupIdChannelsOrderResultItem"
+    }
+  },
+  "GroupsDELETEGroupsByGroupIdRequest": {
+    "group_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "GroupsDELETEGroupsByGroupIdResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "GroupsGETGroupsByGroupIdRequest": {
+    "group_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "GroupsGETGroupsByGroupIdResult": {
+    "_model": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "_id": {
+      "number": 2,
+      "signature": "string"
+    },
+    "__v": {
+      "number": 3,
+      "signature": "double"
+    },
+    "name": {
+      "number": 4,
+      "signature": "string"
+    },
+    "description": {
+      "number": 5,
+      "signature": "string"
+    },
+    "icon": {
+      "number": 6,
+      "signature": "string"
+    },
+    "cover": {
+      "number": 7,
+      "signature": "string"
+    },
+    "reachability": {
+      "number": 8,
+      "signature": "string"
+    },
+    "owner_user_id": {
+      "number": 9,
+      "signature": "string"
+    },
+    "created_at": {
+      "number": 10,
+      "signature": "google.protobuf.Timestamp"
+    }
+  },
+  "GroupsDELETEGroupsByGroupIdInvitesByInviteKeyRequest": {
+    "group_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "invite_key": {
+      "number": 2,
+      "signature": "string"
+    },
+    "body": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 5,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "GroupsDELETEGroupsByGroupIdInvitesByInviteKeyResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "GroupsGETGroupsByGroupIdInvitesByInviteKeyQuery": {
+    "fetch": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "GroupsGETGroupsByGroupIdInvitesByInviteKeyRequest": {
+    "group_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "invite_key": {
+      "number": 2,
+      "signature": "string"
+    },
+    "body": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 4,
+      "signature": "GroupsGETGroupsByGroupIdInvitesByInviteKeyQuery"
+    },
+    "headers": {
+      "number": 5,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "GroupsGETGroupsByGroupIdInvitesByInviteKeyResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "GroupsPOSTGroupsByGroupIdInvitesCreateBody": {
+    "max_usage": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "expires_at": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "GroupsPOSTGroupsByGroupIdInvitesCreateRequest": {
+    "group_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "GroupsPOSTGroupsByGroupIdInvitesCreateBody"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "GroupsPOSTGroupsByGroupIdInvitesCreateResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "GroupsGETGroupsByGroupIdInvitesRequest": {
+    "group_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "GroupsGETGroupsByGroupIdInvitesResponse": {
+    "value": {
+      "number": 1,
+      "signature": "repeated google.protobuf.Value"
+    }
+  },
+  "GroupsPOSTGroupsByGroupIdJoinBody": {
+    "invite_key": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "GroupsPOSTGroupsByGroupIdJoinRequest": {
+    "group_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "GroupsPOSTGroupsByGroupIdJoinBody"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "GroupsPOSTGroupsByGroupIdJoinResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "GroupsPOSTGroupsByGroupIdLeaveRequest": {
+    "group_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "GroupsPOSTGroupsByGroupIdLeaveResponse": {
+    "value": {
+      "number": 1,
+      "signature": "repeated google.protobuf.Value"
+    }
+  },
+  "GroupsDELETEGroupsByGroupIdMembersByMemberIdBody": {
+    "user_id": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "GroupsDELETEGroupsByGroupIdMembersByMemberIdRequest": {
+    "group_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "member_id": {
+      "number": 2,
+      "signature": "string"
+    },
+    "body": {
+      "number": 3,
+      "signature": "GroupsDELETEGroupsByGroupIdMembersByMemberIdBody"
+    },
+    "query": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 5,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "GroupsDELETEGroupsByGroupIdMembersByMemberIdResult": {
+    "_model": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "_id": {
+      "number": 2,
+      "signature": "string"
+    },
+    "group_id": {
+      "number": 3,
+      "signature": "string"
+    },
+    "user_id": {
+      "number": 4,
+      "signature": "string"
+    },
+    "roles": {
+      "number": 5,
+      "signature": "repeated string"
+    },
+    "created_at": {
+      "number": 6,
+      "signature": "google.protobuf.Timestamp"
+    }
+  },
+  "GroupsGETGroupsByGroupIdMembersByMemberIdBody": {
+    "user_id": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "GroupsGETGroupsByGroupIdMembersByMemberIdRequest": {
+    "group_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "member_id": {
+      "number": 2,
+      "signature": "string"
+    },
+    "body": {
+      "number": 3,
+      "signature": "GroupsGETGroupsByGroupIdMembersByMemberIdBody"
+    },
+    "query": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 5,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "GroupsPUTGroupsByGroupIdMembersByMemberIdBody": {
+    "add_roles": {
+      "number": 1,
+      "signature": "repeated string"
+    },
+    "remove_roles": {
+      "number": 2,
+      "signature": "repeated string"
+    }
+  },
+  "GroupsPUTGroupsByGroupIdMembersByMemberIdRequest": {
+    "group_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "member_id": {
+      "number": 2,
+      "signature": "string"
+    },
+    "body": {
+      "number": 3,
+      "signature": "GroupsPUTGroupsByGroupIdMembersByMemberIdBody"
+    },
+    "query": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 5,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "GroupsPUTGroupsByGroupIdMembersByMemberIdResult": {
+    "ok": {
+      "number": 1,
+      "signature": "bool"
+    },
+    "member": {
+      "number": 2,
+      "signature": "GroupsDELETEGroupsByGroupIdMembersByMemberIdResult"
+    }
+  },
+  "GroupsGETGroupsByGroupIdMembersConnectionsQuery": {
+    "users_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "_unmodeled": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "GroupsGETGroupsByGroupIdMembersConnectionsRequest": {
+    "group_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "GroupsGETGroupsByGroupIdMembersConnectionsQuery"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "GroupsGETGroupsByGroupIdMembersConnectionsResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "GroupsGETGroupsByGroupIdMembersQuery": {
+    "limit": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "offset": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "GroupsGETGroupsByGroupIdMembersRequest": {
+    "group_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "GroupsGETGroupsByGroupIdMembersQuery"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "GroupsGETGroupsByGroupIdMembersResult": {
+    "items": {
+      "number": 1,
+      "signature": "repeated GroupsGETGroupsByGroupIdMembersResultItemsItem"
+    },
+    "total_items": {
+      "number": 2,
+      "signature": "double"
+    },
+    "has_more": {
+      "number": 3,
+      "signature": "bool"
+    },
+    "page": {
+      "number": 4,
+      "signature": "double"
+    },
+    "limit": {
+      "number": 5,
+      "signature": "double"
+    }
+  },
+  "GroupsGETGroupsByGroupIdMembersResultItemsItem": {
+    "created_at": {
+      "number": 1,
+      "signature": "google.protobuf.Timestamp"
+    },
+    "roles": {
+      "number": 2,
+      "signature": "repeated GroupsGETGroupsByGroupIdMembersResultItemsItemRolesItem"
+    },
+    "user": {
+      "number": 3,
+      "signature": "ChatsWSChannelBySendPayloadUser"
+    },
+    "cached_at": {
+      "number": 4,
+      "signature": "double"
+    },
+    "_id": {
+      "number": 5,
+      "signature": "string"
+    },
+    "user_id": {
+      "number": 6,
+      "signature": "string"
+    },
+    "group_id": {
+      "number": 7,
+      "signature": "string"
+    }
+  },
+  "GroupsGETGroupsByGroupIdMembersResultItemsItemRolesItem": {
+    "_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "label": {
+      "number": 2,
+      "signature": "string"
+    },
+    "color": {
+      "number": 3,
+      "signature": "string"
+    }
+  },
+  "GroupsPOSTGroupsByGroupIdMembersBody": {
+    "user_id": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "GroupsPOSTGroupsByGroupIdMembersRequest": {
+    "group_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "GroupsPOSTGroupsByGroupIdMembersBody"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "GroupsPOSTGroupsByGroupIdMembersResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "GroupsGETGroupsByGroupIdMetaRequest": {
+    "group_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "GroupsGETGroupsByGroupIdMetaResult": {
+    "group_v": {
+      "number": 1,
+      "signature": "double"
+    },
+    "total_members": {
+      "number": 2,
+      "signature": "double"
+    },
+    "total_channels": {
+      "number": 3,
+      "signature": "double"
+    }
+  },
+  "GroupsPUTGroupsByGroupIdRequest": {
+    "group_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "GroupsDELETEGroupsByGroupIdSoundpadItemsByItemIdRequest": {
+    "group_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "item_id": {
+      "number": 2,
+      "signature": "string"
+    },
+    "body": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 5,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "GroupsDELETEGroupsByGroupIdSoundpadItemsByItemIdResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "GroupsGETGroupsByGroupIdSoundpadItemsByItemIdRequest": {
+    "group_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "item_id": {
+      "number": 2,
+      "signature": "string"
+    },
+    "body": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 5,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "GroupsGETGroupsByGroupIdSoundpadItemsByItemIdResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "GroupsGETGroupsByGroupIdSoundpadItemsRequest": {
+    "group_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "GroupsGETGroupsByGroupIdSoundpadItemsResponse": {
+    "value": {
+      "number": 1,
+      "signature": "repeated google.protobuf.Value"
+    }
+  },
+  "GroupsPOSTGroupsByGroupIdSoundpadItemsBody": {
+    "icon": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "name": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "src": {
+      "number": 3,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "GroupsPOSTGroupsByGroupIdSoundpadItemsRequest": {
+    "group_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "GroupsPOSTGroupsByGroupIdSoundpadItemsBody"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "GroupsPOSTGroupsByGroupIdSoundpadItemsResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "GroupsPOSTGroupsCreateRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "GroupsPOSTGroupsCreateResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "GroupsGETGroupsMyRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "GroupsGETGroupsMyResult": {
+    "items": {
+      "number": 1,
+      "signature": "repeated google.protobuf.Value"
+    }
+  },
+  "GroupsPUTGroupsMySortRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "GroupsPUTGroupsMySortResponse": {
+    "value": {
+      "number": 1,
+      "signature": "repeated string"
+    }
+  },
+  "MainPOSTActivityClientBody": {
+    "id": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "payload": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainPOSTActivityClientRequest": {
+    "body": {
+      "number": 1,
+      "signature": "MainPOSTActivityClientBody"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainGETActivityRecentQuery": {
+    "type": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainGETActivityRecentRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "MainGETActivityRecentQuery"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainGETActivityRecentResponse": {
+    "value": {
+      "number": 1,
+      "signature": "repeated AuthPOSTRegisterResultUser"
+    }
+  },
+  "MainGETBadgesByIdsRequest": {
+    "ids": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainGETBadgesByIdsResponse": {
+    "value": {
+      "number": 1,
+      "signature": "repeated AuthPOSTRegisterResultUser"
+    }
+  },
+  "MainDELETEBotsByBotIdRequest": {
+    "bot_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainDELETEBotsByBotIdResult": {
+    "success": {
+      "number": 1,
+      "signature": "bool"
+    },
+    "data": {
+      "number": 2,
+      "signature": "AuthPOSTAuthActivateResult"
+    }
+  },
+  "MainGETBotsByBotIdRequest": {
+    "bot_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainGETBotsByBotIdResult": {
+    "user": {
+      "number": 1,
+      "signature": "AuthPOSTAuthActivateResult"
+    },
+    "_id": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MainPATCHBotsByBotIdBody": {
+    "public_name": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "avatar": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "cover": {
+      "number": 3,
+      "signature": "google.protobuf.Value"
+    },
+    "description": {
+      "number": 4,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 5,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainPATCHBotsByBotIdRequest": {
+    "bot_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "MainPATCHBotsByBotIdBody"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainPOSTBotsCreateBody": {
+    "username": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "public_name": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "avatar": {
+      "number": 3,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainPOSTBotsCreateRequest": {
+    "body": {
+      "number": 1,
+      "signature": "MainPOSTBotsCreateBody"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainPOSTBotsCreateResult": {
+    "user": {
+      "number": 1,
+      "signature": "AuthPOSTAuthActivateResult"
+    },
+    "_id": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MainGETBotsMyRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainGETBotsMyResultItem": {
+    "user": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "_id": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MainGETBotsMyResponse": {
+    "value": {
+      "number": 1,
+      "signature": "repeated MainGETBotsMyResultItem"
+    }
+  },
+  "MainGETConfigGlobalRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainGETConfigGlobalResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MainGETDecorationsByIdsRequest": {
+    "ids": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainGETDecorationsByIdsResponse": {
+    "value": {
+      "number": 1,
+      "signature": "repeated AuthPOSTRegisterResultUser"
+    }
+  },
+  "MainGETEventsByEventIdDataRequest": {
+    "event_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainGETExpressionsGifFavRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainGETExpressionsGifFavResultItem": {
+    "_model": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "_id": {
+      "number": 2,
+      "signature": "double"
+    },
+    "user_id": {
+      "number": 3,
+      "signature": "string"
+    },
+    "type": {
+      "number": 4,
+      "signature": "string"
+    },
+    "resource_url": {
+      "number": 5,
+      "signature": "string"
+    },
+    "metadata": {
+      "number": 6,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MainGETExpressionsGifFavResponse": {
+    "value": {
+      "number": 1,
+      "signature": "repeated MainGETExpressionsGifFavResultItem"
+    }
+  },
+  "MainPOSTExpressionsGifFavBody": {
+    "_id": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "resource_url": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "metadata": {
+      "number": 3,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainPOSTExpressionsGifFavRequest": {
+    "body": {
+      "number": 1,
+      "signature": "MainPOSTExpressionsGifFavBody"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainPOSTExpressionsGifFavResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MainGETExpressionsGifSearchQuery": {
+    "keywords": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "limit": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "page": {
+      "number": 3,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainGETExpressionsGifSearchRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "MainGETExpressionsGifSearchQuery"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainGETExpressionsGifSearchResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MainGETFeaturedEventsRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainGETFeaturedEventsResponse": {
+    "value": {
+      "number": 1,
+      "signature": "repeated AuthPOSTRegisterResultUser"
+    }
+  },
+  "MainGETFeaturedWallpapersQuery": {
+    "limit": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "offset": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "random": {
+      "number": 3,
+      "signature": "google.protobuf.Value"
+    },
+    "includeDisabled": {
+      "number": 4,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 5,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainGETFeaturedWallpapersRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "MainGETFeaturedWallpapersQuery"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainGETFeaturedWallpapersResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MainPOSTFlagsAckByFlagIdRequest": {
+    "flag_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainPOSTFlagsAckByFlagIdResult": {
+    "ok": {
+      "number": 1,
+      "signature": "bool"
+    },
+    "flags": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MainGETLimitsQuery": {
+    "key": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainGETLimitsRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "MainGETLimitsQuery"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainGETLimitsResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MainGETMainRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainGETMainResponse": {
+    "value": {
+      "number": 1,
+      "signature": "string"
+    }
+  },
+  "MainGETMainQueryUrlQuery": {
+    "url": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "ignore_cache": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainGETMainQueryUrlRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "MainGETMainQueryUrlQuery"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainGETMainQueryUrlResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MainGETMainTurnstileRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainGETMainTurnstileResult": {
+    "siteKey": {
+      "number": 1,
+      "signature": "string"
+    }
+  },
+  "MainGETMainUsersConnectedQuery": {
+    "limit": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "offset": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainGETMainUsersConnectedRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "MainGETMainUsersConnectedQuery"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainGETMainUsersConnectedResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MainDELETENfcTagIdByIdRequest": {
+    "id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainDELETENfcTagIdByIdResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MainGETNfcTagIdByIdExecuteRequest": {
+    "id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainGETNfcTagIdByIdExecuteResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MainGETNfcTagIdByIdRequest": {
+    "id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainGETNfcTagIdByIdResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MainGETNfcTagMyRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainGETNfcTagMyResponse": {
+    "value": {
+      "number": 1,
+      "signature": "repeated AuthPOSTRegisterResultUser"
+    }
+  },
+  "MainPOSTNfcTagRegisterBySerialBody": {
+    "alias": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "behavior": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "active": {
+      "number": 3,
+      "signature": "google.protobuf.Value"
+    },
+    "origin": {
+      "number": 4,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 5,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainPOSTNfcTagRegisterBySerialRequest": {
+    "serial": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "MainPOSTNfcTagRegisterBySerialBody"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainPOSTNfcTagRegisterBySerialResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MainGETNfcTagSerialRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainGETNfcTagSerialResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MainGETPingRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainGETPingResponse": {
+    "value": {
+      "number": 1,
+      "signature": "string"
+    }
+  },
+  "MainGETRepoAutoUpdateMobileRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainGETRepoAutoUpdateMobileResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MainGETRepoReleasesNotesRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainGETRepoReleasesNotesResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MainGETStickersByIdQuery": {
+    "data": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainGETStickersByIdRequest": {
+    "id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "MainGETStickersByIdQuery"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainPOSTStickersCreateBody": {
+    "stickers_set_id": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "emoji": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "file_url": {
+      "number": 3,
+      "signature": "google.protobuf.Value"
+    },
+    "animated": {
+      "number": 4,
+      "signature": "google.protobuf.Value"
+    },
+    "video": {
+      "number": 5,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 6,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainPOSTStickersCreateRequest": {
+    "body": {
+      "number": 1,
+      "signature": "MainPOSTStickersCreateBody"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainPUTStickersPacksByIdBody": {
+    "name": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "thumbnail": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "items": {
+      "number": 3,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainPUTStickersPacksByIdRequest": {
+    "id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "MainPUTStickersPacksByIdBody"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainPOSTStickersPacksCreateBody": {
+    "name": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "thumbnail": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "items": {
+      "number": 3,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainPOSTStickersPacksCreateRequest": {
+    "body": {
+      "number": 1,
+      "signature": "MainPOSTStickersPacksCreateBody"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MainWSMainByFindClientsByUserIdRequest": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MainWSMainByFindClientsByUserIdResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MainWSMainByTestRequest": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MainWSMainByTestResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MarketplaceGETExtensionsByUserIdByPkgRequest": {
+    "user_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "pkg": {
+      "number": 2,
+      "signature": "string"
+    },
+    "body": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 5,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MarketplaceGETExtensionsListQuery": {
+    "limit": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "offset": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MarketplaceGETExtensionsListRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "MarketplaceGETExtensionsListQuery"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MarketplaceGETExtensionsListResult": {
+    "items": {
+      "number": 1,
+      "signature": "repeated google.protobuf.Value"
+    },
+    "total_items": {
+      "number": 2,
+      "signature": "double"
+    }
+  },
+  "MarketplacePUTExtensionsPublishHeaders": {
+    "pkg": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MarketplacePUTExtensionsPublishRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "MarketplacePUTExtensionsPublishHeaders"
+    },
+    "parts": {
+      "number": 4,
+      "signature": "repeated MultipartPart"
+    }
+  },
+  "MusicGETMusicFeedQuery": {
+    "limit": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "page": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "order": {
+      "number": 3,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MusicGETMusicFeedRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "MusicGETMusicFeedQuery"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MusicGETMusicFeedResult": {
+    "total_length": {
+      "number": 1,
+      "signature": "double"
+    },
+    "has_more": {
+      "number": 2,
+      "signature": "bool"
+    },
+    "items": {
+      "number": 3,
+      "signature": "repeated AuthPOSTRegisterResultUser"
+    }
+  },
+  "MusicGETMusicMyLibraryFavoriteQuery": {
+    "kind": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "item_id": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MusicGETMusicMyLibraryFavoriteRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "MusicGETMusicMyLibraryFavoriteQuery"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MusicGETMusicMyLibraryFavoriteResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MusicPUTMusicMyLibraryFavoriteBody": {
+    "kind": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "item_id": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "to": {
+      "number": 3,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MusicPUTMusicMyLibraryFavoriteRequest": {
+    "body": {
+      "number": 1,
+      "signature": "MusicPUTMusicMyLibraryFavoriteBody"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MusicPUTMusicMyLibraryFavoriteResult": {
+    "liked": {
+      "number": 1,
+      "signature": "bool"
+    },
+    "item_id": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "library_item_id": {
+      "number": 3,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MusicGETMusicMyLibraryQuery": {
+    "limit": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "offset": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "kind": {
+      "number": 3,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MusicGETMusicMyLibraryRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "MusicGETMusicMyLibraryQuery"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MusicGETMusicMyLibraryResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MusicGETMusicMyReleasesQuery": {
+    "keywords": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "limit": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "offset": {
+      "number": 3,
+      "signature": "google.protobuf.Value"
+    },
+    "resolveItemsData": {
+      "number": 4,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 5,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MusicGETMusicMyReleasesRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "MusicGETMusicMyReleasesQuery"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MusicGETMusicMyReleasesResult": {
+    "total_items": {
+      "number": 1,
+      "signature": "double"
+    },
+    "items": {
+      "number": 2,
+      "signature": "repeated AuthPOSTRegisterResultUser"
+    }
+  },
+  "MusicGETMusicRadioByRadioIdRequest": {
+    "radio_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MusicGETMusicRadioByRadioIdResponse": {
+    "value": {
+      "number": 1,
+      "signature": "map<string, string>"
+    }
+  },
+  "MusicGETMusicRadioListQuery": {
+    "limit": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "offset": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MusicGETMusicRadioListRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "MusicGETMusicRadioListQuery"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MusicGETMusicRadioListResponse": {
+    "value": {
+      "number": 1,
+      "signature": "repeated google.protobuf.Value"
+    }
+  },
+  "MusicGETMusicRadioSseByChannelIdRequest": {
+    "channel_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MusicGETMusicRadioSseByChannelIdResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MusicGETMusicRadioTrendingsRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MusicGETMusicRadioTrendingsResult": {
+    "items": {
+      "number": 1,
+      "signature": "repeated google.protobuf.Value"
+    }
+  },
+  "MusicPOSTMusicRadioWebhookBody": {
+    "listeners": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "station": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "now_playing": {
+      "number": 3,
+      "signature": "google.protobuf.Value"
+    },
+    "is_online": {
+      "number": 4,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 5,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MusicPOSTMusicRadioWebhookHeaders": {
+    "authorization": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MusicPOSTMusicRadioWebhookRequest": {
+    "body": {
+      "number": 1,
+      "signature": "MusicPOSTMusicRadioWebhookBody"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "MusicPOSTMusicRadioWebhookHeaders"
+    }
+  },
+  "MusicPOSTMusicRadioWebhookResult": {
+    "radio_id": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "listeners": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "station_id": {
+      "number": 3,
+      "signature": "google.protobuf.Value"
+    },
+    "name": {
+      "number": 4,
+      "signature": "google.protobuf.Value"
+    },
+    "hls_src": {
+      "number": 5,
+      "signature": "google.protobuf.Value"
+    },
+    "http_src": {
+      "number": 6,
+      "signature": "google.protobuf.Value"
+    },
+    "now_playing": {
+      "number": 7,
+      "signature": "google.protobuf.Value"
+    },
+    "online": {
+      "number": 8,
+      "signature": "bool"
+    },
+    "background": {
+      "number": 9,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MusicGETMusicRecentlyQuery": {
+    "limit": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MusicGETMusicRecentlyRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "MusicGETMusicRecentlyQuery"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MusicGETMusicRecentlyResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MusicGETMusicReleasesByReleaseIdDataQuery": {
+    "limit": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "offset": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MusicGETMusicReleasesByReleaseIdDataRequest": {
+    "release_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "MusicGETMusicReleasesByReleaseIdDataQuery"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MusicGETMusicReleasesByReleaseIdDataResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MusicDELETEMusicReleasesByReleaseIdRequest": {
+    "release_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MusicDELETEMusicReleasesByReleaseIdResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MusicGETMusicReleasesQuery": {
+    "limit": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "page": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "user_id": {
+      "number": 3,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MusicGETMusicReleasesRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "MusicGETMusicReleasesQuery"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MusicGETMusicReleasesResult": {
+    "total_items": {
+      "number": 1,
+      "signature": "double"
+    },
+    "items": {
+      "number": 2,
+      "signature": "repeated AuthPOSTRegisterResultUser"
+    }
+  },
+  "MusicPUTMusicReleasesBody": {
+    "_id": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MusicPUTMusicReleasesRequest": {
+    "body": {
+      "number": 1,
+      "signature": "MusicPUTMusicReleasesBody"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MusicPUTMusicReleasesResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MusicGETMusicTracksByTrackIdDataRequest": {
+    "track_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MusicGETMusicTracksByTrackIdDataResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MusicDELETEMusicTracksByTrackIdRequest": {
+    "track_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MusicDELETEMusicTracksByTrackIdResult": {
+    "success": {
+      "number": 1,
+      "signature": "bool"
+    },
+    "track": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MusicGETMusicTracksByTrackIdLyricsQuery": {
+    "language": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "fetchAll": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MusicGETMusicTracksByTrackIdLyricsRequest": {
+    "track_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "MusicGETMusicTracksByTrackIdLyricsQuery"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MusicPUTMusicTracksByTrackIdLyricsBody": {
+    "lrc": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "video_source": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "video_loop": {
+      "number": 3,
+      "signature": "google.protobuf.Value"
+    },
+    "video_starts_at": {
+      "number": 4,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 5,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MusicPUTMusicTracksByTrackIdLyricsRequest": {
+    "track_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "MusicPUTMusicTracksByTrackIdLyricsBody"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MusicGETMusicTracksByTrackIdOverrideQuery": {
+    "service": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MusicGETMusicTracksByTrackIdOverrideRequest": {
+    "track_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "MusicGETMusicTracksByTrackIdOverrideQuery"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MusicGETMusicTracksByTrackIdOverrideResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MusicPUTMusicTracksByTrackIdOverrideBody": {
+    "service": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "override": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MusicPUTMusicTracksByTrackIdOverrideRequest": {
+    "track_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "MusicPUTMusicTracksByTrackIdOverrideBody"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MusicPUTMusicTracksByTrackIdOverrideResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MusicGETMusicTracksByTrackIdTimingsRequest": {
+    "track_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MusicGETMusicTracksByTrackIdTimingsResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MusicGETMusicTracksQuery": {
+    "limit": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "page": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "user_id": {
+      "number": 3,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MusicGETMusicTracksRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "MusicGETMusicTracksQuery"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MusicGETMusicTracksResult": {
+    "total_items": {
+      "number": 1,
+      "signature": "double"
+    },
+    "items": {
+      "number": 2,
+      "signature": "repeated AuthPOSTRegisterResultUser"
+    }
+  },
+  "MusicPUTMusicTracksBody": {
+    "items": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MusicPUTMusicTracksRequest": {
+    "body": {
+      "number": 1,
+      "signature": "MusicPUTMusicTracksBody"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "MusicPUTMusicTracksResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MusicWSSyncRoomByJoinRequest": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MusicWSSyncRoomByJoinResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MusicWSSyncRoomByLeaveRequest": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MusicWSSyncRoomByLeaveResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MusicWSSyncRoomByPushRequest": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MusicWSSyncRoomByPushResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MusicWSSyncRoomByPushLyricsRequest": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MusicWSSyncRoomByPushLyricsResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MusicWSSyncRoomByRequestLyricsRequest": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "MusicWSSyncRoomByRequestLyricsResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "NotificationsPOSTNotificationsBroadcastRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "NotificationsPOSTNotificationsBroadcastResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "PostsGETPostsByPostIdDataRequest": {
+    "post_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "PostsGETPostsByPostIdDataResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "PostsDELETEPostsByPostIdRequest": {
+    "post_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "PostsDELETEPostsByPostIdResult": {
+    "deleted": {
+      "number": 1,
+      "signature": "bool"
+    }
+  },
+  "PostsGETPostsByPostIdRepliesQuery": {
+    "page": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "limit": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "PostsGETPostsByPostIdRepliesRequest": {
+    "post_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "PostsGETPostsByPostIdRepliesQuery"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "PostsGETPostsByPostIdRepliesResult": {
+    "items": {
+      "number": 1,
+      "signature": "repeated AuthPOSTRegisterResultUser"
+    },
+    "total_items": {
+      "number": 2,
+      "signature": "double"
+    },
+    "has_more": {
+      "number": 3,
+      "signature": "bool"
+    }
+  },
+  "PostsPOSTPostsByPostIdToggleLikeBody": {
+    "to": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "PostsPOSTPostsByPostIdToggleLikeRequest": {
+    "post_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "PostsPOSTPostsByPostIdToggleLikeBody"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "PostsPOSTPostsByPostIdToggleLikeResult": {
+    "post_id": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "liked": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "count": {
+      "number": 3,
+      "signature": "double"
+    }
+  },
+  "PostsPOSTPostsByPostIdToggleSaveBody": {
+    "to": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "PostsPOSTPostsByPostIdToggleSaveRequest": {
+    "post_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "PostsPOSTPostsByPostIdToggleSaveBody"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "PostsPOSTPostsByPostIdToggleSaveResult": {
+    "post_id": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "saved": {
+      "number": 2,
+      "signature": "bool"
+    },
+    "count": {
+      "number": 3,
+      "signature": "double"
+    }
+  },
+  "PostsPUTPostsByPostIdUpdateRequest": {
+    "post_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "PostsPUTPostsByPostIdUpdateResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "PostsDELETEPostsByPostIdVotePollByOptionIdRequest": {
+    "post_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "option_id": {
+      "number": 2,
+      "signature": "string"
+    },
+    "body": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 5,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "PostsDELETEPostsByPostIdVotePollByOptionIdResponse": {
+    "value": {
+      "number": 1,
+      "signature": "repeated AuthPOSTRegisterResultUser"
+    }
+  },
+  "PostsPOSTPostsByPostIdVotePollByOptionIdRequest": {
+    "post_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "option_id": {
+      "number": 2,
+      "signature": "string"
+    },
+    "body": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 5,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "PostsPOSTPostsByPostIdVotePollByOptionIdResult": {
+    "post": {
+      "number": 1,
+      "signature": "AuthPOSTRegisterResultUser"
+    },
+    "vote": {
+      "number": 2,
+      "signature": "AuthPOSTRegisterResultUser"
+    }
+  },
+  "PostsGETPostsFeedGlobalQuery": {
+    "limit": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "page": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "PostsGETPostsFeedGlobalRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "PostsGETPostsFeedGlobalQuery"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "PostsGETPostsFeedGlobalResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "PostsGETPostsFeedTimelineQuery": {
+    "limit": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "page": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "PostsGETPostsFeedTimelineRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "PostsGETPostsFeedTimelineQuery"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "PostsGETPostsFeedTimelineResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "PostsGETPostsLikedQuery": {
+    "page": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "limit": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "PostsGETPostsLikedRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "PostsGETPostsLikedQuery"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "PostsGETPostsLikedResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "PostsPOSTPostsNewHeaders": {
+    "authorization": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "PostsPOSTPostsNewRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "PostsPOSTPostsNewHeaders"
+    }
+  },
+  "PostsGETPostsSavedQuery": {
+    "page": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "limit": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "PostsGETPostsSavedRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "PostsGETPostsSavedQuery"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "PostsGETPostsSavedResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "PostsGETPostsTrendingByTrendingQuery": {
+    "limit": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "trim": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "PostsGETPostsTrendingByTrendingRequest": {
+    "trending": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "PostsGETPostsTrendingByTrendingQuery"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "PostsGETPostsTrendingByTrendingResponse": {
+    "value": {
+      "number": 1,
+      "signature": "repeated AuthPOSTRegisterResultUser"
+    }
+  },
+  "PostsGETPostsTrendingsRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "PostsGETPostsTrendingsResultItem": {
+    "hashtag": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "count": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "PostsGETPostsTrendingsResponse": {
+    "value": {
+      "number": 1,
+      "signature": "repeated PostsGETPostsTrendingsResultItem"
+    }
+  },
+  "PostsGETPostsUserByUserIdQuery": {
+    "limit": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "page": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "PostsGETPostsUserByUserIdRequest": {
+    "user_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "PostsGETPostsUserByUserIdQuery"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "PostsGETPostsUserByUserIdResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "PostsWSPostsBySubscribeRequest": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "PostsWSPostsBySubscribeResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "PostsWSPostsByUnsubscribeRequest": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "PostsWSPostsByUnsubscribeResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "RtcPOSTRtcGroupsByGroupIdByChannelIdByUserIdDisconnectRequest": {
+    "group_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "channel_id": {
+      "number": 2,
+      "signature": "string"
+    },
+    "user_id": {
+      "number": 3,
+      "signature": "string"
+    },
+    "body": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 5,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 6,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "RtcPOSTRtcGroupsByGroupIdByChannelIdByUserIdDisconnectResult": {
+    "ok": {
+      "number": 1,
+      "signature": "bool"
+    },
+    "user_id": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "client_id": {
+      "number": 3,
+      "signature": "google.protobuf.Value"
+    },
+    "channel_id": {
+      "number": 4,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "RtcGETRtcGroupsByGroupIdStateRequest": {
+    "group_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "RtcGETRtcGroupsByGroupIdStateResponse": {
+    "value": {
+      "number": 1,
+      "signature": "repeated google.protobuf.Value"
+    }
+  },
+  "RtcWSChannelByClientEventPayload": {
+    "isDm": {
+      "number": 1,
+      "signature": "bool"
+    },
+    "event": {
+      "number": 2,
+      "signature": "string"
+    },
+    "data": {
+      "number": 3,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "RtcWSChannelByClientEventResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "RtcWSChannelByConnectTransportPayload": {
+    "transportId": {
+      "number": 1,
+      "signature": "string"
+    },
+    "dtlsParameters": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "isDm": {
+      "number": 3,
+      "signature": "bool"
+    },
+    "additional_properties": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "RtcWSChannelByConnectTransportResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "RtcWSChannelByConsumePayload": {
+    "producerId": {
+      "number": 1,
+      "signature": "string"
+    },
+    "transportId": {
+      "number": 2,
+      "signature": "string"
+    },
+    "rtpCapabilities": {
+      "number": 3,
+      "signature": "google.protobuf.Value"
+    },
+    "paused": {
+      "number": 4,
+      "signature": "bool"
+    },
+    "isDm": {
+      "number": 5,
+      "signature": "bool"
+    },
+    "additional_properties": {
+      "number": 6,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "RtcWSChannelByConsumeResult": {
+    "id": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "producerId": {
+      "number": 2,
+      "signature": "string"
+    },
+    "kind": {
+      "number": 3,
+      "signature": "google.protobuf.Value"
+    },
+    "rtpParameters": {
+      "number": 4,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "RtcWSChannelByConsumerControlPayload": {
+    "consumer_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "paused": {
+      "number": 2,
+      "signature": "bool"
+    }
+  },
+  "RtcWSChannelByConsumerControlResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "RtcWSChannelByConsumerStopPayload": {
+    "consumer_id": {
+      "number": 1,
+      "signature": "string"
+    }
+  },
+  "RtcWSChannelByConsumerStopResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "RtcWSChannelByCreateTransportRequest": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "RtcWSChannelByCreateTransportResult": {
+    "id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "iceParameters": {
+      "number": 2,
+      "signature": "RtcWSChannelByCreateTransportResultIceParameters"
+    },
+    "iceCandidates": {
+      "number": 3,
+      "signature": "repeated RtcWSChannelByCreateTransportResultIceCandidatesItem"
+    },
+    "dtlsParameters": {
+      "number": 4,
+      "signature": "RtcWSChannelByCreateTransportResultDtlsParameters"
+    }
+  },
+  "RtcWSChannelByCreateTransportResultIceParameters": {
+    "usernameFragment": {
+      "number": 1,
+      "signature": "string"
+    },
+    "password": {
+      "number": 2,
+      "signature": "string"
+    },
+    "iceLite": {
+      "number": 3,
+      "signature": "bool"
+    }
+  },
+  "RtcWSChannelByCreateTransportResultIceCandidatesItem": {
+    "foundation": {
+      "number": 1,
+      "signature": "string"
+    },
+    "priority": {
+      "number": 2,
+      "signature": "double"
+    },
+    "ip": {
+      "number": 3,
+      "signature": "string"
+    },
+    "address": {
+      "number": 4,
+      "signature": "string"
+    },
+    "protocol": {
+      "number": 5,
+      "signature": "string"
+    },
+    "port": {
+      "number": 6,
+      "signature": "double"
+    },
+    "type": {
+      "number": 7,
+      "signature": "string"
+    },
+    "tcpType": {
+      "number": 8,
+      "signature": "string"
+    }
+  },
+  "RtcWSChannelByCreateTransportResultDtlsParameters": {
+    "role": {
+      "number": 1,
+      "signature": "string"
+    },
+    "fingerprints": {
+      "number": 2,
+      "signature": "repeated RtcWSChannelByCreateTransportResultDtlsParametersFingerprintsItem"
+    }
+  },
+  "RtcWSChannelByCreateTransportResultDtlsParametersFingerprintsItem": {
+    "algorithm": {
+      "number": 1,
+      "signature": "string"
+    },
+    "value": {
+      "number": 2,
+      "signature": "string"
+    }
+  },
+  "RtcWSChannelByJoinPayload": {
+    "is_dm": {
+      "number": 1,
+      "signature": "bool"
+    },
+    "channel_id": {
+      "number": 2,
+      "signature": "string"
+    },
+    "group_id": {
+      "number": 3,
+      "signature": "string"
+    },
+    "additional_properties": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "RtcWSChannelByJoinResult": {
+    "started_at": {
+      "number": 1,
+      "signature": "google.protobuf.Timestamp"
+    },
+    "room": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "channelId": {
+      "number": 3,
+      "signature": "string"
+    },
+    "rtpCapabilities": {
+      "number": 4,
+      "signature": "RtcWSChannelByJoinResultRtpCapabilities"
+    },
+    "clients": {
+      "number": 5,
+      "signature": "repeated RtcWSChannelByJoinResultClientsItem"
+    },
+    "producers": {
+      "number": 6,
+      "signature": "repeated google.protobuf.Value"
+    }
+  },
+  "RtcWSChannelByJoinResultRtpCapabilities": {
+    "codecs": {
+      "number": 1,
+      "signature": "repeated RtcWSChannelByJoinResultRtpCapabilitiesCodecsItem"
+    },
+    "headerExtensions": {
+      "number": 2,
+      "signature": "repeated RtcWSChannelByJoinResultRtpCapabilitiesHeaderExtensionsItem"
+    }
+  },
+  "RtcWSChannelByJoinResultRtpCapabilitiesCodecsItem": {
+    "kind": {
+      "number": 1,
+      "signature": "string"
+    },
+    "mimeType": {
+      "number": 2,
+      "signature": "string"
+    },
+    "preferredPayloadType": {
+      "number": 3,
+      "signature": "double"
+    },
+    "clockRate": {
+      "number": 4,
+      "signature": "double"
+    },
+    "channels": {
+      "number": 5,
+      "signature": "double"
+    },
+    "parameters": {
+      "number": 6,
+      "signature": "map<string, google.protobuf.Value>"
+    },
+    "rtcpFeedback": {
+      "number": 7,
+      "signature": "repeated RtcWSChannelByJoinResultRtpCapabilitiesCodecsItemRtcpFeedbackItem"
+    }
+  },
+  "RtcWSChannelByJoinResultRtpCapabilitiesCodecsItemRtcpFeedbackItem": {
+    "type": {
+      "number": 1,
+      "signature": "string"
+    },
+    "parameter": {
+      "number": 2,
+      "signature": "string"
+    }
+  },
+  "RtcWSChannelByJoinResultRtpCapabilitiesHeaderExtensionsItem": {
+    "kind": {
+      "number": 1,
+      "signature": "string"
+    },
+    "uri": {
+      "number": 2,
+      "signature": "string"
+    },
+    "preferredId": {
+      "number": 3,
+      "signature": "double"
+    },
+    "preferredEncrypt": {
+      "number": 4,
+      "signature": "bool"
+    },
+    "direction": {
+      "number": 5,
+      "signature": "string"
+    }
+  },
+  "RtcWSChannelByJoinResultClientsItem": {
+    "channel_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "userId": {
+      "number": 2,
+      "signature": "string"
+    },
+    "voiceState": {
+      "number": 3,
+      "signature": "RtcWSChannelByJoinResultClientsItemVoiceState"
+    },
+    "user": {
+      "number": 4,
+      "signature": "RtcWSChannelByJoinResultClientsItemUser"
+    },
+    "self": {
+      "number": 5,
+      "signature": "bool"
+    }
+  },
+  "RtcWSChannelByJoinResultClientsItemVoiceState": {
+    "muted": {
+      "number": 1,
+      "signature": "bool"
+    },
+    "deafen": {
+      "number": 2,
+      "signature": "bool"
+    }
+  },
+  "RtcWSChannelByJoinResultClientsItemUser": {
+    "__v": {
+      "number": 1,
+      "signature": "double"
+    },
+    "cached_at": {
+      "number": 2,
+      "signature": "double"
+    },
+    "_id": {
+      "number": 3,
+      "signature": "string"
+    },
+    "user_id": {
+      "number": 4,
+      "signature": "string"
+    },
+    "username": {
+      "number": 5,
+      "signature": "string"
+    },
+    "public_name": {
+      "number": 6,
+      "signature": "string"
+    },
+    "description": {
+      "number": 7,
+      "signature": "string"
+    },
+    "avatar": {
+      "number": 8,
+      "signature": "string"
+    },
+    "cover": {
+      "number": 9,
+      "signature": "string"
+    },
+    "decorations": {
+      "number": 10,
+      "signature": "map<string, string>"
+    },
+    "links": {
+      "number": 11,
+      "signature": "map<string, string>"
+    },
+    "roles": {
+      "number": 12,
+      "signature": "repeated string"
+    },
+    "verified": {
+      "number": 13,
+      "signature": "bool"
+    },
+    "flags": {
+      "number": 14,
+      "signature": "repeated string"
+    }
+  },
+  "RtcWSChannelByLeavePayload": {
+    "isDm": {
+      "number": 1,
+      "signature": "bool"
+    },
+    "additional_properties": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "RtcWSChannelByLeaveResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "RtcWSChannelByProducePayload": {
+    "transportId": {
+      "number": 1,
+      "signature": "string"
+    },
+    "kind": {
+      "number": 2,
+      "signature": "string"
+    },
+    "rtpParameters": {
+      "number": 3,
+      "signature": "google.protobuf.Value"
+    },
+    "isDm": {
+      "number": 4,
+      "signature": "bool"
+    },
+    "additional_properties": {
+      "number": 5,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "RtcWSChannelByProduceResult": {
+    "id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "producerId": {
+      "number": 2,
+      "signature": "string"
+    },
+    "channelId": {
+      "number": 3,
+      "signature": "string"
+    },
+    "groupId": {
+      "number": 4,
+      "signature": "string"
+    },
+    "userId": {
+      "number": 5,
+      "signature": "string"
+    },
+    "kind": {
+      "number": 6,
+      "signature": "string"
+    },
+    "appData": {
+      "number": 7,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "RtcWSChannelByProducerStopPayload": {
+    "producerId": {
+      "number": 1,
+      "signature": "string"
+    }
+  },
+  "RtcWSChannelByProducerStopResult": {
+    "success": {
+      "number": 1,
+      "signature": "bool"
+    }
+  },
+  "RtcWSChannelByRequestKeyframeResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "RtcWSChannelBySoundpadDispatchPayload": {
+    "isDm": {
+      "number": 1,
+      "signature": "bool"
+    },
+    "additional_properties": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "RtcWSChannelBySoundpadDispatchResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "RtcWSGroupBySubscribeRequest": {
+    "value": {
+      "number": 1,
+      "signature": "string"
+    }
+  },
+  "RtcWSGroupBySubscribeResult": {
+    "ok": {
+      "number": 1,
+      "signature": "bool"
+    },
+    "group_id": {
+      "number": 2,
+      "signature": "string"
+    }
+  },
+  "RtcWSGroupByUnsubscribeRequest": {
+    "value": {
+      "number": 1,
+      "signature": "string"
+    }
+  },
+  "RtcWSGroupByUnsubscribeResult": {
+    "ok": {
+      "number": 1,
+      "signature": "bool"
+    },
+    "group_id": {
+      "number": 2,
+      "signature": "string"
+    }
+  },
+  "SearchGETSearchQuery": {
+    "keywords": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "limit": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "offset": {
+      "number": 3,
+      "signature": "google.protobuf.Value"
+    },
+    "fields": {
+      "number": 4,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 5,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "SearchGETSearchRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "SearchGETSearchQuery"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "SearchGETSearchResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "UsersGETUsersByUserIdAvatarRequest": {
+    "user_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "UsersGETUsersByUserIdAvatarResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "UsersGETUsersByUserIdBadgesQuery": {
+    "limit": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "offset": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "UsersGETUsersByUserIdBadgesRequest": {
+    "user_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "UsersGETUsersByUserIdBadgesQuery"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "UsersGETUsersByUserIdBadgesResponse": {
+    "value": {
+      "number": 1,
+      "signature": "repeated AuthPOSTRegisterResultUser"
+    }
+  },
+  "UsersGETUsersByUserIdDataQuery": {
+    "basic": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "UsersGETUsersByUserIdDataRequest": {
+    "user_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "UsersGETUsersByUserIdDataQuery"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "UsersGETUsersByUserIdDataResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "UsersGETUsersByUserIdDecorationsRequest": {
+    "user_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "UsersGETUsersByUserIdDecorationsResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "UsersPOSTUsersByUserIdFollowBody": {
+    "to": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "UsersPOSTUsersByUserIdFollowRequest": {
+    "user_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "UsersPOSTUsersByUserIdFollowBody"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "UsersPOSTUsersByUserIdFollowResult": {
+    "following": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "count": {
+      "number": 2,
+      "signature": "double"
+    }
+  },
+  "UsersGETUsersByUserIdFollowersQuery": {
+    "fetchData": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "limit": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "page": {
+      "number": 3,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "UsersGETUsersByUserIdFollowersRequest": {
+    "user_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "UsersGETUsersByUserIdFollowersQuery"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "UsersGETUsersByUserIdFollowersResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "UsersGETUsersByUserIdIsConnectedRequest": {
+    "user_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "UsersGETUsersByUserIdIsConnectedResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "UsersGETUsersByUserIdResolveUserIdRequest": {
+    "user_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "UsersGETUsersByUserIdResolveUserIdResult": {
+    "user_id": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "UsersGETUsersByUserIdRolesRequest": {
+    "user_id": {
+      "number": 1,
+      "signature": "string"
+    },
+    "body": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 4,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "UsersGETUsersByUserIdRolesResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "UsersPOSTUsersCheckVersionsRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "UsersPOSTUsersCheckVersionsResponse": {
+    "value": {
+      "number": 1,
+      "signature": "map<string, double>"
+    }
+  },
+  "UsersDELETEUsersSelf2faBody": {
+    "code": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "UsersDELETEUsersSelf2faRequest": {
+    "body": {
+      "number": 1,
+      "signature": "UsersDELETEUsersSelf2faBody"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "UsersDELETEUsersSelf2faResult": {
+    "success": {
+      "number": 1,
+      "signature": "bool"
+    },
+    "message": {
+      "number": 2,
+      "signature": "string"
+    }
+  },
+  "UsersPOSTUsersSelf2faEnableBody": {
+    "code": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "UsersPOSTUsersSelf2faEnableRequest": {
+    "body": {
+      "number": 1,
+      "signature": "UsersPOSTUsersSelf2faEnableBody"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "UsersPOSTUsersSelf2faEnableResult": {
+    "success": {
+      "number": 1,
+      "signature": "bool"
+    },
+    "message": {
+      "number": 2,
+      "signature": "string"
+    }
+  },
+  "UsersGETUsersSelf2faGenerateRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "UsersGETUsersSelf2faGenerateResult": {
+    "qrCodeUrl": {
+      "number": 1,
+      "signature": "string"
+    },
+    "secret": {
+      "number": 2,
+      "signature": "string"
+    }
+  },
+  "UsersGETUsersSelfConfigQuery": {
+    "key": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "UsersGETUsersSelfConfigRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "UsersGETUsersSelfConfigQuery"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "UsersGETUsersSelfConfigResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "UsersPUTUsersSelfConfigRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "UsersPUTUsersSelfConfigResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "UsersPUTUsersSelfDataRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "UsersGETUsersSelfFavStickersSetQuery": {
+    "limit": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "page": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    },
+    "_unmodeled": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "UsersGETUsersSelfFavStickersSetRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "UsersGETUsersSelfFavStickersSetQuery"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "UsersGETUsersSelfFavStickersSetResult": {
+    "total_items": {
+      "number": 1,
+      "signature": "double"
+    },
+    "items": {
+      "number": 2,
+      "signature": "repeated UsersGETUsersSelfFavStickersSetResultItemsItem"
+    }
+  },
+  "UsersGETUsersSelfFavStickersSetResultItemsItem": {
+    "name": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    },
+    "items": {
+      "number": 2,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "UsersGETUsersSelfRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "UsersGETUsersSelfResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  },
+  "UsersGETUsersSelfRolesRequest": {
+    "body": {
+      "number": 1,
+      "signature": "google.protobuf.Struct"
+    },
+    "query": {
+      "number": 2,
+      "signature": "google.protobuf.Struct"
+    },
+    "headers": {
+      "number": 3,
+      "signature": "google.protobuf.Struct"
+    }
+  },
+  "UsersGETUsersSelfRolesResponse": {
+    "value": {
+      "number": 1,
+      "signature": "google.protobuf.Value"
+    }
+  }
+}
